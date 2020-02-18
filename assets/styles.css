@@ -49,24 +49,24 @@ body{
 	/* display: none; */
 }
 
-.center-animation{
-	width: 80vw;
+.load-logo{
+	width: 100vw;
 	height: 38vw;
 	background: url(images/logo2.svg);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	margin: 0 auto;
-	top: 75%;
-	position: relative;
+	bottom: 0;
+	position: absolute;
 }
 
 .load-circle{
 	width: 15vw;
 	height: 15vw;
-	margin: 0 auto;
-	position: relative;
-	top: 24%;
+	margin: 0 42.5vw;
+	position: absolute;
+	bottom: 50%;
 	border: 3px solid var(--main-color);
 	border-radius: 50%;
 }
