@@ -38,6 +38,31 @@ html, body{
 
 /*  TEXT  */
 
+.topbar h1 {
+	margin: 0;
+	text-align: center;
+	font: var(--main-font);
+	font-size: 22px;
+	font-weight: 500;
+}
+
+h2{
+	margin: 0;
+	color: var(--main-font-color);
+	font-size: 22px;
+	font-weight: 500;
+	text-align: left;
+	padding: 12px 0 0 4vw;
+	display: block;
+	float: left;
+}
+
+
+
+
+
+/*  FOREGROUND ELEMENTS  */
+
 /* NAVIGATION TEMPLATE */
 
 .topbar {
@@ -51,14 +76,6 @@ html, body{
 	width: 100%;
 	box-shadow: 0 5px 10px rgba(2,0,36,.3);
 	z-index: 11;
-}
-
-.topbar h1 {
-	margin: 0;
-	text-align: center;
-	font: var(--main-font);
-	font-size: 22px;
-	
 }
 
 .navicon {
@@ -97,58 +114,7 @@ a:link {
 #recipe-icon:target {
 	
 }
-h1{
-	margin: 0;
-	color: var(--main-bg-color);
-	font-size: 24px;
-	font-weight: 500;
-	text-align: center;
-	padding: 9px;
-}
 
-h2{
-	margin: 0;
-	color: var(--main-font-color);
-	font-size: 22px;
-	font-weight: 500;
-	text-align: left;
-	padding: 12px 0 0 4vw;
-	display: block;
-	float: left;
-}
-
-
-
-
-
-/*  FOREGROUND ELEMENTS  */
-
-.title{
-	background-color: #E11B22;
-	height: 60px;
-	width: 100vw;
-	border-radius: 0px 0px 4px 4px;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-}
-
-.navigation{
-	background-color: #E8E7E6;
-	height: 60px;
-	width: 100vw;
-	border-radius: 4px 4px 0px 0px;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-	position: fixed;
-	bottom: 0;
-	z-index: 11;
-}
-
-.center-icon{
-	width: 42px;
-	height: 42px;
-	background-color: var(--main-color);
-	border-radius: 100%;
-	margin: 0 auto;
-}
 
 
 
