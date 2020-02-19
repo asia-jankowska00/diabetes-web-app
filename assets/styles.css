@@ -291,7 +291,7 @@ a:link {
 	width: 42px;
 	top: 40vw;
 	border-radius: 100%;
-	z-index: 10;
+	/* z-index: 10; */
 	background-color: #fff;
 	opacity: .8;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
@@ -305,7 +305,7 @@ a:link {
 	width: 42px;
 	top: 40vw;
 	border-radius: 100%;
-	z-index: 10;
+	/* z-index: 10; */
 	background-color: #fff;
 	opacity: .8;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
@@ -357,14 +357,6 @@ a:link {
 	background-repeat: no-repeat;
 }
 
-.block2{
-	width: 95vw;
-	height: 90vw;
-	background-color: #ECEBEB;
-	position: absolute;
-	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
-	border-radius: 4px;
-}
 
 .image2{
 	height: 100%;
