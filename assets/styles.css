@@ -289,9 +289,9 @@ a:link {
 	right: 4vw;
 	height: 42px;
 	width: 42px;
-	top: 40vw;
+	top: 55vw;
 	border-radius: 100%;
-	/* z-index: 10; */
+	z-index: 10;
 	background-color: #fff;
 	opacity: .8;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
@@ -303,9 +303,9 @@ a:link {
 	left: 4vw;
 	height: 42px;
 	width: 42px;
-	top: 40vw;
+	top: 55vw;
 	border-radius: 100%;
-	/* z-index: 10; */
+	z-index: 10;
 	background-color: #fff;
 	opacity: .8;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
