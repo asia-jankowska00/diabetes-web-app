@@ -220,6 +220,10 @@ a:link {
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
 }
 
+div.tips div.card{
+	border-radius: 11px;
+}
+
 .content-container{
 	display: block;
 	height: 60px;
