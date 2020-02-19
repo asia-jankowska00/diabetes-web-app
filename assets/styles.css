@@ -190,6 +190,7 @@ a:link {
 	background-color: #FCFCFB;
 	border-radius: 11px 11px 0px 0px;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
+	transition: ease-in-out .5s all;
 }
 
 .card-icon-container{
@@ -355,6 +356,7 @@ a:link {
 
 .card-minimized{
 	height: 64px;
+	transition: ease-in-out .5s all;
 }
 
 .animation-container{
@@ -369,6 +371,7 @@ a:link {
 .hidden{
 	display: none;
 	height: 0;
+	transition: ease-in-out .5s all;
 }
 
 .arrow-turn{
