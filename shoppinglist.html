@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="assets/styles.css" media="screen" rel="stylesheet" type="text/css">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <script src="https://kit.fontawesome.com/be0fc92df8.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+    <script src="assets/script.js" defer async></script>
+    <script src="assets/shoppinglist.js" defer async></script>
+    <title>App</title>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <h1>
+            Title
+        </h1>
+    </div>
+
+    <div id="shopping-list" class="shopping-list">
+
+        <input type="text" id="input-item-field"">
+        <button id="input-item-btn"><i class="fas fa-plus"></i></button>
+
+        <button id="clear-list-btn">Clear list</button>
+
+        <ul id="shopping-list-list">
+            <li class="shopping-list-item">Item 1 <i class="fas fa-times" id="delete-btn"></i></li>
+        </ul>
+
+    </div>
+
+    <nav>
+        <div class="flexbox">
+            <a href="">
+                <div id="recipe-icon">
+                    <img src="assets/images/utensils-solid.svg" class="navicon">
+                    <p class="navlabel">
+                        Recipes
+                    </p>
+                </div>
+            </a>
+            <a href="">
+            <div>
+                <img src="assets/images/shopping-cart-solid.svg" class="navicon">
+                <p class="navlabel">
+                    Shopping Guide
+                </p>
+            </div>
+        </a>
+            <a href="">
+            <div>
+                <img src="assets/images/list-ul-solid.svg" class="navicon">
+                <p class="navlabel">
+                    Shopping List
+                </p>
+            </div>
+        </a>
+        </div>
+    </nav>
+
+</body>
+
+</html>
