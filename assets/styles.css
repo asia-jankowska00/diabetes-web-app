@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-/*  VARIABLES  */
+/* ----------------------------------- VARIABLES ----------------------------------- */
 :root {
   --main-color: #e11b22; /* red */
   --darkest-color: #191c27; /* dark grey */
@@ -36,7 +36,7 @@ html, body{
 
 
 
-/*  TEXT  */
+/* ----------------------------------- TEXT ----------------------------------- */
 
 .topbar h1 {
 	margin: 0;
@@ -61,7 +61,14 @@ h2{
 
 
 
-/*  FOREGROUND ELEMENTS  */
+
+
+
+
+
+
+
+/* ----------------------------------- FOREGROUND ELEMENTS ----------------------------------- */
 
 .buffer{
 	height: 60px;
@@ -136,15 +143,6 @@ h2{
 	display: block;
 	float: left;
 }
-
-
-
-
-
-/*  FOREGROUND ELEMENTS  */
-
-
-
 
 
 
@@ -272,7 +270,7 @@ h2{
 }
 
 
-/* SLIDESHOW */
+/* ----------------------------------- SLIDESHOW ----------------------------------- */
 
 .animation-container{
 	width: 95vw;
