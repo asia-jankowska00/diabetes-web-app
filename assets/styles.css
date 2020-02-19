@@ -22,20 +22,245 @@ html{
 	scroll-behavior: smooth;
 }
 
-body{
+html, body{
+	height: 200vh;
+	background-color: var(--dark-color);
+	color: var(--main-bg-color);
 	padding: 0;
 	margin: 0;
-	color: var(--main-bg-color);
 	font-family: var(--main-font);
-	height: 200vh;
+	max-width: 100%;
+	overflow-x: hidden;
 }
+
+
 
 /*  TEXT  */
 
+h1{
+	margin: 0;
+	color: var(--main-bg-color);
+	font-size: 24px;
+	font-weight: 500;
+	text-align: center;
+	padding: 9px;
+}
+
+h2{
+	margin: 0;
+	color: var(--main-font-color);
+	font-size: 22px;
+	font-weight: 500;
+	text-align: left;
+	padding: 12px 0 0 4vw;
+	display: block;
+	float: left;
+}
 
 
 
-/*  LOAD  */
+
+
+
+
+
+
+
+/* ----------------------------------- SHOPPING GUIDE ----------------------------------- */
+
+/* CARDS */
+
+.tips{
+	width: 95vw;
+	margin: 25px auto;
+	height: 60px;
+	position: relative;
+	background-color: #FCFCFB;
+	border-radius: 11px;
+	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.content-container{
+	display: block;
+	height: 60px;
+}
+
+.tips-icon-container{
+	display: block;
+	float: right;
+	width: 42px;
+	height: 42px;
+	border-radius: 100%;
+	background-color: #FFD62C;
+	margin: 9px 4vw 0 0;
+}
+
+.tips-icon{
+	height: 71%;
+	background: url(images/tips-icon.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-top: 5px;
+}
+
+.title{
+	background-color: #E11B22;
+	height: 60px;
+	width: 100vw;
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card{
+	width: 95vw;
+	margin: 0 auto;
+	height: 105vw;
+	position: relative;
+	background-color: #FCFCFB;
+	border-radius: 11px 11px 0px 0px;
+	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+	border: 1px solid #F4F3F2;
+}
+
+.card-icon-container{
+	display: block;
+	height: 42px;
+	width: 42px;
+	float: right;
+	margin:  9px 4vw 0 0;
+}
+
+.arrow-down{
+	height: 100%;
+	background: url(images/arrow.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+
+/* SLIDESHOW */
+
+.animation-container{
+	width: 95vw;
+	height: 90vw;
+	display: block;
+	float: left;
+	position: absolute;
+	bottom: 0;
+}
+
+.block{
+	width: 95vw;
+	height: 90vw;
+	background-color: #ECEBEB;
+	position: absolute;
+	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+.image1{
+	height: 100%;
+	width: 100%;
+	background: url(images/food/bread2.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.block2{
+	width: 95vw;
+	height: 90vw;
+	background-color: #ECEBEB;
+	position: absolute;
+	box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+.image2{
+	height: 100%;
+	width: 100%;
+	background: url(images/food/bread3.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slide{
+  animation: animationSlides ease-in 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+
+.slide2{
+  animation: animationSlides2 ease-in 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+
+
+
+
+/* ANIMATION */
+
+@keyframes animationSlides{
+  0% {
+    transform:  translate(0px,0)  scaleX(1.00) scaleY(1.00) ;
+    filter: opacity(1);
+  }
+  50% {
+    filter: opacity(.8);
+  }
+  100% {
+    transform:  translate(-40vw,0)  scaleX(0.50) scaleY(0.50) ;
+    filter: opacity(.5);
+  }
+}
+
+@keyframes animationSlides2{
+  0% {
+    transform:  translate(90vw,0)  scaleX(0.80) scaleY(0.80) ;
+    filter: opacity(1);
+  }
+  50% {
+    filter: opacity(1);
+  }
+  100% {
+    transform:  translate(0px,0)  scaleX(1.00) scaleY(1.00) ;
+    filter: opacity(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------- LOADING SCREEN ----------------------------------- */
+
 #load-screen{
 	/* visibility: visible; */
 	z-index: 1;
@@ -144,13 +369,14 @@ body{
 #after-load{
 	/* visibility: hidden; */
 	z-index: 2;
-	background-color: green;
 	height: 100vh;
 }
 
 .hidden {
 	visibility: hidden;
 }
+
+
 
 
 
