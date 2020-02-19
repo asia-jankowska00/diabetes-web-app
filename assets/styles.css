@@ -54,12 +54,14 @@
 	  border: 1px solid var(--darker-color);
   }
   
+/*
   div.card div.content-container{
 	  border-top: 1px solid var(--darker-color);
 	  border-right: 1px solid var(--darker-color);
 	  border-left: 1px solid var(--darker-color);
 	  border-radius: 11px 11px 0px 0px;
   }
+*/
   
   .arrow-down{
 	  filter: invert(1);
@@ -222,6 +224,7 @@ a:link {
 
 div.tips div.card{
 	border-radius: 11px;
+	border-top: none;
 }
 
 .content-container{
@@ -256,7 +259,7 @@ div.tips div.card{
 }
 
 .card{
-	width: 95vw;
+	width: 100%;
 	margin: 0 auto;
 	height: 105vw;
 	position: relative;
@@ -264,6 +267,7 @@ div.tips div.card{
 	border-radius: 11px 11px 0px 0px;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
 	transition: ease-in-out .5s all;
+	border-top: 1px solid var(--darker-color);
 }
 
 .card-icon-container{
@@ -420,7 +424,7 @@ div.tips div.card{
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
 
 .card-minimized{
-	height: 64px;
+	height: 58px;
 	transition: ease-in-out .5s all;
 }
 
