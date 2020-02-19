@@ -11,12 +11,75 @@
   --darker-color: #DCDCDC; /* lighter grey */
   --dark-color: #E8E7E6; /* light grey */
   --light-color: #F4F3F2; /* lightest grey */
-  --main-bg-color: #FCFCFB; /* white */
+  --light-fg-color: #FCFCFB; /* white */
   --main-font-color: #181816;
   --main-font: 'Titillium Web', sans-serif;
   --text-align: left;
   --line-height: 1.6;
 }
+
+/* ----------------------------------- NIGHT MODE ----------------------------------- */
+
+@media (prefers-color-scheme: dark){
+	:root {
+	  --main-color: #e11b22; /* red */
+	  --darkest-color: #191c27; /* dark grey */
+	  --darker-color: #1F1F1F; /* lighter grey */
+	  --dark-color: #0D0D0D; /* light grey */
+	  --light-color: #F4F3F2; /* lightest grey */
+	  --light-fg-color: #121212; /* black */
+	  --main-font-color: #FCFCFB; /* white */
+	  
+  }
+  
+  h1{
+	  color: var(--main-font-color);
+  }
+  
+  .flexbox{
+	  background-color: var(--light-fg-color);
+	  border: 1px solid var(--darker-color);
+  }
+  
+  .navicon{
+	  filter: invert(1);
+	  opacity: 1 !important;
+  }
+  
+  p.navlabel{
+	  color: #fff !important;
+  }
+  
+  .tips{
+	  border: 1px solid var(--darker-color);
+  }
+  
+  div.card div.content-container{
+	  border-top: 1px solid var(--darker-color);
+	  border-right: 1px solid var(--darker-color);
+	  border-left: 1px solid var(--darker-color);
+	  border-radius: 11px 11px 0px 0px;
+  }
+  
+  .arrow-down{
+	  filter: invert(1);
+  }
+  
+  .card-container{
+	  border-right: 1px solid var(--darker-color);
+	  border-left: 1px solid var(--darker-color);
+  }
+  
+  .topbar{
+	  border-bottom: 1px solid var(--main-color);
+	  background-color: var(--light-fg-color) !important;
+  }
+  
+}
+
+
+
+/* ----------------------------------- GLOBAL STUFF ----------------------------------- */
 
 html{
 	scroll-behavior: smooth;
@@ -25,7 +88,7 @@ html{
 html, body{
 	height: 200vh;
 	background-color: var(--dark-color);
-	color: var(--main-bg-color);
+	color: var(--light-fg-color);
 	padding: 0;
 	margin: 0;
 	color: var(--main-font-color);
@@ -33,6 +96,10 @@ html, body{
 	max-width: 100%;
 	overflow-x: hidden;
 }
+
+
+
+
 
 
 
@@ -77,10 +144,10 @@ h2{
 /* NAVIGATION TEMPLATE */
 
 .topbar {
-	color: var(--main-bg-color);
+	color: var(--light-fg-color);
 	background-color: var(--main-color);
 	margin: 0;
-	padding: 15px;
+	padding: 12px 0 0;
 	overflow: hidden;
 	position: fixed;
 	top: 0;
@@ -148,7 +215,7 @@ a:link {
 	margin: 25px auto;
 	height: 60px;
 	position: relative;
-	background-color: #FCFCFB;
+	background-color: var(--light-fg-color);
 	border-radius: 11px;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
 }
@@ -180,6 +247,8 @@ a:link {
 .card-container{
 	width: 95vw;
 	margin: 0 auto;
+	background-color: var(--light-fg-color);
+	border-radius: 11px;
 }
 
 .card{
@@ -187,7 +256,7 @@ a:link {
 	margin: 0 auto;
 	height: 105vw;
 	position: relative;
-	background-color: #FCFCFB;
+	background-color: var(--light-fg-color);
 	border-radius: 11px 11px 0px 0px;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
 	transition: ease-in-out .5s all;
@@ -404,7 +473,7 @@ a:link {
 }
 
 .load{
-	background-color: var(--main-bg-color);
+	background-color: var(--light-fg-color);
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
