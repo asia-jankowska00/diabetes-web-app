@@ -1,82 +1,119 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<link href="assets/styles.css" media="screen" rel="stylesheet" type="text/css">
-		<meta content="width=device-width, initial-scale=1" name="viewport"/>
-		<script src="https://kit.fontawesome.com/be0fc92df8.js" crossorigin="anonymous"></script>
-		<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet"> 
-		<script src="assets/script.js" defer></script>
-		<title>App</title>
-	</head>
-	
-	<body>
-		<div id="load-screen" class="load">
-			<div class="load-circle">
-				<div class="load-fade"></div>
-			</div>
-			<div class="load-logo"></div>
-			<div class="load-animation"></div>
+
+<head>
+	<meta charset="UTF-8">
+	<link href="assets/styles.css" media="screen" rel="stylesheet" type="text/css">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<script src="https://kit.fontawesome.com/be0fc92df8.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+	<script src="assets/script.js" defer></script>
+	<title>App</title>
+</head>
+
+<body>
+	<div id="load-screen" class="load">
+		<div class="load-circle">
+			<div class="load-fade"></div>
 		</div>
-		
-<!--		<div class="intro">
+		<div class="load-logo"></div>
+		<div class="load-animation"></div>
+	</div>
+
+	<!--		<div class="intro">
 			
 		</div> -->
-		
-		<div id="after-load" class="wrap">
-			<div class="title">
-				<h1>Shopping guide</h1>
+
+	<div id="after-load" class="wrap">
+		<div class="topbar">
+			<h1>
+				Title
+			</h1>
+		</div>
+
+		<nav>
+			<div class="flexbox">
+				<a href="">
+					<div id="recipe-icon">
+						<img src="assets/images/utensils-solid.svg" class="navicon">
+						<p class="navlabel">
+							Recipes
+						</p>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<img src="assets/images/shopping-cart-solid.svg" class="navicon">
+						<p class="navlabel">
+							Shopping Guide
+						</p>
+					</div>
+				</a>
+				<a href="">
+					<div>
+						<img src="assets/images/list-ul-solid.svg" class="navicon">
+						<p class="navlabel">
+							Shopping List
+						</p>
+					</div>
+				</a>
 			</div>
-			
-			<div class="navigation">
-				<div class="center-icon"></div>
-			</div>
-			
-			
-			<div class="tips">
-				<div class="content-container">
-					<h2>Click for tips</h2>
-					<div class="tips-icon-container">
-						<div class="tips-icon"></div>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="content-container">
-					<h2>Grain products</h2>
-					<div class="card-icon-container">
-						<div class="arrow-down"></div>
-					</div>
-				</div>
-				<div class="animation-container">
-					<div class="arrow-next"><div class="arrow-right-icon"></div></div>
-					<div class="arrow-back"><div class="arrow-left-icon"></div></div>
-					<div class="block slide">
-						<div class="image1"></div>
-					</div>
-					<div class="block2 slide2">
-						<div class="image2"></div>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="content-container">
-					<h2>Dairy products</h2>
-					<div class="card-icon-container">
-						<div class="arrow-down"></div>
-					</div>
-				</div>
-				<div class="animation-container">
-					<div class="arrow-next"><div class="arrow-right-icon"></div></div>
-					<div class="arrow-back"><div class="arrow-left-icon"></div></div>
-					<div class="block slide">
-						<div class="image1"></div>
-					</div>
-					<div class="block2 slide2">
-						<div class="image2"></div>
-					</div>
+		</nav>
+
+
+		<div class="tips">
+			<div class="content-container">
+				<h2>Click for tips</h2>
+				<div class="tips-icon-container">
+					<div class="tips-icon"></div>
 				</div>
 			</div>
 		</div>
-	</body>
+		<div class="card">
+			<div class="content-container">
+				<h2>Grain products</h2>
+				<div class="card-icon-container">
+					<div class="arrow-down"></div>
+				</div>
+			</div>
+			<div class="animation-container">
+				<div class="arrow-next">
+					<div class="arrow-right-icon"></div>
+				</div>
+				<div class="arrow-back">
+					<div class="arrow-left-icon"></div>
+				</div>
+				<div class="block slide">
+					<div class="image1"></div>
+				</div>
+				<div class="block2 slide2">
+					<div class="image2"></div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="content-container">
+				<h2>Dairy products</h2>
+				<div class="card-icon-container">
+					<div class="arrow-down"></div>
+				</div>
+			</div>
+			<div class="animation-container">
+				<div class="arrow-next">
+					<div class="arrow-right-icon"></div>
+				</div>
+				<div class="arrow-back">
+					<div class="arrow-left-icon"></div>
+				</div>
+				<div class="block slide">
+					<div class="image1"></div>
+				</div>
+				<div class="block2 slide2">
+					<div class="image2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
 </html>
