@@ -25,15 +25,65 @@ html{
 body{
 	padding: 0;
 	margin: 0;
-	color: var(--main-bg-color);
+	color: var(--main-font-color);
 	font-family: var(--main-font);
 	height: 200vh;
 }
 
 /*  TEXT  */
 
+/* NAVIGATION TEMPLATE */
 
+.topbar {
+	color: var(--main-bg-color);
+	background-color: var(--main-color);
+	margin: 0;
+	padding: 15px;
+	overflow: hidden;
+	position: fixed;
+	top: auto;
+	width: 100%;
+	
+}
 
+.topbar h1 {
+	margin: 0;
+	text-align: center;
+	font: var(--main-font);
+	font-size: 22px;
+	
+}
+
+.navicon {
+	width: 7vw;
+	height: 7vw;
+}
+
+.flexbox {
+	display: flex;
+	font-size: 12px;
+	padding: 10px;
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	
+}
+a:link {
+	text-decoration: none;
+  }
+
+.flexbox div {
+	padding: 10px;
+	text-align: center;
+	margin: 0 auto;
+	width: 115px;
+	color: var(--darker-color);
+}
+
+.flexbox p {
+	margin: 0;
+}
 
 /*  LOAD  */
 #load-screen{
