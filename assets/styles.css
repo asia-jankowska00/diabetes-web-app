@@ -116,6 +116,26 @@ a:link {
 	
 }
 
+h2{
+	margin: 0;
+	color: var(--main-font-color);
+	font-size: 22px;
+	font-weight: 500;
+	text-align: left;
+	padding: 12px 0 0 4vw;
+	display: block;
+	float: left;
+}
+
+
+
+
+
+/*  FOREGROUND ELEMENTS  */
+
+
+
+
 
 
 
