@@ -38,6 +38,31 @@ html, body{
 
 /*  TEXT  */
 
+.topbar h1 {
+	margin: 0;
+	text-align: center;
+	font: var(--main-font);
+	font-size: 22px;
+	font-weight: 500;
+}
+
+h2{
+	margin: 0;
+	color: var(--main-font-color);
+	font-size: 22px;
+	font-weight: 500;
+	text-align: left;
+	padding: 12px 0 0 4vw;
+	display: block;
+	float: left;
+}
+
+
+
+
+
+/*  FOREGROUND ELEMENTS  */
+
 /* NAVIGATION TEMPLATE */
 
 .topbar {
@@ -47,18 +72,10 @@ html, body{
 	padding: 15px;
 	overflow: hidden;
 	position: fixed;
-	top: auto;
+	top: 0;
 	width: 100%;
 	box-shadow: 0 5px 10px rgba(2,0,36,.3);
 	z-index: 11;
-}
-
-.topbar h1 {
-	margin: 0;
-	text-align: center;
-	font: var(--main-font);
-	font-size: 22px;
-	
 }
 
 .navicon {
@@ -88,6 +105,7 @@ a:link {
 	margin: 0 auto;
 	width: 115px;
 	color: var(--darker-color);
+	justify-content: space-between;
 }
 
 .flexbox p {
@@ -96,14 +114,6 @@ a:link {
 
 #recipe-icon:target {
 	
-}
-h1{
-	margin: 0;
-	color: var(--main-bg-color);
-	font-size: 24px;
-	font-weight: 500;
-	text-align: center;
-	padding: 9px;
 }
 
 h2{
