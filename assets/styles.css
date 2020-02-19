@@ -264,16 +264,6 @@ a:link {
 
 /* ----------------------------------- SLIDESHOW ----------------------------------- */
 
-.animation-container{
-	width: 95vw;
-	height: 90vw;
-	display: block;
-	float: left;
-	position: absolute;
-	bottom: 0;
-	background-color: #DCDCDC;
-}
-
 .block{
 	width: 95vw;
 	height: 90vw;
@@ -356,12 +346,29 @@ a:link {
 }
 
 
+/* ----------------------------------- JS FUNCTIONS ----------------------------------- */
 
+.card-minimized{
+	height: 64px;
+}
 
+.animation-container{
+	width: 95vw;
+	height: 90vw;
+	display: block;
+	float: left;
+	
+	background-color: #DCDCDC;
+}
 
+.hidden{
+	display: none;
+	height: 0;
+}
 
-
-
+.arrow-turn{
+	transform: rotate(180deg);
+}
 
 
 
