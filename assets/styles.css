@@ -105,6 +105,7 @@ a:link {
 	margin: 0 auto;
 	width: 115px;
 	color: var(--darker-color);
+	justify-content: space-between;
 }
 
 .flexbox p {
