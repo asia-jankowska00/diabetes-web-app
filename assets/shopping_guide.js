@@ -35,10 +35,36 @@
 */
 
 
+
+
+
+
+
+// TIPS CARD
+
+let tips = document.getElementsByClassName('tips')[0];
+const clicked = document.getElementsByClassName('tips-content-container')[0];
+let exit = document.getElementsByClassName('tips-content-container')[0];
+
+
+
+clicked.addEventListener('click', function(){
+	tips.classList.toggle('tips-expanded')
+	exit.classList.toggle('tips-exit')
+ 	exit.style.transition = "all .3s";
+ 	tips.style.transition = "all .5s";
+})
+
+
+
+
+// CARD EXPANSION
+
 let clickableTabs = document.getElementsByClassName('content-container');
 let cards = document.getElementsByClassName('card');
 let animationContainer = document.getElementsByClassName('animation-container');
-let arrow = document.getElementsByClassName('arrow-down')
+let arrow = document.getElementsByClassName('arrow-down');
+let swipe = document.getElementsByClassName('block');
 
 for (let i = 0; i < clickableTabs.length; i++) {
 	clickableTabs[i].addEventListener('click', function() {
@@ -50,6 +76,7 @@ for (let i = 0; i < clickableTabs.length; i++) {
 		arrow[i].classList.toggle('arrow-turn')
 		animationContainer[i].classList.toggle('hidden')
 		cards[i].classList.toggle('card-minimized')
+/*  		swipe[i].classList.add('slide') */
 	})
 };
 
@@ -61,27 +88,30 @@ for (let i = 0; i < clickableTabs.length; i++) {
 
 
 
+// SLIDESHOW 
 
-
-let cardParameter = [1,1,1];
-let cardId = ["slideshow-1", "slideshow-2", "slideshow-3"]
+let cardIndex = [1,1,1,1,1,1];
+let cardId = ["slideshow-1", "slideshow-2", "slideshow-3", "slideshow-4", "slideshow-5", "slideshow-6"]
 displayCard(1, 0);
 displayCard(1, 1);
 displayCard(1, 2);
+displayCard(1, 3);
+displayCard(1, 4);
+displayCard(1, 5);
 
 function otherCards(n, no) {
-  displayCard(cardParameter[no] += n, no);
+  displayCard(cardIndex[no] += n, no);
 }
 
 function displayCard(n, no) {
   let i;
   let x = document.getElementsByClassName(cardId[no]);
-  if (n > x.length) {cardParameter[no] = 1}    
-  if (n < 1) {cardParameter[no] = x.length}
+  if (n > x.length) {cardIndex[no] = 1}    
+  if (n < 1) {cardIndex[no] = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
   }
-  x[cardParameter[no]-1].style.display = "block";  
+  x[cardIndex[no]-1].style.display = "block";  
 }
 
 
