@@ -22,6 +22,8 @@ let shoppingList = {
         shoppingListItemDeleteBtn = document.createElement('i');
         shoppingListItemDeleteBtn.setAttribute('class', 'fas fa-times');
         shoppingListItemDeleteBtn.addEventListener('click', () => {
+            parent = shoppingListItemDeleteBtn.parentNode;
+            parent.remove();
         })
         // append elements to list item
         shoppingListItem.appendChild(shoppingListItemCheckbox);
@@ -29,6 +31,8 @@ let shoppingList = {
         shoppingListItem.appendChild(shoppingListItemDeleteBtn);
         // append item to shopping list
         this.shoppingListList.appendChild(shoppingListItem);
+
+        // shoppingList.scanList();
     },
     addButtonEvent: function() {
         // add click event listener to add item button
@@ -37,23 +41,27 @@ let shoppingList = {
         }.bind(shoppingList));
     },
     scanList: function() {
-        let checkbox, listItem, deleteButton;
-        for (let i = 0; i < this.shoppingListListChildren.length; i++) {
-            // define current list item
-            listItem = this.shoppingListListChildren[i];
-            // get current list item's checkbox and delete button
-            checkbox = listItem.getElementsByTagName('input')[0];
-            deleteButton = listItem.getElementsByTagName('i')[0];
+        // let checkbox, listItem, deleteButton;
 
-            deleteButton.addEventListener('click', () => {
-                this.deleteItem();
-            })
-        }
+        // for (let i = 0; i < this.shoppingListListChildren.length; i++) {
+        //     // define current list item
+        //     listItem = this.shoppingListListChildren[i];
+        //     // get current list item's checkbox and delete button
+        //     checkbox = listItem.getElementsByTagName('input')[0];
+        //     deleteButton = listItem.getElementsByTagName('i')[0];
+
+        //     deleteButton.addEventListener('click', this.deleteItem)
+        //     // 
+        // }
+        // console.log(listItem)
     },
-    deleteItem: function() {
-        listItem.remove();
-        this.scanList();
-        console.log('deleted')
+    deleteItem: function(i) {
+        // listItem.remove();
+        // this.shoppingListListChildren[i].remove();
+        // console.log('deleted')
+        // this.scanList();
+        
+
     }
 }
 
@@ -62,7 +70,7 @@ let shoppingList = {
 function init() {
     shoppingList.selectElements()
     shoppingList.addButtonEvent()
-    shoppingList.scanList()
+    // shoppingList.scanList()
 }
 
 init()
