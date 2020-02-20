@@ -21,6 +21,7 @@ let shoppingList = {
         // delete button
         shoppingListItemDeleteBtn = document.createElement('i');
         shoppingListItemDeleteBtn.setAttribute('class', 'fas fa-times');
+        // add delete functionality to button
         shoppingListItemDeleteBtn.addEventListener('click', () => {
             parent = shoppingListItemDeleteBtn.parentNode;
             parent.remove();
@@ -40,28 +41,8 @@ let shoppingList = {
             this.createItem();
         }.bind(shoppingList));
     },
-    scanList: function() {
-        // let checkbox, listItem, deleteButton;
-
-        // for (let i = 0; i < this.shoppingListListChildren.length; i++) {
-        //     // define current list item
-        //     listItem = this.shoppingListListChildren[i];
-        //     // get current list item's checkbox and delete button
-        //     checkbox = listItem.getElementsByTagName('input')[0];
-        //     deleteButton = listItem.getElementsByTagName('i')[0];
-
-        //     deleteButton.addEventListener('click', this.deleteItem)
-        //     // 
-        // }
-        // console.log(listItem)
-    },
-    deleteItem: function(i) {
-        // listItem.remove();
-        // this.shoppingListListChildren[i].remove();
-        // console.log('deleted')
-        // this.scanList();
+    clearList: function() {
         
-
     }
 }
 

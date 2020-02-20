@@ -38,6 +38,7 @@
 let clickableTabs = document.getElementsByClassName('content-container');
 let cards = document.getElementsByClassName('card');
 let animationContainer = document.getElementsByClassName('animation-container');
+let arrow = document.getElementsByClassName('arrow-down')
 
 for (let i = 0; i < clickableTabs.length; i++) {
 	clickableTabs[i].addEventListener('click', function() {
@@ -46,6 +47,7 @@ for (let i = 0; i < clickableTabs.length; i++) {
 		// 		clickableTabs[i].nextElementSibling.classList.toggle('hidden')
 		// 	}
 		// }
+		arrow[i].classList.toggle('arrow-turn')
 		animationContainer[i].classList.toggle('hidden')
 		cards[i].classList.toggle('card-minimized')
 	})
