@@ -24,10 +24,10 @@
 	:root {
 	  --main-color: #e11b22; /* red */
 	  --darkest-color: #191c27; /* dark grey */
-	  --darker-color: #1F1F1F; /* lighter grey */
-	  --dark-color: #0D0D0D; /* light grey */
+	  --darker-color: #4a4a4a; /* border grey */
+	  --dark-color: #272727; /* background color */
 	  --light-color: #F4F3F2; /* lightest grey */
-	  --light-fg-color: #121212; /* black */
+	  --light-fg-color: #393939; /* black */
 	  --main-font-color: #FCFCFB; /* white */
 	  
   }
@@ -37,8 +37,8 @@
   }
   
   .flexbox{
-	  background-color: var(--light-fg-color);
-	  border: 1px solid var(--darker-color);
+	  background-color: var(--light-fg-color) !important;
+	  border: 1px solid var(--darker-color) !important;
   }
   
   .navicon{
@@ -78,11 +78,11 @@
   }
   
   .load-fade{
-	  background: -webkit-linear-gradient(rgba(13,13,13,1) 20%, rgba(13,13,13,0) 100%) !important;
-	  top: -10% !important;
+	  background: -webkit-linear-gradient(rgba(39, 39, 39, 1) 20%, rgba(39, 39, 39, 0) 100%) !important;
+	  top: 14% !important;
 	  left: 55% !important;
-	  width: 96% !important;
-	  height: 140% !important;
+	  width: 77% !important;
+	  height: 80% !important;
 	  transform-origin: -5% 46% !important;
   }
   
@@ -176,7 +176,7 @@ h2{
 	margin: 0;
 	padding: 12px 0 0;
 	overflow: hidden;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	width: 100%;
 	box-shadow: 0 3px 6px rgba(0, 0, 0, .19);
@@ -193,26 +193,26 @@ h2{
 .flexbox {
 	display: flex;
 	font-size: 12px;
-	padding: 10px;
 	overflow: hidden;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	height: 70px;
+	padding-top: 15px;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
 	z-index: 11;
 	background: var(--dark-color);
 	justify-content: space-between;
 }
 
-a:link {
+a {
 	text-decoration: none;
+	width: 33.33%;
   }
 
 .flexbox div {
-	padding: 10px;
 	text-align: center;
 	margin: 0 auto;
-	width: 115px;
 	color: var(--darker-color);
 
 }
@@ -221,6 +221,7 @@ a:link {
 	margin: 0;
 	color: #000;
 	opacity: 0.5;
+	width: 100%;
 }
 
 #recipe-icon:target {
@@ -281,6 +282,7 @@ div.tips div.card{
 	margin: 0 auto;
 	background-color: var(--light-fg-color);
 	border-radius: 11px;
+	height: 260vw;
 }
 
 .card{
@@ -402,13 +404,13 @@ div.tips div.card{
 
 .slide{
   animation: animationSlides ease-in 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 0;
   transform-origin: 50% 50%;
 }
 
 .slide2{
   animation: animationSlides2 ease-in 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 0;
   transform-origin: 50% 50%;
 }
 
@@ -456,9 +458,6 @@ div.tips div.card{
 .animation-container{
 	width: 95vw;
 	height: 90vw;
-	display: block;
-	float: left;
-	
 	background-color: #DCDCDC;
 }
 
