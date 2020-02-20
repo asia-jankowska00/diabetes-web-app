@@ -54,12 +54,14 @@
 	  border: 1px solid var(--darker-color);
   }
   
+/*
   div.card div.content-container{
 	  border-top: 1px solid var(--darker-color);
 	  border-right: 1px solid var(--darker-color);
 	  border-left: 1px solid var(--darker-color);
 	  border-radius: 11px 11px 0px 0px;
   }
+*/
   
   .arrow-down{
 	  filter: invert(1);
@@ -73,6 +75,31 @@
   .topbar{
 	  border-bottom: 1px solid var(--main-color);
 	  background-color: var(--light-fg-color) !important;
+  }
+  
+  .load-fade{
+	  background: -webkit-linear-gradient(rgba(13,13,13,1) 20%, rgba(13,13,13,0) 100%) !important;
+	  top: -10% !important;
+	  left: 55% !important;
+	  width: 96% !important;
+	  height: 140% !important;
+	  transform-origin: -5% 46% !important;
+  }
+  
+  .load{
+	  background-color: var(--dark-color) !important;
+  }
+  
+  .load-logo{
+	  background: url(images/logo2-dark.svg) !important;
+	  background-size: 76% !important;
+	  background-position: center !important;
+	  background-repeat: no-repeat !important;
+	  width: 100vw !important;
+	  height: 38vw !important;
+	  margin: 0 auto !important;
+	  bottom: 0 !important;
+	  position: absolute !important;
   }
   
 }
@@ -220,6 +247,11 @@ a:link {
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
 }
 
+div.tips div.card{
+	border-radius: 11px;
+	border-top: none;
+}
+
 .content-container{
 	display: block;
 	height: 60px;
@@ -252,7 +284,7 @@ a:link {
 }
 
 .card{
-	width: 95vw;
+	width: 100%;
 	margin: 0 auto;
 	height: 105vw;
 	position: relative;
@@ -260,6 +292,7 @@ a:link {
 	border-radius: 11px 11px 0px 0px;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
 	transition: ease-in-out .5s all;
+	border-top: 1px solid var(--darker-color);
 }
 
 .card-icon-container{
@@ -289,9 +322,9 @@ a:link {
 	right: 4vw;
 	height: 42px;
 	width: 42px;
-	top: 40vw;
+	top: 55vw;
 	border-radius: 100%;
-	/* z-index: 10; */
+	z-index: 10;
 	background-color: #fff;
 	opacity: .8;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
@@ -303,9 +336,9 @@ a:link {
 	left: 4vw;
 	height: 42px;
 	width: 42px;
-	top: 40vw;
+	top: 55vw;
 	border-radius: 100%;
-	/* z-index: 10; */
+	z-index: 10;
 	background-color: #fff;
 	opacity: .8;
 	box-shadow: 0 -8px 17px rgba(0,0,0,.19);
@@ -416,7 +449,7 @@ a:link {
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
 
 .card-minimized{
-	height: 64px;
+	height: 58px;
 	transition: ease-in-out .5s all;
 }
 
