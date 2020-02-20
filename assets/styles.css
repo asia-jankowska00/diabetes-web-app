@@ -20,7 +20,7 @@
 
 /* ----------------------------------- NIGHT MODE ----------------------------------- */
 
-@media (prefers-color-scheme: dark){
+@media (/* prefers-color-scheme: dark */){
 	:root {
 	  --main-color: #e11b22; /* red */
 	  --darkest-color: #191c27; /* dark grey */
@@ -402,15 +402,24 @@ div.tips div.card{
 	background-repeat: no-repeat;
 }
 
+.image3{
+	height: 100%;
+	width: 100%;
+	background: url(images/food/grain4.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 .slide{
   animation: animationSlides ease-in 2s;
-  animation-iteration-count: 0;
+  animation-iteration-count: 1;
   transform-origin: 50% 50%;
 }
 
 .slide2{
   animation: animationSlides2 ease-in 2s;
-  animation-iteration-count: 0;
+  animation-iteration-count: 1;
   transform-origin: 50% 50%;
 }
 

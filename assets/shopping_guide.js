@@ -61,10 +61,11 @@ for (let i = 0; i < clickableTabs.length; i++) {
 
 
 
-let cardParameter = [1,1];
-let cardId = ["slideshow-1", "slideshow-2"]
+let cardParameter = [1,1,1];
+let cardId = ["slideshow-1", "slideshow-2", "slideshow-3"]
 displayCard(1, 0);
 displayCard(1, 1);
+displayCard(1, 2);
 
 function otherCards(n, no) {
   displayCard(cardParameter[no] += n, no);
@@ -80,8 +81,6 @@ function displayCard(n, no) {
   }
   x[cardParameter[no]-1].style.display = "block";  
 }
-
-
 
 
 
