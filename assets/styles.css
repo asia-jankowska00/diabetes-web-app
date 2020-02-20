@@ -258,6 +258,11 @@ div.tips div.card{
 	height: 60px;
 }
 
+.tips-content-container{
+	display: block;
+	height: 60px;
+}
+
 .tips-icon-container{
 	display: block;
 	float: right;
