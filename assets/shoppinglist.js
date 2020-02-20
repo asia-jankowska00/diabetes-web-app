@@ -17,7 +17,10 @@ let shoppingList = {
         shoppingListItemCheckbox = document.createElement('input');
         shoppingListItemCheckbox.setAttribute('type', 'checkbox');
         // text  value
-        shoppingListItemValue = document.createTextNode(this.inputItemField.value);
+        if (!(this.inputItemField.value === "")){
+            shoppingListItemValue = document.createTextNode(this.inputItemField.value);
+        };
+
         // delete button
         shoppingListItemDeleteBtn = document.createElement('i');
         shoppingListItemDeleteBtn.setAttribute('class', 'fas fa-times');
@@ -25,6 +28,7 @@ let shoppingList = {
         shoppingListItemDeleteBtn.addEventListener('click', () => {
             parent = shoppingListItemDeleteBtn.parentNode;
             parent.remove();
+            console.log('deleted item')
         })
         // append elements to list item
         shoppingListItem.appendChild(shoppingListItemCheckbox);
@@ -33,24 +37,29 @@ let shoppingList = {
         // append item to shopping list
         this.shoppingListList.appendChild(shoppingListItem);
 
-        // shoppingList.scanList();
+        console.log('created item')
     },
-    addButtonEvent: function() {
+    addButtonEventListeners: function() {
         // add click event listener to add item button
         this.addItemBtn.addEventListener('click', function() {
             this.createItem();
         }.bind(shoppingList));
+        
+        this.clearListBtn.addEventListener('click', function() {
+            this.clearList();
+        }.bind(shoppingList));
     },
     clearList: function() {
-        
-    }
+        this.shoppingListList.innerHTML = "";
+        console.log('cleared list')
+    },
 }
 
 
 
 function init() {
     shoppingList.selectElements()
-    shoppingList.addButtonEvent()
+    shoppingList.addButtonEventListeners()
     // shoppingList.scanList()
 }
 
