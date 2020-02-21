@@ -151,6 +151,10 @@ h2{
 	float: left;
 }
 
+h3{
+	font-size: 22px;
+}
+
 div.info-container p{
 	font-size: 14px;
 	width: 66vw;
@@ -235,7 +239,7 @@ a {
 	text-align: center;
 	margin: 0 auto;
 	color: var(--darker-color);
-	padding-right: 1px;
+	height: 46px;
 }
 
 .flexbox p.navlabel {
@@ -247,11 +251,7 @@ a {
     top: -4px;
     font-weight: 500;
 }
-}
 
-#recipe-icon:target {
-	
-}
 
 
 
@@ -541,6 +541,10 @@ div.tips div.card{
 
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
 
+.wrap-hidden{
+	display: none;
+}
+
 .card-minimized{
 	height: 58px;
 	transition: ease-in-out .5s all;
@@ -585,6 +589,7 @@ div.tips div.card{
 	top: 12px;
 	filter: invert(1);
 	opacity: 1 !important;
+	transform: translateX(-1px);
 }
 
 .icon-highlight-active{
@@ -746,7 +751,7 @@ div.tips div.card{
 }
 
 .recipe-one {
-	margin: 100px 25px;
+	margin: 25px 4vw;
 	overflow: hidden;
 }
 
@@ -763,7 +768,7 @@ div.tips div.card{
 }
 
 .box-ingridients{
-	margin: 20px;
+	margin: 20px 0;
 	display: flex;
 }
 

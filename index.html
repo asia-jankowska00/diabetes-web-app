@@ -8,13 +8,15 @@
 	<script src="https://kit.fontawesome.com/be0fc92df8.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
 	<script src="assets/loading-animation.js" defer></script>
+	<script src="assets/shoppinglist.js" defer></script>
 	<script src="assets/shopping_guide.js" defer></script>
+	<script src="assets/navigation.js" defer></script>
 	<title>App</title>
 </head>
 
 <body>
 	
-<!-- -------------------------------- LOADING SCREEN -------------------------------- -->
+<!-- ///////////////////////////////// LOADING SCREEN ///////////////////////////////// -->
 	
 	<div id="load-screen" class="load">
 		<div class="load-circle">
@@ -24,49 +26,43 @@
 		<div class="load-animation"></div>
 	</div>
 	
-<!-- -------------------------------- TUTORIAL -------------------------------- -->
+<!-- ///////////////////////////////// TUTORIAL ///////////////////////////////// -->
 
 <!--<div class="intro">
 			
 	</div> -->
 	
-<!-- -------------------------------- NAVIGATION -------------------------------- -->
+<!-- ///////////////////////////////// NAVIGATION ///////////////////////////////// -->
 	
 	<div class="buffer1"></div>
 	
 	<div class="foreground-elements">
 		<nav>
 			<div class="flexbox">
-				<a href="">
-					<div id="recipe-icon">
-						<div class="icon-highlight-off">
-							<img src="assets/images/utensils-solid.svg" class="navicon">
-						</div>
-						<p class="navlabel">
-							Recipes
-						</p>
+				<div id="recipes">
+					<div id="recipes-highlight" class="icon-highlight-off">
+						<img id="icon-recipes" src="assets/images/utensils-solid.svg" class="navicon">
 					</div>
-				</a>
-				<a href="">
-					<div id="recipe-icon">
-						<div class="icon-highlight-active">
-							<img src="assets/images/shopping-cart-solid.svg" class="navicon-active">
-						</div>
-						<p class="navlabel">
-							Shopping Guide
-						</p>
+					<p class="navlabel">
+						Recipes
+					</p>
+				</div>
+				<div id="shoppingGuide">
+					<div id="guide-highlight" class="icon-highlight-active">
+						<img id="icon-guide" src="assets/images/shopping-cart-solid.svg" class="navicon-active">
 					</div>
-				</a>
-				<a href="">
-					<div id="recipe-icon">
-						<div class="icon-highlight-off">
-							<img src="assets/images/list-ul-solid.svg" class="navicon">
-						</div>
-						<p class="navlabel">
-							Shopping List
-						</p>
+					<p class="navlabel">
+						Shopping Guide
+					</p>
+				</div>
+				<div id="shoppingList">
+					<div id="list-highlight" class="icon-highlight-off">
+						<img id="icon-list" src="assets/images/list-ul-solid.svg" class="navicon">
 					</div>
-				</a>
+					<p class="navlabel">
+						Shopping List
+					</p>
+				</div>
 			</div>
 		</nav>
 	</div>
@@ -76,11 +72,11 @@
 
 
 
-<!-- -------------------------------- SHOPPING GUIDE -------------------------------- -->
+<!-- ///////////////////////////////// SHOPPING GUIDE ///////////////////////////////// -->
 
 	<!-- shopping guide container -->
 	
-	<div id="after-load" class="wrap"> 
+	<div id="shopping-guide-wrap" class="wrap"> 
 		
 	<!-- title bar -->	
 		
@@ -289,11 +285,143 @@ kostfibre og fuldkorn.</p>
 		</div>
 	</div>
 	
-	<!-- -------------------------------- SHOPPING LIST -------------------------------- -->
+	<!-- ///////////////////////////////// SHOPPING LIST ///////////////////////////////// -->
+	<div id="shopping-list-wrap" class="wrap-hidden">
+		
+		<!-- title bar -->	
+		
+		<div class="topbar">
+			<h1>
+				Shopping list
+			</h1>
+		</div>
+		
+		<div class="recipe-one">
+	        <div class="r-one">
+	            <div>
+	                <img class="r-image" src="assets/images/recipes/1.jpeg">
+	            </div>
+	            <h3>Kale salad with rye kernels</h3>
+	            <div class="r-greybox">
+	                <div class="box-ingridients">
+	                    <div class="r-ingredients-one">
+	                        <p>
+	                           <b> Ingredients </b>
+	                        </p>
+	                        <p>
+	                            150 g rye kernels or whole grain rice
+	                        </p>
+	                        <p>
+	                            150 g of fresh kale leaves
+	                        </p>
+	                        <p>
+	                            150 g of edamame beans
+	                        </p>
+	                        <p>
+	                            1 apple (about 100 g)
+	                        </p>
+	                        <p>
+	                            1 red onion (about 100 g)
+	                        </p>
+	                        <p>
+	                            1 tsp. oil
+	                        </p>
+	                        <p>
+	                            ½ tsp. smoked paprika
+	                        </p>
+	                        <p>
+	                            1 pinch of salt
+	                        </p>
+	                        <p>
+	                            50 g almonds
+	                        </p>
+	                        <p>
+	                            50 g salad with a maximum of 17% fat
+	                        </p>
+	                    </div>
+	                    <div class="r-ingredients-two">
+	                        <p>
+	                            <b> Marinade </b>
+	                        </p>
+	                        <p>
+	                            1½ tbsp. oil
+	                        </p>
+	                        <p>
+	                            4 tbsp. apple vinegar
+	                        </p>
+	                        <p>
+	                            2 tsp. honey
+	                        </p>
+	                        <p>
+	                            salt, pepper
+	                        </p>
+	                    </div>
+	                </div>
+	            </div>
+                <div class="r-method">
+                    <p>
+                       <b> Method </b>
+                    </p>
+                    <p>
+                        Boil rye kernels or whole grain rice as directed on the packaging and cool them.
+                    </p>
+                    <p>
+                        Remove the stick from the kale and chop the cabbage very finely.
+                    </p>
+                    <p>
+                        Pour boiling water over the beans and cool them.
+                    </p>
+                    <p>
+                        Cut the apple into thin slices.
+                    </p>
+                    <p>
+                        Halve the onion and cut it into thin strips.
+                    </p>
+                    <p>
+                        Heat the oil - do not smoke it - and add the pepper, salt and almonds. Shake them for a few minutes, so the pepper spreads to the almonds. Cool them down.
+                    </p>
+                    <p>
+                        Mix all ingredients for the marinade.
+                    </p>
+                    <p>
+                        Mix rice or grains together with vegetables and salad and turn in marinade.
+                    </p>
+                    <p>
+                        Chop the almonds roughly and spread them over the salad just before serving.
+                    </p>
+                </div>
+	        </div>
+		</div>
+	</div>
+
 	
 	
+	<!-- ///////////////////////////////// SHOPPING LIST ///////////////////////////////// -->
+	<div id="recipes-wrap" class="wrap-hidden">
+		
+		<!-- title bar -->	
+		
+		<div class="topbar">
+			<h1>
+				Shopping list
+			</h1>
+		</div>
+		
+		<div id="shopping-list" class="shopping-list">
+
+	        <input type="text" id="input-item-field">
+	        <button id="add-item-btn"><i class="fas fa-plus"></i></button>
+	        <button id="clear-list-btn">Clear list</button>
 	
-	<!-- -------------------------------- RECIPES -------------------------------- -->
+	        <ul id="shopping-list-list">
+	            <li class="shopping-list-item"> 
+	            	<input type="checkbox"> Example Item <i class="fas fa-times"></i>
+	            </li>
+	        </ul>
+	    </div>
+
+		
+	</div>
 	
 	
 </body>

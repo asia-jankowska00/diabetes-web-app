@@ -53,7 +53,7 @@ clicked.addEventListener('click', function(){
 	expandedTips.classList.toggle('hidden');
 	tips.classList.toggle('tips-minimized')
 	exit.classList.toggle('tips-exit')
- 	exit.style.transition = "all .3s";
+ 	exit.style.transition = "all .9s";
  	
 })
 
