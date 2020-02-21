@@ -1,8 +1,8 @@
 const loadScreen = document.getElementById('load-screen')
 
 window.addEventListener('DOMContentLoaded', (event) => {
-//     console.log('DOM fully loaded and parsed');
-    setTimeout(function () {
+    console.log('DOM fully loaded and parsed');
+    // setTimeout(function () {
 	loadScreen.classList.add('hidden');
-	     }, 900000)
+	    // }, 3000)
 });
