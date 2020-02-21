@@ -739,6 +739,37 @@ div.tips div.card{
 
 #preload-01 { background: url(images/exit-icon.svg) no-repeat -9999px -9999px; }
 
+/* ----------------------------------- RECIPES ----------------------------------- */
+
+.all-recipes{
+	background-color: white;
+}
+
+.recipe-one {
+	margin: 100px 25px;
+	overflow: hidden;
+}
+
+.r-image{
+	height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.r-greybox{
+	background-color: #E8E7E6;
+}
+
+.box-ingridients{
+	margin: 20px;
+	display: flex;
+}
+
+.r-ingredients-one{
+	margin-right: 15px;;
+}
 
 
 
