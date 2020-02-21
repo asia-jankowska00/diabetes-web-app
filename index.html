@@ -32,15 +32,16 @@
 	
 <!-- -------------------------------- NAVIGATION -------------------------------- -->
 	
+	<div class="buffer1"></div>
+	
 	<div class="foreground-elements">
-		
-		<div class="buffer"></div>
-
 		<nav>
 			<div class="flexbox">
 				<a href="">
 					<div id="recipe-icon">
-						<img src="assets/images/utensils-solid.svg" class="navicon">
+						<div class="icon-highlight-off">
+							<img src="assets/images/utensils-solid.svg" class="navicon">
+						</div>
 						<p class="navlabel">
 							Recipes
 						</p>
@@ -48,7 +49,9 @@
 				</a>
 				<a href="">
 					<div id="recipe-icon">
-						<img src="assets/images/shopping-cart-solid.svg" class="navicon">
+						<div class="icon-highlight-active">
+							<img src="assets/images/shopping-cart-solid.svg" class="navicon-active">
+						</div>
 						<p class="navlabel">
 							Shopping Guide
 						</p>
@@ -56,7 +59,9 @@
 				</a>
 				<a href="">
 					<div id="recipe-icon">
-						<img src="assets/images/list-ul-solid.svg" class="navicon">
+						<div class="icon-highlight-off">
+							<img src="assets/images/list-ul-solid.svg" class="navicon">
+						</div>
 						<p class="navlabel">
 							Shopping List
 						</p>
@@ -87,11 +92,27 @@
 		
 	<!-- tips block -->
 	
-		<div class="tips">
+		<div class="tips tips-minimized">
 			<div class="tips-content-container">
-				<h2>Click for tips</h2>
+				<h2>Useful tips</h2>
 				<div class="tips-icon-container">
 					<div class="tips-icon"></div>
+				</div>
+			</div>
+			<div class="expanding-container hidden">
+				<div class="info-container">
+					<div class="icon-green"></div>
+					<p>Med <strong>Nøglehulsmærket</strong> får du en vare 
+med mindre fedt, sukker og salt, og flere 
+kostfibre og fuldkorn.</p>
+				</div>
+				<div class="info-container">
+					<div class="icon-orange"></div>
+					<p>Med <strong>Fuldkornslogoet</strong> får du en vare med  masser af fuldkorn, mindre fedt, sukker, salt og flere kostfibre.</p>
+				</div>
+				<div class="info-container">
+					<div class="icon-blue"></div>
+					<p><strong>Sødestoffer, der ikke giver blodsukkerstigning:</strong> Aspartam (E 951), cyklamat (E 952), thaumatin (E 957), acesulfam K (E 950), neohesperidin (E 959), sakkarin (E 954), sucralose (E 955), erythritol (E 968), steviol glycosid (E 960).</p>
 				</div>
 			</div>
 		</div>		
@@ -239,8 +260,8 @@
 
 	<!-- sixth card -->
 
-			<div id="card-6" class="card card-minimized">
-				<div class="content-container">
+			<div id="card-6" class="card">
+				<div class="content-container-final">
 					<h2>Juices & Sodas</h2>
 					<div class="card-icon-container">
 						<div id="arrow-3" class="arrow-down"></div>
@@ -263,6 +284,7 @@
 						<div class="image3"></div>
 					</div>
 				</div>
+				<div class="buffer2"></div>
 			</div>
 		</div>
 	</div>
@@ -272,7 +294,6 @@
 	
 	
 	<!-- -------------------------------- RECIPES -------------------------------- -->
-	
 	
 	
 </body>

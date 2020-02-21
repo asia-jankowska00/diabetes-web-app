@@ -44,15 +44,17 @@
 
 let tips = document.getElementsByClassName('tips')[0];
 const clicked = document.getElementsByClassName('tips-content-container')[0];
-let exit = document.getElementsByClassName('tips-content-container')[0];
+let exit = document.getElementsByClassName('tips-icon')[0];
+let expandedTips = document.getElementsByClassName('expanding-container')[0];
 
 
 
 clicked.addEventListener('click', function(){
-	tips.classList.toggle('tips-expanded')
+	expandedTips.classList.toggle('hidden');
+	tips.classList.toggle('tips-minimized')
 	exit.classList.toggle('tips-exit')
  	exit.style.transition = "all .3s";
- 	tips.style.transition = "all .5s";
+ 	
 })
 
 
@@ -65,6 +67,7 @@ let cards = document.getElementsByClassName('card');
 let animationContainer = document.getElementsByClassName('animation-container');
 let arrow = document.getElementsByClassName('arrow-down');
 let swipe = document.getElementsByClassName('block');
+
 
 for (let i = 0; i < clickableTabs.length; i++) {
 	clickableTabs[i].addEventListener('click', function() {
