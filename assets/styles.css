@@ -841,6 +841,10 @@ i.fa-times{
 	background-color: white;
 }
 
+.back-recipes{
+	text-align: center;
+}
+
 .recipe-one {
 	margin: 25px 4vw;
 	overflow: hidden;
@@ -866,6 +870,7 @@ i.fa-times{
 .r-ingredients-one{
 	margin-right: 15px;;
 }
+
 
 
 
