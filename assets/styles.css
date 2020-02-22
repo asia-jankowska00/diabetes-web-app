@@ -539,6 +539,97 @@ div.tips div.card{
 }
 
 
+
+
+
+/* ----------------------------------- SHOPPING LIST ----------------------------------- */
+
+.shopping-list {
+    width: 95vw;
+    min-height: 50vh;
+    margin: 25px auto;
+    border-radius: 11px;
+    background: 
+    var(--light-fg-color);
+    padding: 25px 4vw;
+    box-shadow: 0 -1px 2px rgba(0,0,0,.1);
+}
+
+ul{
+	padding: 0;
+}
+
+li{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 12px 0;
+}
+
+button#add-item-btn{
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    float: right;
+    background: #e11b22;
+	border: none;
+	color: #fff;
+    font-size: 16px;
+    position: relative;
+	right: 0px;
+	top: -40px;
+}
+
+button#clear-list-btn{
+	border: none;
+	background: none;
+	color: var(--darkest-color);
+}
+
+input[type="text"]{
+	height: 40px;
+	width: 100%;
+	border-radius: 40px;
+	border: 2px solid var(--darker-color);
+	padding: 10px;
+	font-size: 16px;
+	background: var(--dark-color);
+}
+
+input[type="checkbox"]{
+	border-radius: 4px;
+	width: 26px;
+	height: 26px;
+	-webkit-appearance: none;
+	border: 1px solid #737272;
+	position: relative;
+	margin-right: 4vw;
+}
+
+input[type="checkbox"]:active, input[type="checkbox"]:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"]:checked {
+	background-color: none;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+
+input[type="checkbox"]:checked:after {
+	content: '\2714';
+	font-size: 40px;
+	position: absolute;
+	top: -14px;
+	left: 1px;
+	color: var(--main-font-color);
+}
+
+i.fa-times{
+	float: right;
+}
+
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
 
 .wrap-hidden{
