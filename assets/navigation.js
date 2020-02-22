@@ -22,8 +22,8 @@ let highlights = ['recipes-highlight', 'guide-highlight', 'list-highlight'];
 
 recipes.addEventListener('click', function(){
 	guideWrap.classList.add('wrap-hidden');
-	listWrap.classList.remove('wrap-hidden');
-	recipesWrap.classList.toggle('wrap-hidden');
+	listWrap.classList.add('wrap-hidden');
+	recipesWrap.classList.remove('wrap-hidden');
 	hRecipes.classList.add('icon-highlight-active');
 	iRecipes.classList.add('navicon-active');
 	hGuide.classList.remove('icon-highlight-active');
@@ -47,8 +47,8 @@ guide.addEventListener('click', function(){
 
 list.addEventListener('click', function(){
 	guideWrap.classList.add('wrap-hidden');
-	listWrap.classList.add('wrap-hidden');
-	recipesWrap.classList.remove('wrap-hidden');
+	listWrap.classList.remove('wrap-hidden');
+	recipesWrap.classList.add('wrap-hidden');
 	hRecipes.classList.remove('icon-highlight-active');
 	iRecipes.classList.remove('navicon-active');
 	hGuide.classList.remove('icon-highlight-active');
