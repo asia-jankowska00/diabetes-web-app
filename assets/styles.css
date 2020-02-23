@@ -933,6 +933,9 @@ i.fa-times{
 .far.fa-heart {
 	font-size: 30px;
 	padding: 6px;
+	
+.back-recipes{
+	text-align: center;
 }
 
 .recipe-one {
@@ -960,6 +963,7 @@ i.fa-times{
 .r-ingredients-one{
 	margin-right: 15px;;
 }
+
 
 
 
