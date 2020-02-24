@@ -15,7 +15,7 @@ const recipesWrapFavorites = document.getElementById('recipes-wrap');
 function addEventListeners() {
     for (let i = 0; i < hearts.length; i++) {
         hearts[i].addEventListener('click', function () {
-            if (hearts[i].dataset.favorite === 'false') {
+            if (hearts[i].dataset.favorite === 'false' || hearts[i].dataset.favorite === '') {
                 hearts[i].dataset.favorite = 'true';
                 console.log('data-favorite set to true');
                 setRedHeart(i)
