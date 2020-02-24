@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="assets/styles.css" media="screen" rel="stylesheet" type="text/css">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<script src="https://kit.fontawesome.com/be0fc92df8.js" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+	<script src="assets/loading-animation.js" defer></script>
+	<script src="assets/shoppinglist.js" defer></script>
+	<script src="assets/shopping_guide.js" defer></script>
+	<script src="assets/navigation.js" defer></script>
+	<title>App</title>
+</head>
+
+<body>
+	
+
+	
+<!-- ///////////////////////////////// NAVIGATION ///////////////////////////////// -->
+	
+	<div class="buffer1"></div>
+	
+	<div class="foreground-elements">
+		<nav>
+			<div class="flexbox">
+				<div id="recipes">
+					<div id="recipes-highlight" class="icon-highlight-off">
+						<img id="icon-recipes" src="assets/images/utensils-solid.svg" class="navicon">
+					</div>
+					<p class="navlabel">
+						Recipes
+					</p>
+				</div>
+				<div id="shoppingGuide">
+					<div id="guide-highlight" class="icon-highlight-active">
+						<img id="icon-guide" src="assets/images/shopping-cart-solid.svg" class="navicon-active">
+					</div>
+					<p class="navlabel">
+						Shopping Guide
+					</p>
+				</div>
+				<div id="shoppingList">
+					<div id="list-highlight" class="icon-highlight-off">
+						<img id="icon-list" src="assets/images/list-ul-solid.svg" class="navicon">
+					</div>
+					<p class="navlabel">
+						Shopping List
+					</p>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+
+
+
+
+
+<!-- ///////////////////////////////// SHOPPING GUIDE ///////////////////////////////// -->
+
+	<!-- shopping guide container -->
+	
+	<div id="shopping-guide-wrap" class="wrap"> 
+		
+	<!-- title bar -->	
+		
+		<div class="topbar">
+			<h1>
+				Shopping guide
+			</h1>
+		</div>
+		
+	
+
+	
+	
+	
+			
+	
+		
+	
+
+	
+	</div>
+	
+	<!-- ///////////////////////////////// RECIPES ///////////////////////////////// -->
+	
+	<!-- recipes container -->
+	
+	<div id="recipes-wrap" class="wrap-hidden">
+		
+		<!-- title bar -->	
+		
+		<div class="topbar">
+			<h1>
+				Recipes
+			</h1>
+		</div>
+		
+		<div class="recipe-one">
+	        <div class="r-one">
+	            <div>
+	                <img class="r-image" src="assets/images/recipes/6.jpg">
+	            </div>
+	            <h3>Hot chocolate</h3>
+	            <div class="r-greybox">
+	                <div class="box-ingridients">
+	                    <div class="r-ingredients-one">
+	                        <p>
+	                           <b> Ingredients </b>
+                            </p>
+	                        <p>
+                                1 DL water
+							</p>
+							<p>
+                                25 g of dark chocolate with at least 70% cocoa
+							</p>
+							<p>
+                                25 g of cocoa
+							</p>
+							<p>
+                                7 parts milk with a maximum of 0.7% fat
+							</p>
+							<p>
+                                sweetener equivalent to 40-50 g sugar
+							</p>
+	                    </div>
+	                    <div class="r-ingredients-two">
+                            <p>
+                                <b> Garnish </b>
+                            </p>
+                            <p>
+                                1 dl milk with a maximum of 0.7% fat
+                            </p>
+							<p>
+								<b> Serving size </b>
+							</p>
+							<p>
+                                4 People
+							</p>
+							
+						</div>
+	                </div>
+	            </div>
+                <div class="r-method">
+                    <p>
+                       <b> Method </b>
+                    </p>
+                    <p>
+                        Heat the water in a saucepan and melt the chocolate in it. Beat the cocoa powder into the mixture. 
+                    </p>
+                    <p>
+                        Add the milk and warm to the boil. Remove from the heat and season with sweetener.
+                    </p>
+                    <p>
+                        Heat the milk for decoration e.g. in microwave and foam it up with a milk frother.
+                    </p>
+				</div>
+                <div class="r-serving">
+                    <p>
+                        <b> Serving </b>
+                    </p>
+                    <p>
+                        Garnish the cocoa with milk foam and serve immediately for a snack eg. for fasteners.
+                    </p>
+                </div>
+                <div class="r-tip">
+                    <p>
+                        <b> Tip </b>
+                    </p>
+                    <p>
+                        You can add cinnamon, vanilla sugar, chopped cardamom or chopped cloves to vary the taste.    
+                    </p>
+                </div>
+                <div class="r-facts">
+                        <p>
+                            <b> Nutrition Facts </b>
+                        </p>
+                        <p>
+                            Pr. person: Energy 570 kJ, Carbohydrate 11 g, Fat 5 g, Carbohydrate per 100 g 6 g 
+                        </p>
+                    </div>
+	        </div>
+		</div>
+		<div class="buffer2"></div>
+	</div>
+
+	
+	
+	<!-- ///////////////////////////////// SHOPPING LIST ///////////////////////////////// -->
+	
+	<!-- shopping list container -->
+	
+	<div id="shopping-list-wrap" class="wrap-hidden">
+		
+		<!-- title bar -->	
+		
+		<div class="topbar">
+			<h1>
+				Shopping list
+			</h1>
+		</div>
+		
+		<div id="shopping-list" class="shopping-list">
+			
+	        <input type="text" id="input-item-field">
+	        <button id="add-item-btn">
+	        	<i class="fas fa-plus"></i>
+	        </button>
+	        <button id="clear-list-btn">Clear list</button>
+	
+	        <ul id="shopping-list-list">
+	            <li class="shopping-list-item"> 
+	            	<input type="checkbox"> Example Item <i class="fas fa-times"></i>
+	            </li>
+	        </ul>
+	    </div>
+	    <div class="buffer2"></div>
+	</div>
+	
+	
+</body>
+
+</html>
