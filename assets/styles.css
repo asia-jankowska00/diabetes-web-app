@@ -627,7 +627,12 @@ input[type="checkbox"]:checked:after {
 }
 
 i.fa-times{
-	float: right;
+	position: absolute;
+	right: 5vw;
+}
+
+.shopping-list-item {
+	position: relative;
 }
 
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
@@ -898,7 +903,7 @@ i.fa-times{
 .recipe-thumbnail img {
 	width: 125%;
 }
-
+/* 
 #recipe1 {
 	background-image: url(assets/images/recipes/1.jpeg);
 }
@@ -916,7 +921,7 @@ i.fa-times{
 }
 #recipe6 {
 	background-image: url(assets/images/recipes/6.jpg);
-}
+} */
 
 .recipe-card h4 {
 	margin-top: 9px;
