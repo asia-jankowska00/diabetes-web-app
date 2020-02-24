@@ -87,6 +87,13 @@ function setOutlineHeart(i) {
     hearts[i].style.color = "black";
 }
 
+
+function moveToFavorites() {
+    // get id from data
+    // save id div's inner html to variable
+    // remove inner html
+}
+
 function onLoad() {
     addEventListeners();
     setFavorites();
