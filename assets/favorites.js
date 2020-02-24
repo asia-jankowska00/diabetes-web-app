@@ -88,9 +88,10 @@ function setOutlineHeart(i) {
 }
 
 function onLoad() {
-    setFavorites();
-    colorHearts()
     addEventListeners();
+    setFavorites();
+    // colorHearts()
+
     // document.addEventListener('load', setFavorites)
 }
 
