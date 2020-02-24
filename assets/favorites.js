@@ -12,9 +12,9 @@ const favoritesPageHearts = favoritesPageContainer.getElementsByClassName('favor
 const recipesWrapFavorites = document.getElementById('recipes-wrap');
 
 
-function addEventListeners()  {
+function addEventListeners() {
     for (let i = 0; i < hearts.length; i++) {
-        hearts[i].addEventListener('click', function() {
+        hearts[i].addEventListener('click', function () {
             if (hearts[i].dataset.favorite === 'false') {
                 hearts[i].dataset.favorite = 'true';
                 console.log('data-favorite set to true');
@@ -22,8 +22,7 @@ function addEventListeners()  {
                 addToFavorites(i)
                 saveFavoriteData()
                 addFavoritesEventListeners()
-            }
-            else {
+            } else {
                 hearts[i].dataset.favorite = 'false';
                 console.log('data-favorite set to false');
                 setOutlineHeart(i)
@@ -38,7 +37,7 @@ function addEventListeners()  {
 
 function addFavoritesEventListeners() {
     for (let i = 0; i < favoritesPageHearts.length; i++) {
-        favoritesPageHearts[i].addEventListener('click', function() {
+        favoritesPageHearts[i].addEventListener('click', function () {
 
             console.log(this)
             let id = this.parentElement.getAttribute('data-id');
@@ -51,7 +50,7 @@ function addFavoritesEventListeners() {
             heartIcon.dataset.favorite = 'false';
             saveFavoriteData()
             console.log(recipe)
-            
+
             // let id = favoritesPageHearts[i].parentElement.getAttribute('data-id');
             // let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
             // recipe.remove();
@@ -64,17 +63,8 @@ function addFavoritesEventListeners() {
 
 
             for (let i = 0; i < hearts.length; i++) {
-        if (hearts[i].dataset.favorite === 'true') {
-            // console.log(hearts[i].dataset.favorite)
-            setRedHeart(i);
-            console.log('set red heart');
-        }
-        else {
-            // console.log(hearts[i].dataset.favorite)
-            setOutlineHeart(i);
-            console.log('set outline heart');
-        }
-    }
+                colorHearts(i)
+            }
         })
     }
 }
@@ -103,30 +93,28 @@ function renderFavoritesPage() {
 
 function colorHearts(i) {
     // for (let i = 0; i < hearts.length; i++) {
-        if (hearts[i].dataset.favorite === 'true') {
-            // console.log(hearts[i].dataset.favorite)
-            setRedHeart(i);
-            console.log('set red heart');
-        }
-        else {
-            // console.log(hearts[i].dataset.favorite)
-            setOutlineHeart(i);
-            console.log('set outline heart');
-        }
+    if (hearts[i].dataset.favorite === 'true') {
+        // console.log(hearts[i].dataset.favorite)
+        setRedHeart(i);
+        console.log('set red heart');
+    } else {
+        // console.log(hearts[i].dataset.favorite)
+        setOutlineHeart(i);
+        console.log('set outline heart');
+    }
     // }
 }
 
 function saveFavoriteData() {
     for (let i = 0; i < hearts.length; i++) {
-            if (hearts[i].dataset.favorite === 'false') {
-                let data = hearts[i].parentElement.getAttribute('data-id');
-                localStorage.setItem(data, 'false');
-            }
-            else {
-                let data = hearts[i].parentElement.getAttribute('data-id');
-                localStorage.setItem(data, 'true');
-            }
+        if (hearts[i].dataset.favorite === 'false') {
+            let data = hearts[i].parentElement.getAttribute('data-id');
+            localStorage.setItem(data, 'false');
+        } else {
+            let data = hearts[i].parentElement.getAttribute('data-id');
+            localStorage.setItem(data, 'true');
         }
+    }
 }
 
 function setRedHeart(i) {
@@ -172,7 +160,7 @@ function removeFromFavorites(i) {
 
 
 function debug() {
-    console.log(favoritesPageContainer.innerHTML) 
+    console.log(favoritesPageContainer.innerHTML)
     console.log(favoritesPageHearts[0].parentElement)
 }
 
