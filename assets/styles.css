@@ -958,6 +958,8 @@ div.favorites-content-container h2{
 
 .recipe-card h4 {
 	margin-top: 9px;
+	font-weight: 400;
+	margin-bottom: 10px;
 }
 
 .recipe-card h6 {
@@ -965,6 +967,18 @@ div.favorites-content-container h2{
 	float: left;
 	width: 50%;
 }
+
+div.recipe-card p {
+	font-size: 12px;
+	float: left;
+	margin: 0;
+}
+
+/*
+.portions{
+	width: 50%;
+}
+*/
 
 .all-recipes{
 	background-color: white;
