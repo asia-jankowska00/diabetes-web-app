@@ -45,7 +45,7 @@
 						<img id="icon-recipes" src="assets/images/utensils-solid.svg" class="navicon">
 					</div>
 					<p class="navlabel">
-						Recipes
+						Inspiration
 					</p>
 				</div>
 				<div id="shoppingGuide">
@@ -301,20 +301,19 @@
 
 		<div class="topbar">
 			<h1>
-				Recipes
+				Inspiration
 			</h1>
 		</div>
 
 		<!--  browse/favorites  -->
-		<div class="favorites-content-container">
-			<h2>
-				Browse Recipes
-			</h2>
-			<h4 id="favorites-label">Favorites</h4>
-			<div class="favorites-icon-container">
+			<div id="favorites-button" class="favorites-icon-container">
+				<h4 id="favorites-label">Favorites</h4>
 				<i class="fas fa-heart"></i>
 			</div>
-		</div>
+		
+		
+		
+		
 
 		<!--  Recipes Cards  -->
 		<div class="flex-container-recipes">
@@ -501,6 +500,32 @@
 
 
 
+
+
+
+
+	<!-- ///////////////////////////////// FAVORITES TAB ///////////////////////////////// -->
+
+	<!-- favorites container -->
+
+	<div id="favorites-wrap" class="wrap-hidden">
+
+		<!-- title bar -->
+
+		<div class="topbar">
+			<h1>
+				Favorites
+			</h1>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
 	<!-- ///////////////////////////////// SHOPPING LIST ///////////////////////////////// -->
 
 	<!-- shopping list container -->
@@ -517,7 +542,7 @@
 
 		<div id="shopping-list" class="shopping-list">
 
-			<input type="text" id="input-item-field">
+			<input type="text" id="input-item-field" placeholder="Add your item of choice">
 			<button id="add-item-btn">
 				<i class="fas fa-plus"></i>
 			</button>
@@ -531,6 +556,10 @@
 		</div>
 		<div class="buffer2"></div>
 	</div>
+	
+
+	
+
 
 
 </body>
