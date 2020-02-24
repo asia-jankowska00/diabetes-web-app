@@ -23,12 +23,6 @@ function addEventListeners()  {
                 saveFavoriteData()
                 addFavoritesEventListeners()
             }
-            // else if (hearts[i].dataset.favorite === '') {
-            //     console.log('data-favorite set to false');
-            //     setOutlineHeart(i)
-            //     saveFavoriteData()
-            //     addFavoritesEventListeners()
-            // }
             else {
                 hearts[i].dataset.favorite = 'false';
                 console.log('data-favorite set to false');
@@ -49,30 +43,15 @@ function addFavoritesEventListeners() {
             console.log(this)
             let id = this.parentElement.getAttribute('data-id');
             console.log(id)
-            let masterRecipe = recipesWrapFavorites.querySelector(`[data-id='${id}']`);
-            console.log(masterRecipe)
-            masterRecipe.setAttribute('data-favorite', 'false');
-                        
-            for (let i = 0; i < hearts.length; i++) {
-                if (hearts[i].dataset.favorite === 'true') {
-                    // console.log(hearts[i].dataset.favorite)
-                    setRedHeart(i);
-                    console.log('set red heart');
-                }
-                else {
-                    // console.log(hearts[i].dataset.favorite)
-                    setOutlineHeart(i);
-                    console.log('set outline heart');
-                }
-            }
-
-
-            saveFavoriteData();
             let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
-            console.log(recipe)
             recipe.remove();
-           
 
+            let masterRecipe = recipesWrapFavorites.querySelector(`[data-id='${id}']`);
+            let heartIcon = masterRecipe.getElementsByTagName('i')[0];
+            heartIcon.dataset.favorite = 'false';
+            saveFavoriteData()
+            console.log(recipe)
+            
             // let id = favoritesPageHearts[i].parentElement.getAttribute('data-id');
             // let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
             // recipe.remove();
@@ -82,6 +61,20 @@ function addFavoritesEventListeners() {
             // console.log(masterRecipe);
             // removeFromFavorites(i)
             // setOutlineHeart(i)
+
+
+            for (let i = 0; i < hearts.length; i++) {
+        if (hearts[i].dataset.favorite === 'true') {
+            // console.log(hearts[i].dataset.favorite)
+            setRedHeart(i);
+            console.log('set red heart');
+        }
+        else {
+            // console.log(hearts[i].dataset.favorite)
+            setOutlineHeart(i);
+            console.log('set outline heart');
+        }
+    }
         })
     }
 }
@@ -173,10 +166,7 @@ function removeFromFavorites(i) {
     let id = hearts[i].parentElement.getAttribute('data-id');
     let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
     console.log(recipe)
-    if (recipe) {
-        recipe.remove();
-    }
-
+    recipe.remove();
     // addFavoritesEventListeners()
 }
 
