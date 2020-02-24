@@ -5,7 +5,7 @@
 // if false, get the whole recipe div (innerhtml) and put it into favs page, and change value to true
 // if true, remove recipe div from favs and change value to false
 
-const hearts = document.getElementsByClassName('far');
+const hearts = document.getElementsByClassName('favorites-heart');
 
 function addEventListeners()  {
     for (let i = 0; i < hearts.length; i++) {
@@ -13,32 +13,85 @@ function addEventListeners()  {
             if (hearts[i].dataset.favorite === 'false') {
                 hearts[i].dataset.favorite = 'true';
                 console.log('data-favorite set to true');
+                setRedHeart(i)
+                saveFavoriteData()
             }
             else {
                 hearts[i].dataset.favorite = 'false';
                 console.log('data-favorite set to false');
+                setOutlineHeart(i)
+                saveFavoriteData()
             }
         })
     }
 }
 
 function setFavorites() {
+    for (let i = 0; i < hearts.length; i++) {
+        // get parent's id
+        let id = hearts[i].parentElement.getAttribute('id');
+        // get corresponding data from localstorage
+        let data = localStorage.getItem(id);
+        // set heart's favorite attr
+        hearts[i].setAttribute('data-favorite', data);
+        console.log('set data attr to ' + hearts[i].dataset.favorite)
+
+        colorHearts()
+
+    }
     // loop through recipes
     // get data-favorite for [i] recipe
     // set data-favorite for [i] recipe
     // getparent
 }
 
-function saveFavoriteData() {
-    // loop through recipes
-    // get [i] recipe's dataset
-    // save it to localstorage
+function colorHearts() {
+    for (let i = 0; i < hearts.length; i++) {
+        if (hearts[i].dataset.favorite === 'true') {
+            // console.log(hearts[i].dataset.favorite)
+            setRedHeart(i);
+            console.log('set red heart');
+        }
+        else {
+            // console.log(hearts[i].dataset.favorite)
+            setOutlineHeart(i);
+            console.log('set outline heart');
+        }
+    }
 }
 
-addEventListeners()
+function saveFavoriteData() {
+    for (let i = 0; i < hearts.length; i++) {
+            if (hearts[i].dataset.favorite === 'false') {
+                let data = hearts[i].parentElement.getAttribute('id');
+                localStorage.setItem(data, 'false');
+            }
+            else {
+                let data = hearts[i].parentElement.getAttribute('id');
+                localStorage.setItem(data, 'true');
+            }
+        }
+}
+
+function setRedHeart(i) {
+    console.log(hearts[i]);
+    hearts[i].classList.remove('far');
+    hearts[i].classList.add('fas');
+    hearts[i].style.color = "red";
+}
+
+function setOutlineHeart(i) {
+    console.log(hearts[i]);
+    hearts[i].classList.remove('fas');
+    hearts[i].classList.add('far');
+    hearts[i].style.color = "black";
+}
 
 function onLoad() {
-    // run addEventListeners
-    // run setFavorites
+    setFavorites();
+    colorHearts()
+    addEventListeners();
+    // document.addEventListener('load', setFavorites)
 }
 
+onLoad()
