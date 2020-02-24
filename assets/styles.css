@@ -971,9 +971,18 @@ div.favorites-content-container h2{
 }
 
 .far.fa-heart, .fas.fa-heart {
-	font-size: 30px;
+	font-size: 24px;
 	padding: 6px;
 	float: right;
+}
+
+.favorites-button-heart{
+    font-size: 20px !important;
+    padding: 6px !important;
+    float: right !important;
+    position: absolute !important;
+    right: 6px !important;
+    top: 4px !important;
 }
 	
 .back-recipes{
