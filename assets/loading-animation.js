@@ -6,3 +6,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	loadScreen.classList.add('hidden');
 	    // }, 3000)
 });
+
+
+
+
+// on page laod, save 'pageLoadedBefore' to localstorage
+
+//tutorial tooltips
+
+// get pageLoadedBefore from locaStorage
+// if it doesnt exist, perform tutorial
