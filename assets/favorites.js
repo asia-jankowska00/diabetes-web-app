@@ -1,7 +1,7 @@
 // add data-favorite attribute to html heart icon with value of true/false
 
 // add heart click event
-// check value of data-favorite / classlist.contains 'heart-favorited'
+// check value of data-favorite
 // if false, get the whole recipe div (innerhtml) and put it into favs page, and change value to true
 // if true, remove recipe div from favs and change value to false
 
@@ -11,19 +11,24 @@ const favoritesPageContainer = document.getElementById('favorites-page-container
 function addEventListeners()  {
     for (let i = 0; i < hearts.length; i++) {
         hearts[i].addEventListener('click', function() {
-            if (hearts[i].dataset.favorite === 'false') {
-                hearts[i].dataset.favorite = 'true';
-                console.log('data-favorite set to true');
-                setRedHeart(i)
-                addToFavorites(i)
-                saveFavoriteData()
-            }
-            else {
+            if (hearts[i].dataset.favorite === 'true') {
                 hearts[i].dataset.favorite = 'false';
                 console.log('data-favorite set to false');
                 setOutlineHeart(i)
                 saveFavoriteData()
+                // addToFavorites(i)
+
             }
+            else {
+                hearts[i].dataset.favorite = 'true';
+                console.log('data-favorite set to true');
+
+                setRedHeart(i)
+                saveFavoriteData()
+                // removeFromFavorites(i)
+            }
+            
+            // colorHearts()
         })
     }
 }
@@ -46,6 +51,19 @@ function setFavorites() {
     // getparent
 }
 
+function saveFavoriteData() {
+    for (let i = 0; i < hearts.length; i++) {
+            if (hearts[i].dataset.favorite === 'false') {
+                let data = hearts[i].parentElement.getAttribute('id');
+                localStorage.setItem(data, 'false');
+            }
+            else {
+                let data = hearts[i].parentElement.getAttribute('id');
+                localStorage.setItem(data, 'true');
+            }
+        }
+}
+
 function colorHearts() {
     for (let i = 0; i < hearts.length; i++) {
         if (hearts[i].dataset.favorite === 'true') {
@@ -61,18 +79,6 @@ function colorHearts() {
     }
 }
 
-function saveFavoriteData() {
-    for (let i = 0; i < hearts.length; i++) {
-            if (hearts[i].dataset.favorite === 'false') {
-                let data = hearts[i].parentElement.getAttribute('id');
-                localStorage.setItem(data, 'false');
-            }
-            else {
-                let data = hearts[i].parentElement.getAttribute('id');
-                localStorage.setItem(data, 'true');
-            }
-        }
-}
 
 function setRedHeart(i) {
     console.log(hearts[i]);
@@ -88,33 +94,34 @@ function setOutlineHeart(i) {
     hearts[i].style.color = "black";
 }
 
-function addToFavorites(i) {
-    // get id from data
-    let id = hearts[i].parentElement.getAttribute('data-id');
-    // save id div's inner html to variable
-    let innerHTML = hearts[i].parentElement.innerHTML;
-    console.log(innerHTML)
-    let textNode = document.createTextNode(innerHTML);
-    // create div with data-id
-    let recipeDiv = document.createElement('div');
-    recipeDiv.setAttribute('data-id', id);
-    recipeDiv.setAttribute('class', 'recipe-card');
-    // insert innerHTML from variable
-    recipeDiv.innerHTML = textNode.textContent;
-    // recipeDiv
-    console.log(recipeDiv)
-    // appendchild to <div class="flex-container-recipes">
-    favoritesPageContainer.appendChild(recipeDiv)
-}
+// function addToFavorites(i) {
+//     // get id from data
+//     let id = hearts[i].parentElement.getAttribute('data-id');
+//     // save id div's inner html to variable
+//     let innerHTML = hearts[i].parentElement.innerHTML;
+//     console.log(innerHTML)
+//     let textNode = document.createTextNode(innerHTML);
+//     // create div with data-id
+//     let recipeDiv = document.createElement('div');
+//     recipeDiv.setAttribute('data-id', id);
+//     recipeDiv.setAttribute('class', 'recipe-card');
+//     // insert innerHTML from variable
+//     recipeDiv.innerHTML = textNode.textContent;
+//     // recipeDiv
+//     console.log(recipeDiv)
+//     // appendchild to <div class="flex-container-recipes">
+//     favoritesPageContainer.appendChild(recipeDiv)
+// }
 
-function removeFromFavorites(i) {
-    // remove inner html
-    hearts[i].parentElement.innerHTM = ""
-}
+// function removeFromFavorites(i) {
+//     let id = hearts[i].parentElement.getAttribute('data-id');
+//     let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
+//     recipe.remove();
+// }
 
 function onLoad() {
     addEventListeners();
-    setFavorites();
+    // setFavorites();
 }
 
 onLoad()
