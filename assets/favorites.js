@@ -6,6 +6,7 @@
 // if true, remove recipe div from favs and change value to false
 
 const hearts = document.getElementsByClassName('favorites-heart');
+const favoritesPageContainer = document.getElementById('favorites-page-container');
 
 function addEventListeners()  {
     for (let i = 0; i < hearts.length; i++) {
@@ -14,6 +15,7 @@ function addEventListeners()  {
                 hearts[i].dataset.favorite = 'true';
                 console.log('data-favorite set to true');
                 setRedHeart(i)
+                addToFavorites(i)
                 saveFavoriteData()
             }
             else {
@@ -29,7 +31,7 @@ function addEventListeners()  {
 function setFavorites() {
     for (let i = 0; i < hearts.length; i++) {
         // get parent's id
-        let id = hearts[i].parentElement.getAttribute('id');
+        let id = hearts[i].parentElement.getAttribute('data-id');
         // get corresponding data from localstorage
         let data = localStorage.getItem(id);
         // set heart's favorite attr
@@ -37,7 +39,6 @@ function setFavorites() {
         console.log('set data attr to ' + hearts[i].dataset.favorite)
 
         colorHearts()
-
     }
     // loop through recipes
     // get data-favorite for [i] recipe
@@ -87,19 +88,33 @@ function setOutlineHeart(i) {
     hearts[i].style.color = "black";
 }
 
-
-function moveToFavorites() {
+function addToFavorites(i) {
     // get id from data
+    let id = hearts[i].parentElement.getAttribute('data-id');
     // save id div's inner html to variable
+    let innerHTML = hearts[i].parentElement.innerHTML;
+    console.log(innerHTML)
+    let textNode = document.createTextNode(innerHTML);
+    // create div with data-id
+    let recipeDiv = document.createElement('div');
+    recipeDiv.setAttribute('data-id', id);
+    recipeDiv.setAttribute('class', 'recipe-card');
+    // insert innerHTML from variable
+    recipeDiv.innerHTML = textNode.textContent;
+    // recipeDiv
+    console.log(recipeDiv)
+    // appendchild to <div class="flex-container-recipes">
+    favoritesPageContainer.appendChild(recipeDiv)
+}
+
+function removeFromFavorites(i) {
     // remove inner html
+    hearts[i].parentElement.innerHTM = ""
 }
 
 function onLoad() {
     addEventListeners();
     setFavorites();
-    // colorHearts()
-
-    // document.addEventListener('load', setFavorites)
 }
 
 onLoad()
