@@ -900,11 +900,11 @@ div.favorites-content-container h2{
 	font-size: 20px;
 }
 
-.fas.fa-heart {
+/* .fas.fa-heart, .far.fa-heart {
 	font-size: 20px;
 	padding-top: 6px;
 	padding-left: 10px;
-}
+} */
 
 .flex-container-recipes {
 	display: flex;
@@ -970,10 +970,11 @@ div.favorites-content-container h2{
 	background-color: white;
 }
 
-.far.fa-heart {
+.far.fa-heart, .fas.fa-heart {
 	font-size: 30px;
 	padding: 6px;
 	float: right;
+}
 	
 .back-recipes{
 	text-align: center;
