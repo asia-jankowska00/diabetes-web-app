@@ -871,15 +871,15 @@ i.fa-times{
 	display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 2vw;
+    padding: 0 1.25vw;
 }
 
 .recipe-card {
 	background-color: var(--light-color);
-    width: 44vw;
-    height: 54vw;
+    width: 46.25vw;
+    min-height: 54vw;
     padding: 2vw;
-    margin: 2vw;
+    margin: 1.25vw;
     box-shadow: 0 0px 10px rgba(0,0,0,.15);
 	border-radius: 5px;
 	
@@ -923,7 +923,9 @@ i.fa-times{
 }
 
 .recipe-card h6 {
-	margin-bottom: 0;
+	margin: 0;
+	float: left;
+	width: 50%;
 }
 
 .all-recipes{
@@ -933,6 +935,7 @@ i.fa-times{
 .far.fa-heart {
 	font-size: 30px;
 	padding: 6px;
+	float: right;
 	
 .back-recipes{
 	text-align: center;
