@@ -18,27 +18,40 @@ let iList = document.getElementById('icon-list');
 let classesToHide = ['wrap-hidden', 'icon-highlight-off'];
 let highlights = ['recipes-highlight', 'guide-highlight', 'list-highlight'];
 
+let favsButton = document.getElementById('favorites-button');
+let favsWrap = document.getElementById('favorites-wrap');
 
 
 recipes.addEventListener('click', function(){
 	guideWrap.classList.add('wrap-hidden');
 	listWrap.classList.add('wrap-hidden');
 	recipesWrap.classList.remove('wrap-hidden');
+	favsWrap.classList.add('wrap-hidden');
 	hRecipes.classList.add('icon-highlight-active');
 	iRecipes.classList.add('navicon-active');
 	hGuide.classList.remove('icon-highlight-active');
+	hGuide.classList.add('icon-highlight-off');
 	iGuide.classList.remove('navicon-active');
-	iGuide.classList.add('navicon');
+	iGuide.classList.add('navicon-guide');
 	hList.classList.remove('icon-highlight-active'); 
 	iList.classList.remove('navicon-active');
+	
+	favsButton.addEventListener('click', function(){
+		favsWrap.classList.remove('wrap-hidden');
+		recipesWrap.classList.add('wrap-hidden');
+});
+
+	
 });
 
 guide.addEventListener('click', function(){
 	guideWrap.classList.remove('wrap-hidden');
 	listWrap.classList.add('wrap-hidden');
 	recipesWrap.classList.add('wrap-hidden');
+	favsWrap.classList.add('wrap-hidden');
 	hRecipes.classList.remove('icon-highlight-active');
 	iRecipes.classList.remove('navicon-active');
+	hGuide.classList.remove('icon-highlight-off');
 	hGuide.classList.add('icon-highlight-active');
 	iGuide.classList.add('navicon-active');
 	hList.classList.remove('icon-highlight-active'); 
@@ -49,11 +62,37 @@ list.addEventListener('click', function(){
 	guideWrap.classList.add('wrap-hidden');
 	listWrap.classList.remove('wrap-hidden');
 	recipesWrap.classList.add('wrap-hidden');
+	favsWrap.classList.add('wrap-hidden');
 	hRecipes.classList.remove('icon-highlight-active');
 	iRecipes.classList.remove('navicon-active');
 	hGuide.classList.remove('icon-highlight-active');
+	hGuide.classList.add('icon-highlight-off');
 	iGuide.classList.remove('navicon-active');
-	iGuide.classList.add('navicon');
+	iGuide.classList.add('navicon-guide');
 	hList.classList.add('icon-highlight-active'); 
 	iList.classList.add('navicon-active');
 });
+
+
+
+
+
+
+favsButton.addEventListener('click', function(){
+	favsWrap.classList.add('wrap-hidden');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

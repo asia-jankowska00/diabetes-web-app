@@ -206,6 +206,15 @@ div.info-container p{
 	top: 12px;
 }
 
+.navicon-guide{
+	width: 23px;
+	height: 23px;
+	position: relative;
+	top: 12px;
+	opacity: 0.5;
+	transform: translateX(-1px)
+}
+
 .icon-highlight-off {
     width: 46px;
     height: 46px;
@@ -626,9 +635,15 @@ input[type="checkbox"]:checked:after {
 	color: var(--main-font-color);
 }
 
+i.fa-plus{
+	position: absolute;
+	top: 30%;
+	left: 34%;
+}
+
 i.fa-times{
 	position: absolute;
-	right: 5vw;
+	right: 4vw;
 }
 
 .shopping-list-item {
@@ -843,40 +858,58 @@ i.fa-times{
 /* ----------------------------------- RECIPES ----------------------------------- */
 
 .favorites-content-container{
-	display: block;
+	align-content: center;
 	height: 15vw;
+}
+
+div.favorites-content-container h2{
+	margin: 0 0 0 2.5vw;
+	padding: 0;
 }
 
 #favorites-label{
 	margin: 0;
-    color: var(--main-font-color);
+    color: #fff;
     font-size: 20px;
     font-weight: 500;
     text-align: left;
-    padding: 15px 0 0 20vw;
     display: block;
     float: left;
 }
 
 .favorites-icon-container{
+	position: fixed;
 	display: block;
 	float: right;
-	width: 42px;
-	height: 42px;
-	border-radius: 100%;
-	margin: 9px 4vw 0 0;
+	height: 40px;
+	border-radius: 100px;
+	margin: 0 2.5vw 0 0;
+	color: #fff;
+	background: var(--main-color);
+	width: 130px;
+	padding-left: 12px;
+	padding-top: 3px;
+	bottom: 100px;
+	right: 2.5vw;
+	cursor: pointer;
+}
+
+.favorites-icon-container h4{
+	color: #fff;
+	font-size: 20px;
 }
 
 .fas.fa-heart {
-	font-size: 30px;
-	padding: 6px;
+	font-size: 20px;
+	padding-top: 6px;
+	padding-left: 10px;
 }
 
 .flex-container-recipes {
 	display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 1.25vw;
+    padding: 2.5vw 1.25vw;
 }
 
 .recipe-card {
@@ -891,7 +924,6 @@ i.fa-times{
 }
 
 .recipe-thumbnail {
-	width: 40vw;
     height: 28vw;
 	border-radius: 5px;
 	background-size: cover;
