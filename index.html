@@ -10,9 +10,9 @@
 	<script src="assets/loading-animation.js" defer></script>
 	<script src="assets/shoppinglist.js" defer></script>
 	<script src="assets/shopping_guide.js" defer></script>
-	<script src="assets/navigation.js" defer></script>
 	<script src="assets/favorites.js" defer></script>
-	<script src="assets/recipe-links.js" defer></script>
+	<script src="assets/navigation.js" defer></script>
+
 	<title>App</title>
 </head>
 
@@ -30,10 +30,9 @@
 
 	<!-- ///////////////////////////////// TUTORIAL ///////////////////////////////// -->
 
-	<div id="tutorial-wrap" class="wrap">
-<div class="dark-overlay">
+	<div id="tutorial-wrap" class="wrap-hidden">
+		<div class="dark-overlay"></div>
 
-</div>
 		<div class="intro-item-container" id="intro1">
 			<div class="intro" id="tutorial-slide-1">
 				<p>
@@ -478,8 +477,8 @@ og plantebaserede produkter</h3>
 
 		<!-- Recipe 1 -->
 
-		<div class="recipe-one wrap-hidden" id="recipe1">
-			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+		<div class="recipe wrap-hidden" id="recipe1">
+			<p class="back-recipes back-to-recipes-btn">Back to recipes</p>
 			<div class="r-one">
 				<div>
 					<img class="r-image" src="assets/images/recipes/1.jpeg">
@@ -579,8 +578,8 @@ og plantebaserede produkter</h3>
 
 		<!-- Recipe 2 -->
 
-		<div class="recipe-one wrap-hidden" id="recipe2">
-			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+		<div class="recipe wrap-hidden" id="recipe2">
+			<p class="back-recipes back-to-recipes-btn">Back to recipes</p>
 	        <div class="r-one">
 	            <div class="back-recipes">
 	                <img class="r-image" src="assets/images/recipes/2.jpeg">
@@ -693,8 +692,8 @@ og plantebaserede produkter</h3>
 
 		<!-- Recipe 3 -->
 
-		<div class="recipe-one wrap-hidden" id="recipe3">
-			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+		<div class="recipe wrap-hidden" id="recipe3">
+			<p class="back-recipes back-to-recipes-btn">Back to recipes</p>
 	        <div class="r-one">
 	            <div>
 	                <img class="r-image" src="assets/images/recipes/3.jpeg">
@@ -864,8 +863,8 @@ og plantebaserede produkter</h3>
 
 		<!-- Recipe 4 -->
 
-		<div class="recipe-one wrap-hidden" id="recipe4">
-			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+		<div class="recipe wrap-hidden" id="recipe4">
+			<p class="back-recipes back-to-recipes-btn">Back to recipes</p>
 	        <div class="r-one">
 	            <div>
 	                <img class="r-image" src="assets/images/recipes/4.jpeg">
@@ -971,8 +970,8 @@ og plantebaserede produkter</h3>
 
 		<!-- Recipe 5 -->
 		
-		<div class="recipe-one wrap-hidden" id="recipe5">
-			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+		<div class="recipe wrap-hidden" id="recipe5">
+			<p class="back-recipes back-to-recipes-btn">Back to recipes</p>
 	        <div class="r-one">
 	            <div>
 	                <img class="r-image" src="assets/images/recipes/5.jpg">
@@ -1123,8 +1122,8 @@ og plantebaserede produkter</h3>
 		
 		<!-- Recipe 6 -->
 		
-		<div class="recipe-one wrap-hidden" id="recipe6">
-			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+		<div class="recipe wrap-hidden" id="recipe6">
+			<p class="back-recipes back-to-recipes-btn">Back to recipes</p>
 	        <div class="r-one">
 	            <div>
 	                <img class="r-image" src="assets/images/recipes/6.jpg">
@@ -1231,7 +1230,7 @@ og plantebaserede produkter</h3>
 			</h1>
 		</div>
 
-		<p class="back-recipes" id="back-to-recipes-btn">Back to recipes</p>
+		<p class="back-recipes" id="favorites-back-to-recipes-btn">Back to recipes</p>
 		<div class="flex-container-recipes" id="favorites-page-container">
 
 		</div>

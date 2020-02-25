@@ -22,7 +22,7 @@ function addEventListeners() {
                 addToFavorites(i)
                 saveFavoriteData()
                 addFavoritesEventListeners()
-                recipeCardsListeners()
+                favoritesRecipeCardsListeners()
             } else {
                 hearts[i].dataset.favorite = 'false';
                 console.log('data-favorite set to false');
@@ -161,12 +161,6 @@ function removeFromFavorites(i) {
     // console.log(recipe)
     recipe.remove();
     // addFavoritesEventListeners()
-}
-
-
-function debug() {
-    console.log(favoritesPageContainer.innerHTML)
-    console.log(favoritesPageHearts[0].parentElement)
 }
 
 function onLoad() {
