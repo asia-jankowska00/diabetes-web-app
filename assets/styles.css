@@ -823,7 +823,7 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:checked:after {
 	content: '\2714';
-	font-size: 40px;
+	font-size: 9.66vw;
 	position: absolute;
 	top: -14px;
 	left: 1px;
