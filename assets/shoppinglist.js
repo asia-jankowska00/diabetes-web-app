@@ -66,10 +66,11 @@ let shoppingList = {
         let shoppingListItemDeleteBtns = this.shoppingListList.getElementsByClassName('fa-times');
         for (let i = 0; i < shoppingListItemDeleteBtns.length; i++) {
             shoppingListItemDeleteBtns[i].addEventListener('click', () =>  {
-                    parent = shoppingListItemDeleteBtns[i].parentNode;
-                    parent.remove();
-                    console.log('deleted item')
-                    this.saveList();
+                // console.log(shoppingListItemDeleteBtns[i])
+                parent = shoppingListItemDeleteBtns[i].parentNode;
+                parent.remove();
+                console.log('deleted item')
+                this.saveList();
             })
         }
     },
@@ -78,13 +79,15 @@ let shoppingList = {
 function init() {
     shoppingList.selectElements()
     //check localStorage if savedList is present
+    // if yes, put it in ul element in html
     if (localStorage.getItem('shoppingListListinnerHTML')) {
         shoppingList.shoppingListList.innerHTML = localStorage.getItem('shoppingListListinnerHTML');
         console.log(shoppingList.shoppingListList.innerHTML);
-        shoppingList.loopDeleteButtons()
+        shoppingList.saveList();
+        shoppingList.loopDeleteButtons();
     };
-    shoppingList.addButtonEventListeners()
-    // if yes, put it in ul
+    shoppingList.addButtonEventListeners();
+
 }
 
 init()
