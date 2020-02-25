@@ -1052,6 +1052,7 @@ div.favorites-content-container h2{
 
 .flex-container-recipes {
 	display: flex;
+	justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     padding: 2.5vw 1.25vw;
@@ -1059,7 +1060,7 @@ div.favorites-content-container h2{
 
 .recipe-card {
 	background-color: var(--light-color);
-    width: 46.25vw;
+    width: 45vw;
     min-height: 54vw;
     padding: 2vw;
     margin: 1.25vw;
