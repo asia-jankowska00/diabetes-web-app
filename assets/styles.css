@@ -793,7 +793,7 @@ i.fa-times{
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
 
 .wrap-hidden{
-	display: none;
+	display: none !important;
 }
 
 .card-minimized{
@@ -1044,11 +1044,9 @@ div.favorites-content-container h2{
 	font-size: 20px;
 }
 
-/* .fas.fa-heart, .far.fa-heart {
-	font-size: 20px;
-	padding-top: 6px;
-	padding-left: 10px;
-} */
+.fas.fa-heart, .far.fa-heart {
+	/* pointer-events: none; */
+}
 
 .flex-container-recipes {
 	display: flex;
