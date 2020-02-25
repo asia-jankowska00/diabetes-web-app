@@ -15,7 +15,7 @@ const recipesWrapFavorites = document.getElementById('recipes-wrap');
 function addEventListeners() {
     for (let i = 0; i < hearts.length; i++) {
         hearts[i].addEventListener('click', function () {
-            if (hearts[i].dataset.favorite === 'false' || hearts[i].dataset.favorite === '') {
+            if (hearts[i].dataset.favorite === 'false' || hearts[i].dataset.favorite === 'null' || hearts[i].dataset.favorite === undefined) {
                 hearts[i].dataset.favorite = 'true';
                 console.log('data-favorite set to true');
                 setRedHeart(i)
@@ -78,7 +78,6 @@ function setFavorites() {
         let id = hearts[i].parentElement.getAttribute('data-id');
         // get corresponding data from localstorage
         let data = localStorage.getItem(id);
-
         // console.log(data)
         
         // set heart's favorite attr
@@ -112,7 +111,7 @@ function colorHearts(i) {
 
 function saveFavoriteData() {
     for (let i = 0; i < hearts.length; i++) {
-        if (hearts[i].dataset.favorite === 'false') {
+        if (hearts[i].dataset.favorite === 'false' || hearts[i].dataset.favorite === 'null' ) {
             let data = hearts[i].parentElement.getAttribute('data-id');
             localStorage.setItem(data, 'false');
         } else {
@@ -159,7 +158,9 @@ function removeFromFavorites(i) {
     let id = hearts[i].parentElement.getAttribute('data-id');
     let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
     // console.log(recipe)
-    recipe.remove();
+    if (recipe) {
+        recipe.remove();
+    }
     // addFavoritesEventListeners()
 }
 
