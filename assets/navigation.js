@@ -22,13 +22,13 @@ let favsButton = document.getElementById('favorites-button');
 let favsWrap = document.getElementById('favorites-wrap');
 
 
-let recipeCards = document.getElementsByClassName('recipe-card');
+
 const recipesOpen = document.getElementsByClassName('recipe');
 const flexContainerRecipes = document.getElementById('flex-container-recipes')
 const backToRecipesFromRecipeBtns = document.getElementsByClassName('back-to-recipes-btn');
 let favoritesBackToRecipesBtn = document.getElementById('favorites-back-to-recipes-btn');
-
-
+let favoritesRecipeCards = favoritesPageContainer.getElementsByClassName('recipe-card');
+let recipeCards = flexContainerRecipes.getElementsByClassName('recipe-card');
 
 recipes.addEventListener('click', function(){
 	guideWrap.classList.add('wrap-hidden');
@@ -66,27 +66,21 @@ recipes.addEventListener('click', function(){
 
 
 function recipeCardsListeners() {
-	recipeCards = document.getElementsByClassName('recipe-card');
+	// recipeCards = document.getElementsByClassName('recipe-card');
     for (let i = 0; i < recipeCards.length; i++) {
         recipeCards[i].addEventListener('click', () => {
-            // exclude hearts from opening the recipe
+			// exclude hearts from opening the recipe
             let noClick = '.fa-heart';
                 if (!event.target.matches(noClick)) {
                     // recipeCards = document.getElementsByClassName('recipe-card');
 					console.log('clicked recipe card')
-						let id = recipeCards[i].dataset.id;
-						if (id) {
-						// .querySelector(`[data-id='${id}']`);
-						let openRecipe = document.getElementById(`${id}`);
-						openRecipe.classList.remove('wrap-hidden');
-						// if(!flexContainerRecipes.classList.contains('wrap-hidden')) {
-							flexContainerRecipes.classList.add('wrap-hidden')
-						// }
-						// if(!favoritesPageContainer.classList.contains('wrap-hidden')) {
-						// 	favoritesPageContainer.classList.add('wrap-hidden')
-						// }
-
-					}
+					let id = recipeCards[i].dataset.id;
+					// if (id) {
+					// .querySelector(`[data-id='${id}']`);
+					let openRecipe = document.getElementById(`${id}`);
+					openRecipe.classList.remove('wrap-hidden');
+					flexContainerRecipes.classList.add('wrap-hidden')
+				// }
                 }
         })
 	}
@@ -101,19 +95,34 @@ function recipeCardsListeners() {
 
 }
 
+recipeCardsListeners()
+
+
+function favoritesRecipeCardsListeners() {
+	for (let i = 0; i < favoritesRecipeCards.length; i++) {
+		favoritesRecipeCards[i].addEventListener('click', () => {
+			// exclude hearts from opening the recipe
+            let noClick = '.fa-heart';
+                if (!event.target.matches(noClick)) {
+                    // recipeCards = document.getElementsByClassName('recipe-card');
+					console.log('clicked recipe card')
+					let id = favoritesRecipeCards[i].dataset.id;
+					let openRecipe = document.getElementById(`${id}`);
+					console.log(openRecipe)
+					openRecipe.classList.remove('wrap-hidden');
+				}
+		})
+}
+}
+
+favoritesRecipeCardsListeners()
+
 function closeAllOpenRecipes() {
     for (let i = 0; i < recipesOpen.length; i++) {
         if (!recipesOpen[i].classList.contains('wrap-hidden'))
         recipesOpen[i].classList.add('wrap-hidden')
     }
 }
-
-recipeCardsListeners()
-
-
-
-
-
 
 guide.addEventListener('click', function(){
 	guideWrap.classList.remove('wrap-hidden');
@@ -152,18 +161,3 @@ list.addEventListener('click', function(){
 // favsButton.addEventListener('click', function(){
 // 	favsWrap.classList.add('wrap-hidden');
 // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

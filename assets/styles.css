@@ -1190,7 +1190,8 @@ div.recipe-card p {
 
 .recipe {
 	margin: 25px 4vw;
-	overflow: hidden;
+	/* overflow: hidden; */
+	z-index: 100 !important;
 }
 
 .r-image{
