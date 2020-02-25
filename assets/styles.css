@@ -1197,31 +1197,31 @@ div.recipe-card p {
 .intro-item-container {
 	width: 100%;
 	position: absolute;
-	bottom: 90px;
+	bottom: 11vh;
 }
 
 #intro2 {
 	position: absolute;
-	right: 40px;
+	right: 11vw;
 }
 
 #intro3 {
 	position: absolute;
-	left: 40px;
+	left: 11vw;
 }
 
 #arrow1 {
 	position: absolute;
-	left: 160px;
+	left: 43vw;
 }
 
 #arrow2 {
 	position: absolute;
-	left: 76px;
+	left: 20vw;
 }
 #arrow3 {
 	position: absolute;
-	left: 252px;
+	left: 68vw;
 }
 
 .arrow-down-tutorial {
