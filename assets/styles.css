@@ -1283,4 +1283,13 @@ div.recipe-card p {
 	z-index: 20;
   }
 
+.dark-overlay {
+	background-color: var(--darkest-color);
+	opacity: .5;
+	position: absolute;
+	bottom: 72px;
+	height: 100vh;
+	width: 100vw;
+} 
+
   
