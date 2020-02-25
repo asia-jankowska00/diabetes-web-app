@@ -149,6 +149,8 @@ for (let i = 0; i < arrowNextNumber; i++){
 			switch(count){
 				case 1: {
 					count = count + 1;
+					slide2.classList.remove('slide-reverse2'); //next
+					slide1.classList.remove('slide-reverse'); //current
 					slide1.classList.remove('slide2');
 		 			slide1.classList.add('slide');
 			 		slide2.classList.add('slide2');
@@ -158,6 +160,8 @@ for (let i = 0; i < arrowNextNumber; i++){
 				break};
 				case 2: {
 					count = 1;
+					slide1.classList.remove('slide-reverse2'); //next
+					slide2.classList.remove('slide-reverse'); //current
 					slide1.classList.remove('slide');
 			 		slide2.classList.remove('slide2');
 					slide2.classList.add('slide');
@@ -177,6 +181,8 @@ for (let i = 0; i < arrowNextNumber; i++){
 			switch(count){
 				case 1: {
 					count = count + 1;
+					slide2.classList.remove('slide-reverse2'); //next
+					slide1.classList.remove('slide-reverse'); //current
 					slide1.classList.remove('slide2');
 		 			slide1.classList.add('slide');
 			 		slide2.classList.add('slide2');
@@ -186,6 +192,8 @@ for (let i = 0; i < arrowNextNumber; i++){
 				break};
 				case 2: {
 					count = count + 1;
+					slide3.classList.remove('slide-reverse2'); //next
+					slide2.classList.remove('slide-reverse'); //current
 					slide1.classList.remove('slide');
 			 		slide2.classList.remove('slide2');
 					slide2.classList.add('slide');
@@ -196,6 +204,8 @@ for (let i = 0; i < arrowNextNumber; i++){
 				break};
 				case 3: {
 					count = 1;
+					slide1.classList.remove('slide-reverse2'); //next
+					slide3.classList.remove('slide-reverse'); //current
 					slide2.classList.remove('slide');
 			 		slide3.classList.remove('slide2');
 					slide3.classList.add('slide');
@@ -216,7 +226,9 @@ for (let i = 0; i < arrowNextNumber; i++){
 			
 			switch(count){
 			case 1: {
-				count = count + 1;
+				count = 2;
+				slide2.classList.remove('slide-reverse2');
+				slide1.classList.remove('slide-reverse');
 				slide4.classList.remove('slide');
 				slide1.classList.remove('slide2');
 	 			slide1.classList.add('slide');
@@ -226,7 +238,9 @@ for (let i = 0; i < arrowNextNumber; i++){
 		 		slide1.style.zIndex = '0';
 			break};
 			case 2: {
-				count = count + 1;
+				count = 3;
+				slide3.classList.remove('slide-reverse2');
+				slide2.classList.remove('slide-reverse');
 				slide1.classList.remove('slide');
 		 		slide2.classList.remove('slide2');
 				slide2.classList.add('slide');
@@ -235,7 +249,9 @@ for (let i = 0; i < arrowNextNumber; i++){
 		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
 			break};
 			case 3: {
-				count = count + 1;
+				count = 4;
+				slide4.classList.remove('slide-reverse2');
+				slide3.classList.remove('slide-reverse');
 				slide2.classList.remove('slide');
 		 		slide3.classList.remove('slide2');
 				slide3.classList.add('slide');
@@ -246,6 +262,8 @@ for (let i = 0; i < arrowNextNumber; i++){
 			break};
 			case 4: {
 				count = 1;
+				slide1.classList.remove('slide-reverse2');
+				slide4.classList.remove('slide-reverse');
 				slide3.classList.remove('slide');
 		 		slide4.classList.remove('slide2');
 				slide4.classList.add('slide');
@@ -304,31 +322,37 @@ for (let i = 0; i < arrowBackNumber; i++){
 		slide4 = siblings[11];
 		
 */
-		/*
-if(length == 9){
+		
+		if(length == 9){
 			
 			slide1 = siblings[5];
 			slide2 = siblings[7];
 			
 			switch(count){
 				case 1: {
-					count = count + 1;
-					slide1.classList.remove('slide2');
-		 			slide1.classList.add('slide');
-			 		slide2.classList.add('slide2');
-			 		slide2.classList.remove('hidden-image');
-			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 1500);
-			 		slide1.style.zIndex = '0';
+					count = 2;
+					slide2.classList.remove('slide'); //next
+			 		slide1.classList.remove('slide2'); //current
+					slide2.classList.remove('slide-reverse2'); //previous
+					slide1.classList.remove('slide-reverse'); //current
+					slide1.classList.add('slide-reverse2'); //current
+		 			slide2.classList.add('slide-reverse'); //next
+		 			slide2.classList.remove('hidden-image'); //next
+		 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
+		 			slide1.style.zIndex = '9'; //current
 				break};
 				case 2: {
 					count = 1;
-					slide1.classList.remove('slide');
-			 		slide2.classList.remove('slide2');
-					slide2.classList.add('slide');
-			 		slide1.classList.add('slide2');
-			 		slide1.classList.remove('hidden-image');
-			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 1500);
-			 		slide1.style.zIndex = '9';
+					slide1.classList.remove('slide'); //next
+			 		slide2.classList.remove('slide2'); //current
+					slide1.classList.remove('slide-reverse2'); //previous
+			 		slide2.classList.remove('slide-reverse'); //current
+					slide2.classList.add('slide-reverse2'); //current
+			 		slide1.classList.add('slide-reverse'); //next
+			 		slide1.classList.remove('hidden-image'); //next
+			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800); //current
+			 		//slide4.classList.add('hidden-image');
+			 		slide1.style.zIndex = '0'; //previous
 				break};
 			};
 		}
@@ -340,39 +364,44 @@ if(length == 9){
 			
 			switch(count){
 				case 1: {
-					count = count + 1;
-					slide1.classList.remove('slide2');
-		 			slide1.classList.add('slide');
-			 		slide2.classList.add('slide2');
-			 		slide2.classList.remove('hidden-image');
-			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 1500);
-			 		slide1.style.zIndex = '0';
+					count = 3;
+					slide3.classList.remove('slide'); //next
+			 		slide1.classList.remove('slide2'); //current
+					slide2.classList.remove('slide-reverse2'); //previous
+					slide1.classList.remove('slide-reverse'); //current
+					slide1.classList.add('slide-reverse2'); //current
+		 			slide3.classList.add('slide-reverse'); //next
+		 			slide3.classList.remove('hidden-image'); //next
+		 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
+		 			slide1.style.zIndex = '9'; //current
 				break};
 				case 2: {
-					count = count + 1;
-					slide1.classList.remove('slide');
-			 		slide2.classList.remove('slide2');
-					slide2.classList.add('slide');
-			 		slide3.classList.add('slide2');
-			 		slide3.classList.remove('hidden-image');
-			 		slide1.classList.add('hidden-image');
-			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 1500);
+					count = 1;
+					slide1.classList.remove('slide'); //next
+			 		slide2.classList.remove('slide2'); //current
+					slide3.classList.remove('slide-reverse2'); //previous
+					slide2.classList.remove('slide-reverse'); //current
+		 			slide2.classList.add('slide-reverse2'); //current
+			 		slide1.classList.add('slide-reverse'); //next
+			 		slide1.classList.remove('hidden-image'); //next
+			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800); //current
 				break};
 				case 3: {
-					count = 1;
-					slide2.classList.remove('slide');
-			 		slide3.classList.remove('slide2');
-					slide3.classList.add('slide');
-			 		slide1.classList.add('slide2');
-			 		slide1.classList.remove('hidden-image');
-			 		slide2.classList.add('hidden-image');
-			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 1500);
-			 		slide1.style.zIndex = '9';
+					count = 2;
+					slide2.classList.remove('slide'); //next
+			 		slide3.classList.remove('slide2'); //current
+					slide1.classList.remove('slide-reverse2'); //previous
+			 		slide3.classList.remove('slide-reverse'); //current
+					slide3.classList.add('slide-reverse2'); //current
+			 		slide2.classList.add('slide-reverse'); //next
+			 		slide2.classList.remove('hidden-image'); //next
+			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800); //current
+			 		slide1.style.zIndex = '0'; //previous
 				break};
 			};
 		}
 		else if(length == 13){
-*/
+
 			
 			slide1 = siblings[5];
 			slide2 = siblings[7];
@@ -382,48 +411,56 @@ if(length == 9){
 			console.log(siblings);
 			
 			switch(count){
-			case 1: {
-				count = 4;
-				slide2.classList.remove('slide-reverse2');
-				slide1.classList.remove('slide-reverse');
-	 			slide1.classList.add('slide-reverse2');
-		 		slide4.classList.add('slide-reverse');
-		 		slide4.classList.remove('hidden-image');
-		 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
-		 		slide1.style.zIndex = '9';
-			break};
-			case 2: {
-				count = count - 1;
-				slide3.classList.remove('slide-reverse2');
-		 		slide2.classList.remove('slide-reverse');
-				slide2.classList.add('slide-reverse2');
-		 		slide1.classList.add('slide-reverse');
-		 		slide1.classList.remove('hidden-image');
-		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
-			break};
-			case 3: {
-				count = count - 1;
-				slide4.classList.remove('slide-reverse2');
-		 		slide3.classList.remove('slide-reverse');
-				slide3.classList.add('slide-reverse2');
-		 		slide2.classList.add('slide-reverse');
-		 		slide2.classList.remove('hidden-image');
-		 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
-		 		//slide3.classList.add('hidden-image');
-			break};
-			case 4: {
-				count = count - 1;
-				slide1.classList.remove('slide-reverse2');
-		 		slide4.classList.remove('slide-reverse');
-				slide4.classList.add('slide-reverse2');
-		 		slide3.classList.add('slide-reverse');
-		 		slide3.classList.remove('hidden-image');
-		 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800);
-		 		//slide4.classList.add('hidden-image');
-		 		slide1.style.zIndex = '0';
-			break};
-		    };
-		/* }; */
+				case 1: {
+					count = 4;
+					slide4.classList.remove('slide'); //next
+			 		slide1.classList.remove('slide2'); //current
+					slide2.classList.remove('slide-reverse2'); //previous
+					slide1.classList.remove('slide-reverse'); //current
+		 			slide1.classList.add('slide-reverse2'); //current
+			 		slide4.classList.add('slide-reverse'); //next
+			 		slide4.classList.remove('hidden-image'); //next
+			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
+			 		slide1.style.zIndex = '9'; //current
+				break};
+				case 2: {
+					count = 1;
+					slide1.classList.remove('slide');
+			 		slide2.classList.remove('slide2');
+					slide3.classList.remove('slide-reverse2');
+			 		slide2.classList.remove('slide-reverse');
+					slide2.classList.add('slide-reverse2');
+			 		slide1.classList.add('slide-reverse');
+			 		slide1.classList.remove('hidden-image');
+			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+				break};
+				case 3: {
+					count = 2;
+					slide2.classList.remove('slide');
+			 		slide3.classList.remove('slide2');
+					slide4.classList.remove('slide-reverse2');
+			 		slide3.classList.remove('slide-reverse');
+					slide3.classList.add('slide-reverse2');
+			 		slide2.classList.add('slide-reverse');
+			 		slide2.classList.remove('hidden-image');
+			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
+			 		//slide3.classList.add('hidden-image');
+				break};
+				case 4: {
+					count = 3;
+					slide3.classList.remove('slide'); //next
+			 		slide4.classList.remove('slide2'); //current
+					slide1.classList.remove('slide-reverse2'); //previous
+			 		slide4.classList.remove('slide-reverse'); //current
+					slide4.classList.add('slide-reverse2'); //current
+			 		slide3.classList.add('slide-reverse'); //next
+			 		slide3.classList.remove('hidden-image'); //next
+			 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800); //current
+			 		//slide4.classList.add('hidden-image');
+			 		slide1.style.zIndex = '0'; //previous
+				break};
+		    	};
+			}; 
 	});
 };
 
