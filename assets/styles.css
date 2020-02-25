@@ -1253,6 +1253,7 @@ div.recipe-card p {
 	width: 70vw;
 	border-radius: 10px;
 	margin: 0 auto;
+	/* position: relative; */
 }
 
 .intro p {
@@ -1261,32 +1262,37 @@ div.recipe-card p {
 
 .intro-item-container {
 	width: 100%;
-	position: absolute;
-	bottom: 11vh;
+	position: relative;
+	z-index: 100;
+	/* bottom: 11vh; */
+}
+
+#intro1 {
+	left: 15vw;
 }
 
 #intro2 {
-	position: absolute;
-	right: 11vw;
+	/* position: absolute; */
+	left: 2vw;
 }
 
 #intro3 {
-	position: absolute;
-	left: 11vw;
+	/* position: absolute; */
+	left: 25vw;
 }
 
 #arrow1 {
 	position: absolute;
-	left: 43vw;
+	left: 30vw;
 }
 
 #arrow2 {
 	position: absolute;
-	left: 20vw;
+	left: 10vw;
 }
 #arrow3 {
 	position: absolute;
-	left: 68vw;
+	left: 54vw;
 }
 
 .arrow-down-tutorial {
@@ -1300,18 +1306,26 @@ div.recipe-card p {
   }
 
   #tutorial-wrap{
-	height: 100vh;
-	width: 100vw;
-	position: fixed;
-	z-index: 20;
-	display: none;
+	bottom: 14vh;
+	/* height: 100vh; */
+	/* width: 100vw; */
+	position: absolute;
+	/* z-index: 10; */
   }
+
+
+
+.tutorial-cross {
+	z-index: 21;
+	position: absolute;
+}
 
 .dark-overlay {
 	background-color: var(--darkest-color);
 	opacity: .5;
+	z-index: 10;
 	position: absolute;
-	bottom: 72px;
+	bottom: -20px;
 	height: 100vh;
 	width: 100vw;
 } 
