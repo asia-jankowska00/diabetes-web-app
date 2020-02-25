@@ -164,21 +164,25 @@ arrowRight.addEventListener('click', function(){
 
 const arrowNext = document.getElementsByClassName('arrow-next'); //all next arrows in an array
 const arrowNextNumber = arrowNext.length; //length of the arrow next array
+const arrowBack = document.getElementsByClassName('arrow-back'); //all back arrows in an array
+const arrowBackNumber = arrowBack.length;
 let slide1;
 let slide2;
 let slide3;
 let slide4;
 var siblings;
+
 	
 
-	for (let i = 0; i < arrowNextNumber; i++){
-		arrowNext[i].addEventListener('click', function(){
-			let parent = arrowNext[i].parentNode;
-			siblings = parent.childNodes; //stores an array of all the sibling elements of the arrow
-console.log(siblings)
+for (let i = 0; i < arrowNextNumber; i++){
+	arrowNext[i].addEventListener('click', function(){
+	let parent = arrowNext[i].parentNode;
+	siblings = parent.childNodes; //stores an array of all the sibling elements of the arrow
+	
+	console.log(siblings)
 		
-		let length = siblings.length;
-// 		alert(length);
+	let length = siblings.length;
+// 	alert(length);
 
 				
 		// [1 = arrow next, 3 = arrow back, 7 <-> 11 = images] (odd numbers)
@@ -194,6 +198,170 @@ console.log(siblings)
 		
 */
 		if(length == 9){
+			
+			slide1 = siblings[5];
+			slide2 = siblings[7];
+			
+			switch(count){
+				case 1: {
+					count = count + 1;
+					slide1.classList.remove('slide2');
+		 			slide1.classList.add('slide');
+			 		slide2.classList.add('slide2');
+			 		slide2.classList.remove('hidden-image');
+			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
+			 		slide1.style.zIndex = '0';
+				break};
+				case 2: {
+					count = 1;
+					slide1.classList.remove('slide');
+			 		slide2.classList.remove('slide2');
+					slide2.classList.add('slide');
+			 		slide1.classList.add('slide2');
+			 		slide1.classList.remove('hidden-image');
+			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+			 		slide1.style.zIndex = '9';
+				break};
+			};
+		}
+		else if(length == 11){
+			
+			slide1 = siblings[5];
+			slide2 = siblings[7];
+			slide3 = siblings[9];
+			
+			switch(count){
+				case 1: {
+					count = count + 1;
+					slide1.classList.remove('slide2');
+		 			slide1.classList.add('slide');
+			 		slide2.classList.add('slide2');
+			 		slide2.classList.remove('hidden-image');
+			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
+			 		slide1.style.zIndex = '0';
+				break};
+				case 2: {
+					count = count + 1;
+					slide1.classList.remove('slide');
+			 		slide2.classList.remove('slide2');
+					slide2.classList.add('slide');
+			 		slide3.classList.add('slide2');
+			 		slide3.classList.remove('hidden-image');
+			 		slide1.classList.add('hidden-image');
+			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+				break};
+				case 3: {
+					count = 1;
+					slide2.classList.remove('slide');
+			 		slide3.classList.remove('slide2');
+					slide3.classList.add('slide');
+			 		slide1.classList.add('slide2');
+			 		slide1.classList.remove('hidden-image');
+			 		slide2.classList.add('hidden-image');
+			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
+			 		slide1.style.zIndex = '9';
+				break};
+			};
+		}
+		else if(length == 13){
+			
+			slide1 = siblings[5];
+			slide2 = siblings[7];
+			slide3 = siblings[9];
+			slide4 = siblings[11];
+			
+			switch(count){
+			case 1: {
+				count = count + 1;
+				slide4.classList.remove('slide');
+				slide1.classList.remove('slide2');
+	 			slide1.classList.add('slide');
+		 		slide2.classList.add('slide2');
+		 		slide2.classList.remove('hidden-image');
+		 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
+		 		slide1.style.zIndex = '0';
+			break};
+			case 2: {
+				count = count + 1;
+				slide1.classList.remove('slide');
+		 		slide2.classList.remove('slide2');
+				slide2.classList.add('slide');
+		 		slide3.classList.add('slide2');
+		 		slide3.classList.remove('hidden-image');
+		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+			break};
+			case 3: {
+				count = count + 1;
+				slide2.classList.remove('slide');
+		 		slide3.classList.remove('slide2');
+				slide3.classList.add('slide');
+		 		slide4.classList.add('slide2');
+		 		slide4.classList.remove('hidden-image');
+		 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
+		 		//slide3.classList.add('hidden-image');
+			break};
+			case 4: {
+				count = 1;
+				slide3.classList.remove('slide');
+		 		slide4.classList.remove('slide2');
+				slide4.classList.add('slide');
+		 		slide1.classList.add('slide2');
+		 		slide1.classList.remove('hidden-image');
+		 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800);
+		 		//slide4.classList.add('hidden-image');
+		 		slide1.style.zIndex = '9';
+			break};
+		    };
+		};
+	});
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for (let i = 0; i < arrowBackNumber; i++){
+	arrowBack[i].addEventListener('click', function(){
+	let parent = arrowBack[i].parentNode;
+	siblings = parent.childNodes; //stores an array of all the sibling elements of the arrow
+	
+	console.log(siblings)
+	console.log(parent)
+		
+	let length = siblings.length;
+// 	alert(length);
+
+				
+		// [1 = arrow next, 3 = arrow back, 7 <-> 11 = images] (odd numbers)
+		
+		//images
+	
+/*
+		slide1 = siblings[5];
+ 		console.log(siblings);
+		slide2 = siblings[7];
+		slide3 = siblings[9];
+		slide4 = siblings[11];
+		
+*/
+		/*
+if(length == 9){
 			
 			slide1 = siblings[5];
 			slide2 = siblings[7];
@@ -260,61 +428,63 @@ console.log(siblings)
 			};
 		}
 		else if(length == 13){
+*/
 			
 			slide1 = siblings[5];
 			slide2 = siblings[7];
 			slide3 = siblings[9];
 			slide4 = siblings[11];
 			
+			console.log(siblings);
+			
 			switch(count){
 			case 1: {
-				count = count + 1;
-				slide4.classList.remove('slide');
-				slide1.classList.remove('slide2');
-	 			slide1.classList.add('slide');
-		 		slide2.classList.add('slide2');
-		 		slide2.classList.remove('hidden-image');
-		 		slide4.classList.add('hidden-image');
-		 		setTimeout(function(){slide1.classList.add('hidden-image')}, 1500);
-		 		slide1.style.zIndex = '0';
+				count = 4;
+				slide2.classList.remove('slide-reverse2');
+				slide1.classList.remove('slide-reverse');
+	 			slide1.classList.add('slide-reverse2');
+		 		slide4.classList.add('slide-reverse');
+		 		slide4.classList.remove('hidden-image');
+		 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
+		 		slide1.style.zIndex = '9';
 			break};
 			case 2: {
-				count = count + 1;
-				slide1.classList.remove('slide');
-		 		slide2.classList.remove('slide2');
-				slide2.classList.add('slide');
-		 		slide3.classList.add('slide2');
-		 		slide3.classList.remove('hidden-image');
-		 		slide1.classList.add('hidden-image');
-		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 1500);
+				count = count - 1;
+				slide3.classList.remove('slide-reverse2');
+		 		slide2.classList.remove('slide-reverse');
+				slide2.classList.add('slide-reverse2');
+		 		slide1.classList.add('slide-reverse');
+		 		slide1.classList.remove('hidden-image');
+		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
 			break};
 			case 3: {
-				count = count + 1;
-				slide2.classList.remove('slide');
-		 		slide3.classList.remove('slide2');
-				slide3.classList.add('slide');
-		 		slide4.classList.add('slide2');
-		 		slide4.classList.remove('hidden-image');
-		 		slide2.classList.add('hidden-image');
-		 		setTimeout(function(){slide3.classList.add('hidden-image')}, 1500);
+				count = count - 1;
+				slide4.classList.remove('slide-reverse2');
+		 		slide3.classList.remove('slide-reverse');
+				slide3.classList.add('slide-reverse2');
+		 		slide2.classList.add('slide-reverse');
+		 		slide2.classList.remove('hidden-image');
+		 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
 		 		//slide3.classList.add('hidden-image');
 			break};
 			case 4: {
-				count = 1;
-				slide3.classList.remove('slide');
-		 		slide4.classList.remove('slide2');
-				slide4.classList.add('slide');
-		 		slide1.classList.add('slide2');
-		 		slide1.classList.remove('hidden-image');
-		 		slide3.classList.add('hidden-image');
-		 		setTimeout(function(){slide4.classList.add('hidden-image')}, 1500);
+				count = count - 1;
+				slide1.classList.remove('slide-reverse2');
+		 		slide4.classList.remove('slide-reverse');
+				slide4.classList.add('slide-reverse2');
+		 		slide3.classList.add('slide-reverse');
+		 		slide3.classList.remove('hidden-image');
+		 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800);
 		 		//slide4.classList.add('hidden-image');
-		 		slide1.style.zIndex = '9';
+		 		slide1.style.zIndex = '0';
 			break};
 		    };
-		};
+		/* }; */
 	});
 };
+
+
+
 
 
 
