@@ -1180,12 +1180,67 @@ div.recipe-card p {
 
 
 
+/* ---------------------------- Tutorials ----------------------------- */
 
 
+.intro{
+	background-color: var(--main-color);
+	padding: 2vw;
+	color: var(--light-fg-color);
+	width: 70vw;
+	border-radius: 10px;
+	margin: 0 auto;
+}
 
+.intro p {
+	font-size: 17px;
+}
 
+.intro-item-container {
+	width: 100%;
+	position: absolute;
+	bottom: 90px;
+}
 
+#intro2 {
+	position: absolute;
+	right: 40px;
+}
 
+#intro3 {
+	position: absolute;
+	left: 40px;
+}
 
+#arrow1 {
+	position: absolute;
+	left: 160px;
+}
 
+#arrow2 {
+	position: absolute;
+	left: 76px;
+}
+#arrow3 {
+	position: absolute;
+	left: 252px;
+}
 
+.arrow-down-tutorial {
+	width: 20px;
+    height: 20px;
+    padding: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid var(--main-color);
+  }
+
+  #tutorial-wrap{
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	z-index: 20;
+  }
+
+  
