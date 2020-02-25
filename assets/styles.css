@@ -1330,4 +1330,35 @@ div.recipe-card p {
 	width: 100vw;
 } 
 
+
+
+
+
+
+
+
+
+
+@media (max-width: 350px) {
+	.topbar{
+		position: relative;
+	}
+	
+	.buffer1{
+		display: none;
+	}
+	
+	
+	
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
   

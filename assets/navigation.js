@@ -14,6 +14,8 @@ let iRecipes = document.getElementById('icon-recipes');
 let iGuide = document.getElementById('icon-guide');
 let iList = document.getElementById('icon-list');
 
+let recipe = document.getElementsByClassName('recipe')[0];
+
 
 let classesToHide = ['wrap-hidden', 'icon-highlight-off'];
 let highlights = ['recipes-highlight', 'guide-highlight', 'list-highlight'];
