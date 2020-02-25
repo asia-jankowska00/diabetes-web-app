@@ -21,6 +21,8 @@ let highlights = ['recipes-highlight', 'guide-highlight', 'list-highlight'];
 let favsButton = document.getElementById('favorites-button');
 let favsWrap = document.getElementById('favorites-wrap');
 
+let backToRecipesBtn = document.getElementById('back-to-recipes-btn');
+
 
 recipes.addEventListener('click', function(){
 	guideWrap.classList.add('wrap-hidden');
@@ -39,9 +41,13 @@ recipes.addEventListener('click', function(){
 	favsButton.addEventListener('click', function(){
 		favsWrap.classList.remove('wrap-hidden');
 		recipesWrap.classList.add('wrap-hidden');
-});
+	});
 
-	
+	backToRecipesBtn.addEventListener('click', function() {
+		favsWrap.classList.add('wrap-hidden');
+		recipesWrap.classList.remove('wrap-hidden');
+	})
+
 });
 
 guide.addEventListener('click', function(){
@@ -76,11 +82,11 @@ list.addEventListener('click', function(){
 
 
 
+// doesnt do anything
 
-
-favsButton.addEventListener('click', function(){
-	favsWrap.classList.add('wrap-hidden');
-});
+// favsButton.addEventListener('click', function(){
+// 	favsWrap.classList.add('wrap-hidden');
+// });
 
 
 

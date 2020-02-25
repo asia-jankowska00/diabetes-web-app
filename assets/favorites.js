@@ -15,13 +15,14 @@ const recipesWrapFavorites = document.getElementById('recipes-wrap');
 function addEventListeners() {
     for (let i = 0; i < hearts.length; i++) {
         hearts[i].addEventListener('click', function () {
-            if (hearts[i].dataset.favorite === 'false') {
+            if (hearts[i].dataset.favorite === 'false' || hearts[i].dataset.favorite === '') {
                 hearts[i].dataset.favorite = 'true';
                 console.log('data-favorite set to true');
                 setRedHeart(i)
                 addToFavorites(i)
                 saveFavoriteData()
                 addFavoritesEventListeners()
+                recipeCardsListeners()
             } else {
                 hearts[i].dataset.favorite = 'false';
                 console.log('data-favorite set to false');
@@ -39,29 +40,31 @@ function addFavoritesEventListeners() {
     for (let i = 0; i < favoritesPageHearts.length; i++) {
         favoritesPageHearts[i].addEventListener('click', function () {
 
-            console.log(this)
+            // get id of clicked recipe
+            // console.log(this)
             let id = this.parentElement.getAttribute('data-id');
-            console.log(id)
+            // console.log(id)
+            // remove clicked recipe
             let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
-            recipe.remove();
+            
+            // prevent "cannot remove property 'remove' of null" error
+            // sometimes multiple listeners of the same kind are applied to recipe element
+            // therefore sometimes the first one fires, removes the element, then the second one fires and cannot find the element anymore
 
+            if (recipe) {
+                recipe.remove();
+            }
+
+            // get corresponding recipe in the recipes lis
             let masterRecipe = recipesWrapFavorites.querySelector(`[data-id='${id}']`);
             let heartIcon = masterRecipe.getElementsByTagName('i')[0];
+            // set the corresponding recipe to favorite = 'false'
             heartIcon.dataset.favorite = 'false';
             saveFavoriteData()
-            console.log(recipe)
 
-            // let id = favoritesPageHearts[i].parentElement.getAttribute('data-id');
-            // let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
-            // recipe.remove();
-
-            // let masterRecipe = recipesWrapFavorites.querySelector(`[data-id='${id}']`);
-            // masterRecipe.dataset.favorite = 'false';
-            // console.log(masterRecipe);
-            // removeFromFavorites(i)
-            // setOutlineHeart(i)
-
-
+            // console.log(recipe) 
+            
+            // recolor hearts according to favorite
             for (let i = 0; i < hearts.length; i++) {
                 colorHearts(i)
             }
@@ -75,7 +78,9 @@ function setFavorites() {
         let id = hearts[i].parentElement.getAttribute('data-id');
         // get corresponding data from localstorage
         let data = localStorage.getItem(id);
-        console.log(data)
+
+        // console.log(data)
+        
         // set heart's favorite attr
         hearts[i].setAttribute('data-favorite', data);
         console.log('set data attr to ' + hearts[i].dataset.favorite)
@@ -118,14 +123,14 @@ function saveFavoriteData() {
 }
 
 function setRedHeart(i) {
-    console.log(hearts[i]);
+    // console.log(hearts[i]);
     hearts[i].classList.remove('far');
     hearts[i].classList.add('fas');
     hearts[i].style.color = "red";
 }
 
 function setOutlineHeart(i) {
-    console.log(hearts[i]);
+    // console.log(hearts[i]);
     hearts[i].classList.remove('fas');
     hearts[i].classList.add('far');
     hearts[i].style.color = "black";
@@ -145,7 +150,7 @@ function addToFavorites(i) {
     // insert innerHTML from variable
     recipeDiv.innerHTML = textNode.textContent;
     // recipeDiv
-    console.log(recipeDiv)
+    // console.log(recipeDiv)
     // appendchild to <div class="flex-container-recipes">
     favoritesPageContainer.appendChild(recipeDiv)
 }
@@ -153,7 +158,7 @@ function addToFavorites(i) {
 function removeFromFavorites(i) {
     let id = hearts[i].parentElement.getAttribute('data-id');
     let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
-    console.log(recipe)
+    // console.log(recipe)
     recipe.remove();
     // addFavoritesEventListeners()
 }

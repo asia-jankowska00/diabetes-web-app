@@ -43,10 +43,12 @@ let shoppingList = {
         // add click event listener to add item button
         this.addItemBtn.addEventListener('click', function() {
             this.createItem();
+            this.saveList();
         }.bind(shoppingList));
         
         this.clearListBtn.addEventListener('click', function() {
             this.clearList();
+            this.saveList();
         }.bind(shoppingList));
     },
     clearList: function() {
@@ -54,18 +56,37 @@ let shoppingList = {
         console.log('cleared list')
     },
     saveList: function() {
-        //get innerHTML of ul
-        // save to localstorage
-    }
+        // get innerHTML of ul
+        shoppingListListinnerHTML = this.shoppingListList.innerHTML;
+        console.log(shoppingListListinnerHTML);
+        // save to localStorage
+        localStorage.setItem('shoppingListListinnerHTML', shoppingListListinnerHTML);
+    },
+    loopDeleteButtons: function() {
+        let shoppingListItemDeleteBtns = this.shoppingListList.getElementsByClassName('fa-times');
+        for (let i = 0; i < shoppingListItemDeleteBtns.length; i++) {
+            shoppingListItemDeleteBtns[i].addEventListener('click', () =>  {
+                // console.log(shoppingListItemDeleteBtns[i])
+                parent = shoppingListItemDeleteBtns[i].parentNode;
+                parent.remove();
+                console.log('deleted item')
+                this.saveList();
+            })
+        }
+    },
 }
-
-
 
 function init() {
     shoppingList.selectElements()
-    shoppingList.addButtonEventListeners()
     //check localStorage if savedList is present
-    // if yes, put it in ul
+    // if yes, put it in ul element in html
+    if (localStorage.getItem('shoppingListListinnerHTML')) {
+        shoppingList.shoppingListList.innerHTML = localStorage.getItem('shoppingListListinnerHTML');
+        console.log(shoppingList.shoppingListList.innerHTML);
+        shoppingList.saveList();
+        shoppingList.loopDeleteButtons();
+    };
+    shoppingList.addButtonEventListeners();
 }
 
 init()

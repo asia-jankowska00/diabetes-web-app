@@ -835,7 +835,7 @@ i.fa-times{
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
 
 .wrap-hidden{
-	display: none;
+	display: none !important;
 }
 
 .card-minimized{
@@ -1086,14 +1086,13 @@ div.favorites-content-container h2{
 	font-size: 20px;
 }
 
-/* .fas.fa-heart, .far.fa-heart {
-	font-size: 20px;
-	padding-top: 6px;
-	padding-left: 10px;
-} */
+.fas.fa-heart, .far.fa-heart {
+	/* pointer-events: none; */
+}
 
 .flex-container-recipes {
 	display: flex;
+	justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     padding: 2.5vw 1.25vw;
@@ -1101,10 +1100,10 @@ div.favorites-content-container h2{
 
 .recipe-card {
 	background-color: var(--light-color);
-    width: 46.25vw;
+    width: 45vw;
     min-height: 54vw;
     padding: 2vw;
-    margin: 1.25vw;
+    margin: 1.25vw 0;
     box-shadow: 0 0px 10px rgba(0,0,0,.15);
 	border-radius: 5px;
 	
@@ -1221,12 +1220,67 @@ div.recipe-card p {
 
 
 
+/* ---------------------------- Tutorials ----------------------------- */
 
 
+.intro{
+	background-color: var(--main-color);
+	padding: 2vw;
+	color: var(--light-fg-color);
+	width: 70vw;
+	border-radius: 10px;
+	margin: 0 auto;
+}
 
+.intro p {
+	font-size: 17px;
+}
 
+.intro-item-container {
+	width: 100%;
+	position: absolute;
+	bottom: 90px;
+}
 
+#intro2 {
+	position: absolute;
+	right: 40px;
+}
 
+#intro3 {
+	position: absolute;
+	left: 40px;
+}
 
+#arrow1 {
+	position: absolute;
+	left: 160px;
+}
 
+#arrow2 {
+	position: absolute;
+	left: 76px;
+}
+#arrow3 {
+	position: absolute;
+	left: 252px;
+}
 
+.arrow-down-tutorial {
+	width: 20px;
+    height: 20px;
+    padding: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid var(--main-color);
+  }
+
+  #tutorial-wrap{
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	z-index: 20;
+  }
+
+  
