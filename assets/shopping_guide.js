@@ -168,7 +168,7 @@ for (let i = 0; i < arrowNextNumber; i++){
 			 		slide1.classList.add('slide2');
 			 		slide1.classList.remove('hidden-image');
 			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
-			 		slide1.style.zIndex = '9';
+			 		slide1.style.zIndex = '1';
 				break};
 			};
 		}
@@ -213,7 +213,7 @@ for (let i = 0; i < arrowNextNumber; i++){
 			 		slide1.classList.remove('hidden-image');
 			 		slide2.classList.add('hidden-image');
 			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
-			 		slide1.style.zIndex = '9';
+			 		slide1.style.zIndex = '1';
 				break};
 			};
 		}
@@ -271,7 +271,7 @@ for (let i = 0; i < arrowNextNumber; i++){
 		 		slide1.classList.remove('hidden-image');
 		 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800);
 		 		//slide4.classList.add('hidden-image');
-		 		slide1.style.zIndex = '9';
+		 		slide1.style.zIndex = '1';
 			break};
 		    };
 		};
@@ -339,7 +339,7 @@ for (let i = 0; i < arrowBackNumber; i++){
 		 			slide2.classList.add('slide-reverse'); //next
 		 			slide2.classList.remove('hidden-image'); //next
 		 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
-		 			slide1.style.zIndex = '9'; //current
+		 			slide1.style.zIndex = '1'; //current
 				break};
 				case 2: {
 					count = 1;
@@ -373,7 +373,7 @@ for (let i = 0; i < arrowBackNumber; i++){
 		 			slide3.classList.add('slide-reverse'); //next
 		 			slide3.classList.remove('hidden-image'); //next
 		 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
-		 			slide1.style.zIndex = '9'; //current
+		 			slide1.style.zIndex = '1'; //current
 				break};
 				case 2: {
 					count = 1;
@@ -421,7 +421,7 @@ for (let i = 0; i < arrowBackNumber; i++){
 			 		slide4.classList.add('slide-reverse'); //next
 			 		slide4.classList.remove('hidden-image'); //next
 			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
-			 		slide1.style.zIndex = '9'; //current
+			 		slide1.style.zIndex = '1'; //current
 				break};
 				case 2: {
 					count = 1;
