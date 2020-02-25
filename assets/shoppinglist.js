@@ -87,7 +87,6 @@ function init() {
         shoppingList.loopDeleteButtons();
     };
     shoppingList.addButtonEventListeners();
-
 }
 
 init()

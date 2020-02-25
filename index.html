@@ -12,6 +12,7 @@
 	<script src="assets/shopping_guide.js" defer></script>
 	<script src="assets/navigation.js" defer></script>
 	<script src="assets/favorites.js" defer></script>
+	<script src="assets/recipe-links.js" defer></script>
 	<title>App</title>
 </head>
 
@@ -337,14 +338,14 @@
 
 
 		<!--  Recipes Cards  -->
-		<div class="flex-container-recipes">
+		<div class="flex-container-recipes" id="flex-container-recipes">
 
 			<div class="recipe-card" data-id="recipe1">
 				<div class="recipe-thumbnail">
 					<img src="assets/images/recipes/1.jpeg">
 				</div>
 				<h4>
-					Recipe Name
+					Kale salad with rye kernels
 				</h4>
 				<h6>
 					Serving Size
@@ -358,7 +359,7 @@
 					<img src="assets/images/recipes/2.jpeg">
 				</div>
 				<h4>
-					Recipe Name
+					Tomato Soup
 				</h4>
 				<h6>
 					Serving Size
@@ -371,7 +372,7 @@
 					<img src="assets/images/recipes/3.jpeg">
 				</div>
 				<h4>
-					Recipe Name
+					Mini pizza
 				</h4>
 				<h6>
 					Serving Size
@@ -383,7 +384,7 @@
 					<img src="assets/images/recipes/4.jpeg">
 				</div>
 				<h4>
-					Recipe Name
+					Chicken friezes with coconut
 				</h4>
 				<h6>
 					Serving Size
@@ -395,7 +396,7 @@
 					<img src="assets/images/recipes/5.jpg">
 				</div>
 				<h4>
-					Recipe Name
+					Spandauer with cream and jam
 				</h4>
 				<h6>
 					Serving Size
@@ -407,7 +408,7 @@
 					<img src="assets/images/recipes/6.jpg">
 				</div>
 				<h4>
-					Recipe Name
+					Hot chocolate
 				</h4>
 				<h6>
 					Serving Size
@@ -420,7 +421,10 @@
 
 		<!--  Expanded Recipe Cards  -->
 
-		<div class="recipe-one">
+		<!-- Recipe 1 -->
+
+		<div class="recipe-one wrap-hidden" id="recipe1">
+			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
 			<div class="r-one">
 				<div>
 					<img class="r-image" src="assets/images/recipes/1.jpeg">
@@ -517,6 +521,640 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Recipe 2 -->
+
+		<div class="recipe-one wrap-hidden" id="recipe2">
+			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+	        <div class="r-one">
+	            <div class="back-recipes">
+	                <img class="r-image" src="assets/images/recipes/2.jpeg">
+	            </div>
+	            <h3>Tomato Soup</h3>
+	            <div class="r-greybox">
+	                <div class="box-ingridients">
+	                    <div class="r-ingredients-one">
+	                        <p>
+	                           <b> Ingredients </b>
+	                        </p>
+	                        <p>
+								½ leeks (about 60 g)
+							</p>
+							<p>
+								1 small carrot (about 50 g)
+							</p>
+							<p>
+								1 slice of cabbage (about 200 g)
+							</p>
+							<p>
+								75 g minced beef with a maximum of 10% fat
+							</p>
+							<p>
+								1 tsp. liquid fat
+							</p>
+							<p>
+								2½ dl vegetable broth
+							</p>
+							<p>
+								½ ds. peeled tomatoes (200 g)
+							</p>
+							<p>
+								½ tbsp. tomato paste, preferably concentrate
+							</p>
+							<p>
+								½ tsp. mild pepper
+							</p>
+							<p>
+								¼ tsp. dried basil
+							</p>
+							<p>
+								salt, pepper
+							</p>
+									
+	                    </div>
+	                    <div class="r-ingredients-two">
+	                        <p>
+	                            <b> Marinade </b>
+	                        </p>
+	                        <p>
+	                            1½ tbsp. oil
+	                        </p>
+	                        <p>
+	                            4 tbsp. apple vinegar
+	                        </p>
+	                        <p>
+	                            2 tsp. honey
+	                        </p>
+	                        <p>
+	                            salt, pepper
+							</p>
+							<p>
+								<b> Serving size </b>
+							</p>
+							<p>
+								1 Person
+							</p>
+							
+						</div>
+	                </div>
+	            </div>
+                <div class="r-method">
+                    <p>
+                       <b> Method </b>
+                    </p>
+                    <p>
+						Cut the leek into thin rings. Cut the carrot into small cubes. Cut the cabbage finely.
+                    </p>
+                    <p>
+						Brown the meat in the fat. Add the vegetables and sweat them. Add the remaining ingredients and cook the soup for 10-15 minutes. Taste the soup for.
+                    </p>
+				</div>
+				<div class="r-serving">
+					<p>
+						<b> Serving </b>
+					</p>
+					<p>
+						Serve tomato soup with whole grain bread.
+					</p>
+				</div>
+				<div class="r-serving">
+					<p>
+						<b> Alternative </b>
+					</p>
+					<p>
+						You can replace the carrot or some of the cabbage with celery.
+					</p>
+				</div>
+				<div class="r-serving">
+					<p>
+						<b> Nutricion Facts </b>
+					</p>
+					<p>
+						Pr. person: Energy 1450 kJ, Carbohydrate 25 g, Fat 14 g, Carbohydrate per 100 g 3 g
+					</p>
+				</div>
+	        </div>
+		</div>
+
+		<!-- Recipe 3 -->
+
+		<div class="recipe-one wrap-hidden" id="recipe3">
+			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+	        <div class="r-one">
+	            <div>
+	                <img class="r-image" src="assets/images/recipes/3.jpeg">
+	            </div>
+	            <h3>Mini pizza</h3>
+	            <div class="r-greybox">
+	                <div class="box-ingridients">
+	                    <div class="r-ingredients-one">
+	                        <p>
+	                           <b> Ingredients </b>
+	                        </p>
+	                        <p>
+                                3½ dl water
+							</p>
+							<p>
+                                ½ hp. yeast (25 g)
+							</p>
+							<p>
+                                2 tsp. oil, like olive oil
+							</p>
+							<p>
+                                1 tsp. salt
+							</p>
+							<p>
+                                100 g white wheat flour
+							</p>
+							<p>
+                                150 g graham flour (2½ dl)
+							</p>
+							<p>
+                                ca. 250 g wheat flour (6 dl)
+                            </p>	
+                            <p>
+                                <b> Fill </b>
+                            </p>
+                            <p>
+                                150 g pastrami in slices
+                            </p>
+                            <p>
+                                5 cherry tomatoes (75 g)
+                            </p>
+                            <p>
+                                1 small green pepper (100 g)
+                            </p>
+                            <p>
+                                Garnish    
+                            </p>
+                            <p>
+                                100 g of grated cheese with a maximum of 17% fat
+                            </p>
+                            <p>
+                                dried oregano
+                            </p>
+	                    </div>
+	                    <div class="r-ingredients-two">
+	                        <p>
+	                            <b> Tomato Sauce </b>
+	                        </p>
+	                        <p>
+                                    1 small onion (50 g)
+	                        </p>
+	                        <p>
+                                    1 carrot (75 g)
+	                        </p>
+	                        <p>
+                                    1 clove of garlic
+	                        </p>
+	                        <p>
+                                    1 tsp. oil
+                            </p>
+                            <p>
+                                    1 ds. peeled tomatoes (400 g)
+                            </p>
+                            <p>
+                                    2 tsp. dried oregano
+                            </p>
+                            <p>
+                                    salt, pepper
+                            </p>
+							<p>
+								<b> Serving size </b>
+							</p>
+							<p>
+                                20 pcs.
+							</p>
+							
+						</div>
+	                </div>
+	            </div>
+                <div class="r-method">
+                    <p>
+                       <b> Method </b>
+                    </p>
+                    <p>
+                        Strain the water and stir the yeast into it. Add the other ingredients to the dough - hold back some of the wheat flour. 
+                    </p>
+                    <p>
+                        Knead the dough well. Cover the dough and allow it to rise slightly for approx. 45 min.
+                    </p>
+				</div>
+				<div class="r-sauce">
+					<p>
+						<b> Tomato Sauce </b>
+					</p>
+					<p>
+                        Arrow the onion and finely chop. Peel the carrot and finely grate. Press the garlic.
+                    </p>
+                    <p>
+                        Put the oil in a pan and lightly heat it up. Add the vegetables and lightly sweat them. 
+                    </p>
+                    <p>
+                        Add the peeled tomatoes and oregano, and simmer the sauce for approx. 20 min. without a lid. 
+                    </p>
+                    <p>
+                        Cool the sauce lightly and season with salt and pepper.
+                    </p>
+				</div>
+				<div class="r-fill">
+					<p>
+						<b> Fill </b>
+					</p>
+					<p>
+                        Cut the pastrami into strips. Cut the cherry tomatoes into slices. Cut the peppers into cubes.
+                    </p>
+                    <p>
+                        Toss the dough and divide it into 20 pieces and roll it into buns.
+                    </p>
+                    <p>
+                        Roll out each bun to small pizza bottoms. Distribute the tomato sauce on the bottoms.
+                    </p>
+                    <p>
+                        Fill the pizzas and sprinkle cheese and oregano on.
+                    </p>
+                    <p>
+                        Bake the mini pizzas at 200ºC for approx. 15 min. on middle oven rack. Cool the pizzas on a baking dish.
+                    </p>
+				</div>
+				<div class="r-serving">
+					<p>
+						<b> Serving </b>
+					</p>
+					<p>
+                        Eat the mini pizzas hot as a lunch dish with vegetables or cold in the lunch box.
+					</p>
+                </div>
+                <div class="r-alternative">
+                    <p>
+                        <b> Alternative </b>
+                    </p>
+                    <p>
+                        Pastrami can be replaced by chicken teas, ham strips, tuna or shrimp. Other vegetables can be used.
+                    </p>
+                </div>
+                <div class="r-alternative">
+                    <p>
+                        <b> Nutrition Facts </b>
+                    </p>
+                    <p>
+                        Packed lunch and dinner, Hot dishes, Snack and snack
+                    </p>
+                    <p>
+                        Pr. pcs .: Energy 550 kJ, Carbohydrate 19 g, Fat 3 g, Carbohydrate per 100 g 22 g    
+                    </p>
+                </div>
+	        </div>
+		</div>
+
+		<!-- Recipe 4 -->
+
+		<div class="recipe-one wrap-hidden" id="recipe4">
+			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+	        <div class="r-one">
+	            <div>
+	                <img class="r-image" src="assets/images/recipes/4.jpeg">
+	            </div>
+	            <h3>Chicken friezes with coconut</h3>
+	            <div class="r-greybox">
+	                <div class="box-ingridients">
+	                    <div class="r-ingredients-one">
+	                        <p>
+	                           <b> Ingredients </b>
+	                        </p>
+	                        <p>
+                                1 onion (55 g)
+							</p>
+							<p>
+                                1 small carrot (45 g)
+							</p>
+							<p>
+                                50 g of edamame beans without pods
+							</p>
+							<p>
+                                200 minced chicken meat maximum 10% fat
+							</p>
+							<p>
+                                ½ tsp. salt
+							</p>
+							<p>
+                                1 egg
+							</p>
+							<p>
+                                ½ dl fine rolled oatmeal (20 g)
+                            </p>	
+                            <p>
+                                ½ dl coconut flour (20 g)
+                            </p>
+                            <p>
+                                1-2 tsp. lime or lemon juice
+                            </p>
+                            <p>
+                                Possibly. 1 tbsp. milk with a maximum of 0.7% fat
+                            </p>
+                            <p>
+                                Pepper
+                            </p>
+                            <p>
+                                2 tsp. liquid fat for frying   
+                            </p>
+	                    </div>
+	                    <div class="r-ingredients-two">
+							<p>
+								<b> Serving size </b>
+							</p>
+							<p>
+                                10 pcs.
+							</p>
+							
+						</div>
+	                </div>
+	            </div>
+                <div class="r-method">
+                    <p>
+                       <b> Method </b>
+                    </p>
+                    <p>
+                        Grate onion and carrot. Pour boiling water over the edamame beans. Roughly chop them. Stir the chicken meat with salt and add the egg.
+                    </p>
+                    <p>
+                        Add all the ingredients except the milk to the farce and stir well. If milk is too firm, add milk. The father benefits from pulling in the refrigerator for approx. ½ hour.
+                    </p>
+                    <p>
+                        Form 10 meatballs, and fry them in the fat for 5-6 minutes. on each side until they are cooked through. Remove the meatballs from the pan when fried.
+                    </p>
+				</div>
+				<div class="r-serving">
+					<p>
+						<b> Serving </b>
+					</p>
+					<p>
+                        Serve Chicken Frikadella with coconut for potatoes, rice or pasta salad and vegetables. You can use the rest of the meatballs as a topping.
+					</p>
+                </div>
+                <div class="r-variation">
+                    <p>
+                        <b> Variation </b>
+                    </p>
+                    <p>
+                        Use other vegetables after the season eg. parsley root, parsnip, celeriac, turnip, spring onion.
+                    </p>
+                    <p>
+                        Use minced pork or veal instead of chicken.
+                    </p>
+                </div>
+                <div class="r-facts">
+                    <p>
+                        <b> Nutrition Facts </b>
+                    </p>
+                    <p>
+                        Pr. pcs .: Energy 325 kJ, Carbohydrate 3 g, Fat 5 g, Carbohydrate per 100 g 7 g    
+                    </p>
+                </div>
+	        </div>
+		</div>
+
+		<!-- Recipe 5 -->
+		
+		<div class="recipe-one wrap-hidden" id="recipe5">
+			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+	        <div class="r-one">
+	            <div>
+	                <img class="r-image" src="assets/images/recipes/5.jpg">
+	            </div>
+	            <h3>Spandauer with cream and jam</h3>
+	            <div class="r-greybox">
+	                <div class="box-ingridients">
+	                    <div class="r-ingredients-one">
+	                        <p>
+	                           <b> Ingredients </b>
+                            </p>
+                            <p>
+                                <b> Dough </b>
+                            </p>
+	                        <p>
+                                2½ dl milk with a maximum of 0.7% fat
+							</p>
+							<p>
+                                1 hp yeast (50 g)
+							</p>
+							<p>
+                                1 egg
+							</p>
+							<p>
+                                50 g liquid margarine
+							</p>
+							<p>
+                                2 tbsp. sugar
+							</p>
+							<p>
+                                ¼ tsp. salt
+							</p>
+							<p>
+                                150 g oatmeal, finely rolled (5 dl)
+                            </p>	
+                            <p>
+                                ca. 350 g wheat flour (approx. 5½ dl)
+                            </p>
+                            <p>
+                                <b>Cream</b>
+                            </p>
+                            <p>
+                                1 egg
+                            </p>
+                            <p>
+                                1 tbsp. corn starch
+                            </p>
+                            <p>
+                                2 parts milk with a maximum of 0.7% fat
+                            </p>
+                            <p>
+                                1 tsp. vanilla sugar
+                            </p>
+                            <p>
+                                sweetener equivalent to 20-25 g of sugar, preferably liquid
+                            </p>
+	                    </div>
+	                    <div class="r-ingredients-two">
+                            <p>
+                                <b> Fill </b>
+                            </p>
+                            <p>
+                                100 g of jam without added sugar eg. Strawberry
+                            </p>
+                            <p>
+                                Garnish
+                            </p>
+                            <p>
+                                Glaze possibly. colored, melted chocolate or icing
+                            </p>
+							<p>
+								<b> Serving size </b>
+							</p>
+							<p>
+                                16 pcs.
+							</p>
+							
+						</div>
+	                </div>
+	            </div>
+                <div class="r-method">
+                    <p>
+                       <b> Method </b>
+                    </p>
+                    <p>
+                        <b>Cream (cook this first)</b>
+                    </p>
+                    <p>
+                        Whisk eggs, cornstarch, milk and vanilla sugar together in a thick-bottomed pan. Bring the mixture to a boil and cook for 1-2 minutes while whipping.
+                    </p>
+                    <p>
+                        Add sweetener, taste and cool cream, covered, in refrigerator.
+                    </p>
+                    <p>
+                        <b>Dough</b>
+                    </p>
+                    <p>
+                        Heat the milk until hand-warm and dissolve the yeast in it. Add eggs, margarine, sugar, salt, oatmeal and most of the wheat flour
+                    </p>
+                    <p>
+                        Knead the dough well and add any. the last wheat flour until the dough is released.
+                    </p>
+                    <p>
+                        Let the dough rest for approx. 5 min.
+                    </p>
+                    <p>
+                        Divide the dough into 16 equal parts and roll it into buns. Press or roll with a rolling pin buns flat (about 10 cm in diameter) and dispense 1 tbsp. cream and 1 tsp. jam on each.
+                    </p>
+                    <p>
+                        Fold the dough together against the filling and place the buns on a baking sheet with baking paper. Allow the buns to rise for approx. 15 min.
+                    </p>
+                    <p>
+                        Bake them at 200⁰ C for approx. 15 min. on the middle or second upper furnace groove. Cool them on a baking rack.
+                    </p>
+                    <p>
+                        If you want to decorate the lobster balls, you can melt approx. 25 g of chocolate in a small plastic microwave oven bag. Cut a very small corner of the bag and sprinkle the chocolate on the buns.
+                    </p>
+                    <p>
+                        You can also make icing of icing and boiling water and decorate it. Color the glaze with fruit color. Alternatively, sprinkle icing over the buns. 
+                    </p>
+				</div>
+                <div class="r-alternative">
+                    <p>
+                        <b> Variation </b>
+                    </p>
+                    <p>
+                        Replace jam with 50 g of dark or light chocolate. You can also use raisins to fill with the cream
+                    </p>
+                </div>
+                <div class="r-tip">
+                    <p>
+                        <b> Tip </b>
+                    </p>
+                    <p>
+                        You can make the cream the day before you bake pie buns. Store in a refrigerator.    
+                    </p>
+                </div>
+                <div class="r-facts">
+                        <p>
+                            <b> Nutrition Facts </b>
+                        </p>
+                        <p>
+                            Pr. pcs .: Energy 725 kJ, Carbohydrate 27 g, Fat 5 g, Carbohydrate per 100 g 36 g    
+                        </p>
+                    </div>
+	        </div>
+		</div>
+		
+		<!-- Recipe 6 -->
+		
+		<div class="recipe-one wrap-hidden" id="recipe6">
+			<p class="back-recipes back-to-recipes-from-recipe-btn">Back to recipes</p>
+	        <div class="r-one">
+	            <div>
+	                <img class="r-image" src="assets/images/recipes/6.jpg">
+	            </div>
+	            <h3>Hot chocolate</h3>
+	            <div class="r-greybox">
+	                <div class="box-ingridients">
+	                    <div class="r-ingredients-one">
+	                        <p>
+	                           <b> Ingredients </b>
+                            </p>
+	                        <p>
+                                1 DL water
+							</p>
+							<p>
+                                25 g of dark chocolate with at least 70% cocoa
+							</p>
+							<p>
+                                25 g of cocoa
+							</p>
+							<p>
+                                7 parts milk with a maximum of 0.7% fat
+							</p>
+							<p>
+                                sweetener equivalent to 40-50 g sugar
+							</p>
+	                    </div>
+	                    <div class="r-ingredients-two">
+                            <p>
+                                <b> Garnish </b>
+                            </p>
+                            <p>
+                                1 dl milk with a maximum of 0.7% fat
+                            </p>
+							<p>
+								<b> Serving size </b>
+							</p>
+							<p>
+                                4 People
+							</p>
+							
+						</div>
+	                </div>
+	            </div>
+                <div class="r-method">
+                    <p>
+                       <b> Method </b>
+                    </p>
+                    <p>
+                        Heat the water in a saucepan and melt the chocolate in it. Beat the cocoa powder into the mixture. 
+                    </p>
+                    <p>
+                        Add the milk and warm to the boil. Remove from the heat and season with sweetener.
+                    </p>
+                    <p>
+                        Heat the milk for decoration e.g. in microwave and foam it up with a milk frother.
+                    </p>
+				</div>
+                <div class="r-serving">
+                    <p>
+                        <b> Serving </b>
+                    </p>
+                    <p>
+                        Garnish the cocoa with milk foam and serve immediately for a snack eg. for fasteners.
+                    </p>
+                </div>
+                <div class="r-tip">
+                    <p>
+                        <b> Tip </b>
+                    </p>
+                    <p>
+                        You can add cinnamon, vanilla sugar, chopped cardamom or chopped cloves to vary the taste.    
+                    </p>
+                </div>
+                <div class="r-facts">
+                        <p>
+                            <b> Nutrition Facts </b>
+                        </p>
+                        <p>
+                            Pr. person: Energy 570 kJ, Carbohydrate 11 g, Fat 5 g, Carbohydrate per 100 g 6 g 
+                        </p>
+                    </div>
+	        </div>
+		</div>
+
 		<div class="buffer2"></div>
 	</div>
 

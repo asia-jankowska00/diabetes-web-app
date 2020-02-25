@@ -22,6 +22,7 @@ function addEventListeners() {
                 addToFavorites(i)
                 saveFavoriteData()
                 addFavoritesEventListeners()
+                recipeCardsListeners()
             } else {
                 hearts[i].dataset.favorite = 'false';
                 console.log('data-favorite set to false');
@@ -47,7 +48,9 @@ function addFavoritesEventListeners() {
             let recipe = favoritesPageContainer.querySelector(`[data-id='${id}']`);
             
             // prevent "cannot remove property 'remove' of null" error
-            // why is it like this, can someone explain
+            // sometimes multiple listeners of the same kind are applied to recipe element
+            // therefore sometimes the first one fires, removes the element, then the second one fires and cannot find the element anymore
+
             if (recipe) {
                 recipe.remove();
             }
