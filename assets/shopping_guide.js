@@ -216,7 +216,9 @@ for (let i = 0; i < arrowNextNumber; i++){
 			
 			switch(count){
 			case 1: {
-				count = count + 1;
+				count = 2;
+				slide2.classList.remove('slide-reverse2');
+				slide1.classList.remove('slide-reverse');
 				slide4.classList.remove('slide');
 				slide1.classList.remove('slide2');
 	 			slide1.classList.add('slide');
@@ -226,7 +228,9 @@ for (let i = 0; i < arrowNextNumber; i++){
 		 		slide1.style.zIndex = '0';
 			break};
 			case 2: {
-				count = count + 1;
+				count = 3;
+				slide3.classList.remove('slide-reverse2');
+				slide2.classList.remove('slide-reverse');
 				slide1.classList.remove('slide');
 		 		slide2.classList.remove('slide2');
 				slide2.classList.add('slide');
@@ -235,7 +239,9 @@ for (let i = 0; i < arrowNextNumber; i++){
 		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
 			break};
 			case 3: {
-				count = count + 1;
+				count = 4;
+				slide4.classList.remove('slide-reverse2');
+				slide3.classList.remove('slide-reverse');
 				slide2.classList.remove('slide');
 		 		slide3.classList.remove('slide2');
 				slide3.classList.add('slide');
@@ -246,6 +252,8 @@ for (let i = 0; i < arrowNextNumber; i++){
 			break};
 			case 4: {
 				count = 1;
+				slide1.classList.remove('slide-reverse2');
+				slide4.classList.remove('slide-reverse');
 				slide3.classList.remove('slide');
 		 		slide4.classList.remove('slide2');
 				slide4.classList.add('slide');
@@ -384,6 +392,8 @@ if(length == 9){
 			switch(count){
 			case 1: {
 				count = 4;
+				slide4.classList.remove('slide');
+		 		slide1.classList.remove('slide2');
 				slide2.classList.remove('slide-reverse2');
 				slide1.classList.remove('slide-reverse');
 	 			slide1.classList.add('slide-reverse2');
@@ -393,7 +403,9 @@ if(length == 9){
 		 		slide1.style.zIndex = '9';
 			break};
 			case 2: {
-				count = count - 1;
+				count = 1;
+				slide1.classList.remove('slide');
+		 		slide2.classList.remove('slide2');
 				slide3.classList.remove('slide-reverse2');
 		 		slide2.classList.remove('slide-reverse');
 				slide2.classList.add('slide-reverse2');
@@ -402,7 +414,9 @@ if(length == 9){
 		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
 			break};
 			case 3: {
-				count = count - 1;
+				count = 2;
+				slide2.classList.remove('slide');
+		 		slide3.classList.remove('slide2');
 				slide4.classList.remove('slide-reverse2');
 		 		slide3.classList.remove('slide-reverse');
 				slide3.classList.add('slide-reverse2');
@@ -412,7 +426,9 @@ if(length == 9){
 		 		//slide3.classList.add('hidden-image');
 			break};
 			case 4: {
-				count = count - 1;
+				count = 3;
+				slide3.classList.remove('slide');
+		 		slide4.classList.remove('slide2');
 				slide1.classList.remove('slide-reverse2');
 		 		slide4.classList.remove('slide-reverse');
 				slide4.classList.add('slide-reverse2');
