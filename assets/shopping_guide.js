@@ -485,8 +485,8 @@ for (let i = 0; i < arrowBackNumber; i++){
 					 		//slide4.classList.add('hidden-image');
 					 		slide1.style.zIndex = '0'; //previous
 						break};
-				    	};
-					}; 
+			    	};
+				}; 
 			break};
 	
 			case false: {
