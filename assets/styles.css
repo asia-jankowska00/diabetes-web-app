@@ -54,14 +54,7 @@
 	  border: 1px solid var(--darker-color);
   }
   
-/*
-  div.card div.content-container{
-	  border-top: 1px solid var(--darker-color);
-	  border-right: 1px solid var(--darker-color);
-	  border-left: 1px solid var(--darker-color);
-	  border-radius: 11px 11px 0px 0px;
-  }
-*/
+
   
   .arrow-down{
 	  filter: invert(1);
@@ -921,17 +914,6 @@ i.fa-times{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* ----------------------------------- LOADING SCREEN ----------------------------------- */
 
 #load-screen{
@@ -1136,25 +1118,6 @@ div.favorites-content-container h2{
 .recipe-thumbnail img {
 	width: 125%;
 }
-/* 
-#recipe1 {
-	background-image: url(assets/images/recipes/1.jpeg);
-}
-#recipe2 {
-	background-image: url(assets/images/recipes/2.jpeg);
-}
-#recipe3 {
-	background-image: url(assets/images/recipes/3.jpeg);
-}
-#recipe4 {
-	background-image: url(assets/images/recipes/4.jpeg);
-}
-#recipe4 {
-	background-image: url(assets/images/recipes/5.jpg);
-}
-#recipe6 {
-	background-image: url(assets/images/recipes/6.jpg);
-} */
 
 .recipe-card h4 {
 	margin-top: 9px;
@@ -1173,12 +1136,6 @@ div.recipe-card p {
 	float: left;
 	margin: 0;
 }
-
-/*
-.portions{
-	width: 50%;
-}
-*/
 
 .all-recipes{
 	background-color: white;
