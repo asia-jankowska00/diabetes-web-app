@@ -18,86 +18,6 @@
   --line-height: 1.6;
 }
 
-/* ----------------------------------- NIGHT MODE ----------------------------------- */
-
-@media (/* prefers-color-scheme: dark */){
-	:root {
-	  --main-color: #e11b22; /* red */
-	  --darkest-color: #191c27; /* dark grey */
-	  --darker-color: #4a4a4a; /* border grey */
-	  --dark-color: #272727; /* background color */
-	  --light-color: #F4F3F2; /* lightest grey */
-	  --light-fg-color: #393939; /* black */
-	  --main-font-color: #FCFCFB; /* white */
-	  
-  }
-  
-  h1{
-	  color: var(--main-font-color);
-  }
-  
-  .flexbox{
-	  background-color: var(--light-fg-color) !important;
-	  border: 1px solid var(--darker-color) !important;
-  }
-  
-  .navicon{
-	  filter: invert(1);
-	  opacity: 1 !important;
-  }
-  
-  p.navlabel{
-	  color: #fff !important;
-  }
-  
-  .tips{
-	  border: 1px solid var(--darker-color);
-  }
-  
-
-  
-  .arrow-down{
-	  filter: invert(1);
-  }
-  
-  .card-container{
-	  border-right: 1px solid var(--darker-color);
-	  border-left: 1px solid var(--darker-color);
-  }
-  
-  .topbar{
-	  border-bottom: 1px solid var(--main-color);
-	  background-color: var(--light-fg-color) !important;
-  }
-  
-  .load-fade{
-	  background: -webkit-linear-gradient(rgba(39, 39, 39, 1) 20%, rgba(39, 39, 39, 0) 100%) !important;
-	  top: 14% !important;
-	  left: 55% !important;
-	  width: 77% !important;
-	  height: 80% !important;
-	  transform-origin: -5% 46% !important;
-  }
-  
-  .load{
-	  background-color: var(--dark-color) !important;
-  }
-  
-  .load-logo{
-	  background: url(images/logo2-dark.svg) !important;
-	  background-size: 76% !important;
-	  background-position: center !important;
-	  background-repeat: no-repeat !important;
-	  width: 100vw !important;
-	  height: 38vw !important;
-	  margin: 0 auto !important;
-	  bottom: 0 !important;
-	  position: absolute !important;
-  }
-  
-}
-
-
 
 /* ----------------------------------- GLOBAL STUFF ----------------------------------- */
 
@@ -1386,7 +1306,7 @@ div.recipe div.r-one{
 
 
 
-
+/* ---------------------------- Smaller screen topbar ----------------------------- */
 
 @media (max-width: 350px) {
 	.topbar{
