@@ -16,6 +16,10 @@ let shoppingList = {
         // checkbox
         shoppingListItemCheckbox = document.createElement('input');
         shoppingListItemCheckbox.setAttribute('type', 'checkbox');
+        shoppingListItemCheckbox.addEventListener('click', function () {
+            console.log('click')
+            shoppingListItem.classList.toggle('crossed-out')
+        })
         // text  value
         if (!(this.inputItemField.value === "")){
             shoppingListItemValue = document.createTextNode(this.inputItemField.value);
@@ -74,7 +78,18 @@ let shoppingList = {
             })
         }
     },
+    setUpCheckBoxes: function() {     
+        let checkboxes = document.querySelectorAll("input[type='checkbox']");
+        console.log(checkboxes)
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].addEventListener('click', function () {
+                console.log('click')
+                checkboxes[i].parentElement.classList.toggle('crossed-out')
+            })
+        }
+    },
 }
+
 
 function init() {
     shoppingList.selectElements()
@@ -87,6 +102,7 @@ function init() {
         shoppingList.loopDeleteButtons();
     };
     shoppingList.addButtonEventListeners();
+    shoppingList.setUpCheckBoxes();
 }
 
 init()
