@@ -784,6 +784,7 @@ button#clear-list-btn{
 	border: none;
 	background: none;
 	color: var(--darkest-color);
+	font-family: var(--main-font);
 }
 
 input[type="text"]{
@@ -794,6 +795,7 @@ input[type="text"]{
 	padding: 10px;
 	font-size: 16px;
 	background: var(--dark-color);
+	font-family: var(--main-font);
 }
 
 input[type="checkbox"]{
