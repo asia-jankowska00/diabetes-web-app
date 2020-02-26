@@ -24,13 +24,15 @@ let favsButton = document.getElementById('favorites-button');
 let favsWrap = document.getElementById('favorites-wrap');
 
 
-
+const expandedRecipesWrap = document.getElementById('expanded-recipes-wrap')
 const recipesOpen = document.getElementsByClassName('recipe');
 const flexContainerRecipes = document.getElementById('flex-container-recipes')
 const backToRecipesFromRecipeBtns = document.getElementsByClassName('back-to-recipes-btn');
 let favoritesBackToRecipesBtn = document.getElementById('favorites-back-to-recipes-btn');
 let favoritesRecipeCards = favoritesPageContainer.getElementsByClassName('recipe-card');
 let recipeCards = flexContainerRecipes.getElementsByClassName('recipe-card');
+
+
 
 recipes.addEventListener('click', function(){
 	guideWrap.classList.add('wrap-hidden');
@@ -45,6 +47,7 @@ recipes.addEventListener('click', function(){
 	iGuide.classList.add('navicon-guide');
 	hList.classList.remove('icon-highlight-active'); 
 	iList.classList.remove('navicon-active');
+	flexContainerRecipes.classList.remove('wrap-hidden')
 	
 	favsButton.addEventListener('click', function(){
 		favsWrap.classList.remove('wrap-hidden');
@@ -53,10 +56,11 @@ recipes.addEventListener('click', function(){
 	});
 
 	favoritesBackToRecipesBtn.addEventListener('click', function(){
-		closeAllOpenRecipes();
 		favsWrap.classList.add('wrap-hidden')
 		recipesWrap.classList.remove('wrap-hidden');
 		flexContainerRecipes.classList.remove('wrap-hidden');
+		expandedRecipesWrap.classList.add('wrap-hidden')
+		closeAllOpenRecipes();
 	})
 
 	// backToRecipesBtn.addEventListener('click', function() {
@@ -80,6 +84,7 @@ function recipeCardsListeners() {
 					// if (id) {
 					// .querySelector(`[data-id='${id}']`);
 					let openRecipe = document.getElementById(`${id}`);
+					expandedRecipesWrap.classList.remove('wrap-hidden')
 					openRecipe.classList.remove('wrap-hidden');
 					flexContainerRecipes.classList.add('wrap-hidden')
 				// }
@@ -88,9 +93,13 @@ function recipeCardsListeners() {
 	}
     for (let i = 0; i < backToRecipesFromRecipeBtns.length; i++) {
         backToRecipesFromRecipeBtns[i].addEventListener('click', function() {
-            let buttonParent = backToRecipesFromRecipeBtns[i].parentElement;
-            buttonParent.classList.add('wrap-hidden')
-            flexContainerRecipes.classList.remove('wrap-hidden');
+			let buttonParent = backToRecipesFromRecipeBtns[i].parentElement;
+			let buttonParentParent = buttonParent.parentElement;
+			buttonParent.classList.add('wrap-hidden')
+			buttonParentParent.classList.add('wrap-hidden')
+			flexContainerRecipes.classList.remove('wrap-hidden');
+			// favsWrap.classList.remove('wrap-hidden');
+			recipesWrap.classList.remove('wrap-hidden');
         })
         
     }
@@ -111,7 +120,9 @@ function favoritesRecipeCardsListeners() {
 					let id = favoritesRecipeCards[i].dataset.id;
 					let openRecipe = document.getElementById(`${id}`);
 					console.log(openRecipe)
+					expandedRecipesWrap.classList.remove('wrap-hidden')
 					openRecipe.classList.remove('wrap-hidden');
+					favsWrap.classList.add('wrap-hidden');
 				}
 		})
 }
@@ -123,7 +134,9 @@ function closeAllOpenRecipes() {
     for (let i = 0; i < recipesOpen.length; i++) {
         if (!recipesOpen[i].classList.contains('wrap-hidden'))
         recipesOpen[i].classList.add('wrap-hidden')
-    }
+	}
+	expandedRecipesWrap.classList.add('wrap-hidden')
+	
 }
 
 guide.addEventListener('click', function(){
@@ -138,6 +151,7 @@ guide.addEventListener('click', function(){
 	iGuide.classList.add('navicon-active');
 	hList.classList.remove('icon-highlight-active'); 
 	iList.classList.remove('navicon-active');
+	closeAllOpenRecipes()
 });
 
 list.addEventListener('click', function(){
@@ -153,13 +167,6 @@ list.addEventListener('click', function(){
 	iGuide.classList.add('navicon-guide');
 	hList.classList.add('icon-highlight-active'); 
 	iList.classList.add('navicon-active');
+	closeAllOpenRecipes()
 });
 
-
-
-
-// doesnt do anything
-
-// favsButton.addEventListener('click', function(){
-// 	favsWrap.classList.add('wrap-hidden');
-// });
