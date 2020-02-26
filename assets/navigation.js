@@ -48,6 +48,7 @@ recipes.addEventListener('click', function(){
 	hList.classList.remove('icon-highlight-active'); 
 	iList.classList.remove('navicon-active');
 	flexContainerRecipes.classList.remove('wrap-hidden')
+	closeAllOpenRecipes();
 	
 	favsButton.addEventListener('click', function(){
 		favsWrap.classList.remove('wrap-hidden');
