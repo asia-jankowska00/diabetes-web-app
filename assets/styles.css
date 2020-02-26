@@ -757,6 +757,7 @@ div.tips div.card{
 
 ul{
 	padding: 0;
+	z-index: 2;
 }
 
 li{
@@ -764,6 +765,7 @@ li{
 	display: flex;
 	align-items: center;
 	margin: 12px 0;
+	z-index: 2;
 }
 
 button#add-item-btn{
@@ -831,7 +833,7 @@ input[type="checkbox"]:checked:after {
 i.fa-plus{
 	position: absolute;
 	top: 30%;
-	left: 34%;
+	left: 33%;
 }
 
 i.fa-times{
@@ -843,7 +845,60 @@ i.fa-times{
 	position: relative;
 }
 
+.underline1{
+	height: 0px;
+	border-bottom: 3px solid var(--dark-color);
+	position: absolute;
+	width: 87vw;
+	margin: 75px 0 0;
+	z-index: 0;
+}
+
+.underline2{
+	height: 47px;
+	border-bottom: 3px solid var(--dark-color);
+	position: absolute;
+	width: 87vw;
+	margin: 74px 0 0;
+	z-index: 1;
+}
+
+.underline3{
+	height: 47px;
+	border-bottom: 3px solid var(--dark-color);
+	position: absolute;
+	width: 87vw;
+	margin: 118px 0 0;
+	z-index: 1;
+}
+
+.underline4{
+	height: 47px;
+	border-bottom: 3px solid var(--dark-color);
+	position: absolute;
+	width: 87vw;
+	margin: 162px 0 0;
+	z-index: 1;
+}
+
+.underline5{
+	height: 47px;
+	border-bottom: 3px solid var(--dark-color);
+	position: absolute;
+	width: 87vw;
+	margin: 206px 0 0;
+	z-index: 1;
+}
+
+#clear-list-btn{
+	z-index: 2;
+}
+
 /* ----------------------------------- JS FUNCTIONS ----------------------------------- */
+
+.wrap{
+	display: block;
+}
 
 .wrap-hidden{
 	display: none !important;
@@ -914,7 +969,31 @@ i.fa-times{
 	padding: 2vw 4vw 10px;
 }
 
+.favorites-topbar{
+	color: var(--light-fg-color);
+	background-color: var(--main-color);
+	margin: 0;
+	padding: 6px 0 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 12;
+	height: 50px;
+	display: block;
+}
 
+.favorites-topbar h1{
+	margin: 0;
+	text-align: center;
+	font: var(--main-font);
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.topbar-hidden{
+	display: none;
+}
 
 
 
@@ -1047,7 +1126,7 @@ i.fa-times{
 a.other-recipes-link{
 	display: block;
 	width: 50vw;
-	margin: 25px auto 100px;
+	margin: 25px auto 200px;
 	text-align: center;
 	text-decoration: none;
 	background: #f4f3f2;

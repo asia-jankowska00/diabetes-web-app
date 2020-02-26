@@ -16,13 +16,13 @@ let iList = document.getElementById('icon-list');
 
 let recipe = document.getElementsByClassName('recipe')[0];
 
-
 let classesToHide = ['wrap-hidden', 'icon-highlight-off'];
 let highlights = ['recipes-highlight', 'guide-highlight', 'list-highlight'];
 
 let favsButton = document.getElementById('favorites-button');
 let favsWrap = document.getElementById('favorites-wrap');
 
+let favTopbar = document.getElementsByClassName("favorites-topbar")[0];
 
 const expandedRecipesWrap = document.getElementById('expanded-recipes-wrap')
 const recipesOpen = document.getElementsByClassName('recipe');
@@ -48,6 +48,7 @@ recipes.addEventListener('click', function(){
 	hList.classList.remove('icon-highlight-active'); 
 	iList.classList.remove('navicon-active');
 	flexContainerRecipes.classList.remove('wrap-hidden')
+	favTopbar.classList.add('topbar-hidden');
 	closeAllOpenRecipes();
 	
 	favsButton.addEventListener('click', function(){
@@ -96,6 +97,7 @@ function recipeCardsListeners() {
         backToRecipesFromRecipeBtns[i].addEventListener('click', function() {
 			let buttonParent = backToRecipesFromRecipeBtns[i].parentElement;
 			let buttonParentParent = buttonParent.parentElement;
+			favTopbar.classList.add('topbar-hidden');
 			buttonParent.classList.add('wrap-hidden')
 			buttonParentParent.classList.add('wrap-hidden')
 			flexContainerRecipes.classList.remove('wrap-hidden');
@@ -123,6 +125,7 @@ function favoritesRecipeCardsListeners() {
 					console.log(openRecipe)
 					expandedRecipesWrap.classList.remove('wrap-hidden')
 					openRecipe.classList.remove('wrap-hidden');
+					favTopbar.classList.remove('topbar-hidden');
 					favsWrap.classList.add('wrap-hidden');
 				}
 		})
@@ -152,6 +155,7 @@ guide.addEventListener('click', function(){
 	iGuide.classList.add('navicon-active');
 	hList.classList.remove('icon-highlight-active'); 
 	iList.classList.remove('navicon-active');
+	favTopbar.classList.add('topbar-hidden');
 	closeAllOpenRecipes()
 });
 
@@ -168,6 +172,7 @@ list.addEventListener('click', function(){
 	iGuide.classList.add('navicon-guide');
 	hList.classList.add('icon-highlight-active'); 
 	iList.classList.add('navicon-active');
+	favTopbar.classList.add('topbar-hidden');
 	closeAllOpenRecipes()
 });
 

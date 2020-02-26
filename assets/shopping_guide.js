@@ -1,3 +1,5 @@
+
+
 // TIPS CARD
 
 let tips = document.getElementsByClassName('tips')[0];
@@ -120,14 +122,16 @@ let timeout = true;
 function delay(){
 	timeout = true;
 }
-	
+
+
+
 
 for (let i = 0; i < arrowNextNumber; i++){
 	arrowNext[i].addEventListener('click', function(){
 		let parent = arrowNext[i].parentNode;
 		siblings = parent.childNodes; //stores an array of all the sibling elements of the arrow
 		
-		console.log(siblings)
+		console.log(timeout)
 			
 		let length = siblings.length;
 		// 	alert(length);
