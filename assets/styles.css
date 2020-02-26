@@ -764,7 +764,7 @@ li{
 	list-style: none;
 	display: flex;
 	align-items: center;
-	margin: 12px 0;
+	margin: 6px 0;
 	z-index: 2;
 }
 
@@ -846,6 +846,8 @@ i.fa-times{
 
 .shopping-list-item {
 	position: relative;
+	padding: 0 0 6px;
+	border-bottom: 3px solid var(--dark-color);
 }
 
 .underline1{
@@ -855,42 +857,6 @@ i.fa-times{
 	width: 87vw;
 	margin: 75px 0 0;
 	z-index: 0;
-}
-
-.underline2{
-	height: 47px;
-	border-bottom: 3px solid var(--dark-color);
-	position: absolute;
-	width: 87vw;
-	margin: 74px 0 0;
-	z-index: 1;
-}
-
-.underline3{
-	height: 47px;
-	border-bottom: 3px solid var(--dark-color);
-	position: absolute;
-	width: 87vw;
-	margin: 118px 0 0;
-	z-index: 1;
-}
-
-.underline4{
-	height: 47px;
-	border-bottom: 3px solid var(--dark-color);
-	position: absolute;
-	width: 87vw;
-	margin: 162px 0 0;
-	z-index: 1;
-}
-
-.underline5{
-	height: 47px;
-	border-bottom: 3px solid var(--dark-color);
-	position: absolute;
-	width: 87vw;
-	margin: 206px 0 0;
-	z-index: 1;
 }
 
 #clear-list-btn{
