@@ -115,18 +115,22 @@ let slide2;
 let slide3;
 let slide4;
 var siblings;
+let timeout = true;
 
+function delay(){
+	timeout = true;
+}
 	
 
 for (let i = 0; i < arrowNextNumber; i++){
 	arrowNext[i].addEventListener('click', function(){
-	let parent = arrowNext[i].parentNode;
-	siblings = parent.childNodes; //stores an array of all the sibling elements of the arrow
-	
-	console.log(siblings)
+		let parent = arrowNext[i].parentNode;
+		siblings = parent.childNodes; //stores an array of all the sibling elements of the arrow
 		
-	let length = siblings.length;
-// 	alert(length);
+		console.log(siblings)
+			
+		let length = siblings.length;
+		// 	alert(length);
 
 				
 		// [1 = arrow next, 3 = arrow back, 7 <-> 11 = images] (odd numbers)
@@ -138,142 +142,157 @@ for (let i = 0; i < arrowNextNumber; i++){
  		console.log(siblings);
 		slide2 = siblings[7];
 		slide3 = siblings[9];
-		slide4 = siblings[11];
+		slide4 = siblings[11];	
+*/	
+
+		switch(timeout){
+			case true: {
+				
+				timeout = false;
+				
+				setTimeout(delay, 800);
+				
+				if(length == 9){
+					
+					slide1 = siblings[5];
+					slide2 = siblings[7];
+					
+					switch(count){
+						case 1: {
+							count = count + 1;
+							slide2.classList.remove('slide-reverse2'); //next
+							slide1.classList.remove('slide-reverse'); //current
+							slide1.classList.remove('slide2');
+				 			slide1.classList.add('slide');
+					 		slide2.classList.add('slide2');
+					 		slide2.classList.remove('hidden-image');
+					 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
+					 		slide1.style.zIndex = '0';
+						break};
+						case 2: {
+							count = 1;
+							slide1.classList.remove('slide-reverse2'); //next
+							slide2.classList.remove('slide-reverse'); //current
+							slide1.classList.remove('slide');
+					 		slide2.classList.remove('slide2');
+							slide2.classList.add('slide');
+					 		slide1.classList.add('slide2');
+					 		slide1.classList.remove('hidden-image');
+					 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+					 		slide1.style.zIndex = '1';
+						break};
+					};
+				}
+				
+				else if(length == 11){
+					
+					slide1 = siblings[5];
+					slide2 = siblings[7];
+					slide3 = siblings[9];
+					
+					switch(count){
+						case 1: {
+							count = count + 1;
+							slide2.classList.remove('slide-reverse2'); //next
+							slide1.classList.remove('slide-reverse'); //current
+							slide1.classList.remove('slide2');
+				 			slide1.classList.add('slide');
+					 		slide2.classList.add('slide2');
+					 		slide2.classList.remove('hidden-image');
+					 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
+					 		slide1.style.zIndex = '0';
+						break};
+						case 2: {
+							count = count + 1;
+							slide3.classList.remove('slide-reverse2'); //next
+							slide2.classList.remove('slide-reverse'); //current
+							slide1.classList.remove('slide');
+					 		slide2.classList.remove('slide2');
+							slide2.classList.add('slide');
+					 		slide3.classList.add('slide2');
+					 		slide3.classList.remove('hidden-image');
+					 		slide1.classList.add('hidden-image');
+					 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+						break};
+						case 3: {
+							count = 1;
+							slide1.classList.remove('slide-reverse2'); //next
+							slide3.classList.remove('slide-reverse'); //current
+							slide2.classList.remove('slide');
+					 		slide3.classList.remove('slide2');
+							slide3.classList.add('slide');
+					 		slide1.classList.add('slide2');
+					 		slide1.classList.remove('hidden-image');
+					 		slide2.classList.add('hidden-image');
+					 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
+					 		slide1.style.zIndex = '1';
+						break};
+					};
+				}
+				
+				else if(length == 13){
+					
+					slide1 = siblings[5];
+					slide2 = siblings[7];
+					slide3 = siblings[9];
+					slide4 = siblings[11];
+					
+					switch(count){
+						case 1: {
+							count = 2;
+							slide2.classList.remove('slide-reverse2');
+							slide1.classList.remove('slide-reverse');
+							slide4.classList.remove('slide');
+							slide1.classList.remove('slide2');
+				 			slide1.classList.add('slide');
+					 		slide2.classList.add('slide2');
+					 		slide2.classList.remove('hidden-image');
+					 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
+					 		slide1.style.zIndex = '0';
+						break};
+						case 2: {
+							count = 3;
+							slide3.classList.remove('slide-reverse2');
+							slide2.classList.remove('slide-reverse');
+							slide1.classList.remove('slide');
+					 		slide2.classList.remove('slide2');
+							slide2.classList.add('slide');
+					 		slide3.classList.add('slide2');
+					 		slide3.classList.remove('hidden-image');
+					 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+						break};
+						case 3: {
+							count = 4;
+							slide4.classList.remove('slide-reverse2');
+							slide3.classList.remove('slide-reverse');
+							slide2.classList.remove('slide');
+					 		slide3.classList.remove('slide2');
+							slide3.classList.add('slide');
+					 		slide4.classList.add('slide2');
+					 		slide4.classList.remove('hidden-image');
+					 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
+					 		//slide3.classList.add('hidden-image');
+						break};
+						case 4: {
+							count = 1;
+							slide1.classList.remove('slide-reverse2');
+							slide4.classList.remove('slide-reverse');
+							slide3.classList.remove('slide');
+					 		slide4.classList.remove('slide2');
+							slide4.classList.add('slide');
+					 		slide1.classList.add('slide2');
+					 		slide1.classList.remove('hidden-image');
+					 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800);
+					 		//slide4.classList.add('hidden-image');
+					 		slide1.style.zIndex = '1';
+						break};
+				    };
+				};
+			break};
 		
-*/
-		if(length == 9){
-			
-			slide1 = siblings[5];
-			slide2 = siblings[7];
-			
-			switch(count){
-				case 1: {
-					count = count + 1;
-					slide2.classList.remove('slide-reverse2'); //next
-					slide1.classList.remove('slide-reverse'); //current
-					slide1.classList.remove('slide2');
-		 			slide1.classList.add('slide');
-			 		slide2.classList.add('slide2');
-			 		slide2.classList.remove('hidden-image');
-			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
-			 		slide1.style.zIndex = '0';
-				break};
-				case 2: {
-					count = 1;
-					slide1.classList.remove('slide-reverse2'); //next
-					slide2.classList.remove('slide-reverse'); //current
-					slide1.classList.remove('slide');
-			 		slide2.classList.remove('slide2');
-					slide2.classList.add('slide');
-			 		slide1.classList.add('slide2');
-			 		slide1.classList.remove('hidden-image');
-			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
-			 		slide1.style.zIndex = '1';
-				break};
-			};
-		}
-		else if(length == 11){
-			
-			slide1 = siblings[5];
-			slide2 = siblings[7];
-			slide3 = siblings[9];
-			
-			switch(count){
-				case 1: {
-					count = count + 1;
-					slide2.classList.remove('slide-reverse2'); //next
-					slide1.classList.remove('slide-reverse'); //current
-					slide1.classList.remove('slide2');
-		 			slide1.classList.add('slide');
-			 		slide2.classList.add('slide2');
-			 		slide2.classList.remove('hidden-image');
-			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
-			 		slide1.style.zIndex = '0';
-				break};
-				case 2: {
-					count = count + 1;
-					slide3.classList.remove('slide-reverse2'); //next
-					slide2.classList.remove('slide-reverse'); //current
-					slide1.classList.remove('slide');
-			 		slide2.classList.remove('slide2');
-					slide2.classList.add('slide');
-			 		slide3.classList.add('slide2');
-			 		slide3.classList.remove('hidden-image');
-			 		slide1.classList.add('hidden-image');
-			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
-				break};
-				case 3: {
-					count = 1;
-					slide1.classList.remove('slide-reverse2'); //next
-					slide3.classList.remove('slide-reverse'); //current
-					slide2.classList.remove('slide');
-			 		slide3.classList.remove('slide2');
-					slide3.classList.add('slide');
-			 		slide1.classList.add('slide2');
-			 		slide1.classList.remove('hidden-image');
-			 		slide2.classList.add('hidden-image');
-			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
-			 		slide1.style.zIndex = '1';
-				break};
-			};
-		}
-		else if(length == 13){
-			
-			slide1 = siblings[5];
-			slide2 = siblings[7];
-			slide3 = siblings[9];
-			slide4 = siblings[11];
-			
-			switch(count){
-			case 1: {
-				count = 2;
-				slide2.classList.remove('slide-reverse2');
-				slide1.classList.remove('slide-reverse');
-				slide4.classList.remove('slide');
-				slide1.classList.remove('slide2');
-	 			slide1.classList.add('slide');
-		 		slide2.classList.add('slide2');
-		 		slide2.classList.remove('hidden-image');
-		 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800);
-		 		slide1.style.zIndex = '0';
+			case false: {
+	
 			break};
-			case 2: {
-				count = 3;
-				slide3.classList.remove('slide-reverse2');
-				slide2.classList.remove('slide-reverse');
-				slide1.classList.remove('slide');
-		 		slide2.classList.remove('slide2');
-				slide2.classList.add('slide');
-		 		slide3.classList.add('slide2');
-		 		slide3.classList.remove('hidden-image');
-		 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
-			break};
-			case 3: {
-				count = 4;
-				slide4.classList.remove('slide-reverse2');
-				slide3.classList.remove('slide-reverse');
-				slide2.classList.remove('slide');
-		 		slide3.classList.remove('slide2');
-				slide3.classList.add('slide');
-		 		slide4.classList.add('slide2');
-		 		slide4.classList.remove('hidden-image');
-		 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
-		 		//slide3.classList.add('hidden-image');
-			break};
-			case 4: {
-				count = 1;
-				slide1.classList.remove('slide-reverse2');
-				slide4.classList.remove('slide-reverse');
-				slide3.classList.remove('slide');
-		 		slide4.classList.remove('slide2');
-				slide4.classList.add('slide');
-		 		slide1.classList.add('slide2');
-		 		slide1.classList.remove('hidden-image');
-		 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800);
-		 		//slide4.classList.add('hidden-image');
-		 		slide1.style.zIndex = '1';
-			break};
-		    };
 		};
 	});
 };
@@ -323,144 +342,157 @@ for (let i = 0; i < arrowBackNumber; i++){
 		
 */
 		
-		if(length == 9){
-			
-			slide1 = siblings[5];
-			slide2 = siblings[7];
-			
-			switch(count){
-				case 1: {
-					count = 2;
-					slide2.classList.remove('slide'); //next
-			 		slide1.classList.remove('slide2'); //current
-					slide2.classList.remove('slide-reverse2'); //previous
-					slide1.classList.remove('slide-reverse'); //current
-					slide1.classList.add('slide-reverse2'); //current
-		 			slide2.classList.add('slide-reverse'); //next
-		 			slide2.classList.remove('hidden-image'); //next
-		 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
-		 			slide1.style.zIndex = '1'; //current
-				break};
-				case 2: {
-					count = 1;
-					slide1.classList.remove('slide'); //next
-			 		slide2.classList.remove('slide2'); //current
-					slide1.classList.remove('slide-reverse2'); //previous
-			 		slide2.classList.remove('slide-reverse'); //current
-					slide2.classList.add('slide-reverse2'); //current
-			 		slide1.classList.add('slide-reverse'); //next
-			 		slide1.classList.remove('hidden-image'); //next
-			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800); //current
-			 		//slide4.classList.add('hidden-image');
-			 		slide1.style.zIndex = '0'; //previous
-				break};
-			};
-		}
-		else if(length == 11){
-			
-			slide1 = siblings[5];
-			slide2 = siblings[7];
-			slide3 = siblings[9];
-			
-			switch(count){
-				case 1: {
-					count = 3;
-					slide3.classList.remove('slide'); //next
-			 		slide1.classList.remove('slide2'); //current
-					slide2.classList.remove('slide-reverse2'); //previous
-					slide1.classList.remove('slide-reverse'); //current
-					slide1.classList.add('slide-reverse2'); //current
-		 			slide3.classList.add('slide-reverse'); //next
-		 			slide3.classList.remove('hidden-image'); //next
-		 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
-		 			slide1.style.zIndex = '1'; //current
-				break};
-				case 2: {
-					count = 1;
-					slide1.classList.remove('slide'); //next
-			 		slide2.classList.remove('slide2'); //current
-					slide3.classList.remove('slide-reverse2'); //previous
-					slide2.classList.remove('slide-reverse'); //current
-		 			slide2.classList.add('slide-reverse2'); //current
-			 		slide1.classList.add('slide-reverse'); //next
-			 		slide1.classList.remove('hidden-image'); //next
-			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800); //current
-				break};
-				case 3: {
-					count = 2;
-					slide2.classList.remove('slide'); //next
-			 		slide3.classList.remove('slide2'); //current
-					slide1.classList.remove('slide-reverse2'); //previous
-			 		slide3.classList.remove('slide-reverse'); //current
-					slide3.classList.add('slide-reverse2'); //current
-			 		slide2.classList.add('slide-reverse'); //next
-			 		slide2.classList.remove('hidden-image'); //next
-			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800); //current
-			 		slide1.style.zIndex = '0'; //previous
-				break};
-			};
-		}
-		else if(length == 13){
+		switch(timeout){
+			case true: {
+				
+				timeout = false;
+				
+				setTimeout(delay, 800);
+		
+				if(length == 9){
+					
+					slide1 = siblings[5];
+					slide2 = siblings[7];
+					
+					switch(count){
+						case 1: {
+							count = 2;
+							slide2.classList.remove('slide'); //next
+					 		slide1.classList.remove('slide2'); //current
+							slide2.classList.remove('slide-reverse2'); //previous
+							slide1.classList.remove('slide-reverse'); //current
+							slide1.classList.add('slide-reverse2'); //current
+				 			slide2.classList.add('slide-reverse'); //next
+				 			slide2.classList.remove('hidden-image'); //next
+				 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
+				 			slide1.style.zIndex = '1'; //current
+						break};
+						case 2: {
+							count = 1;
+							slide1.classList.remove('slide'); //next
+					 		slide2.classList.remove('slide2'); //current
+							slide1.classList.remove('slide-reverse2'); //previous
+					 		slide2.classList.remove('slide-reverse'); //current
+							slide2.classList.add('slide-reverse2'); //current
+					 		slide1.classList.add('slide-reverse'); //next
+					 		slide1.classList.remove('hidden-image'); //next
+					 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800); //current
+					 		//slide4.classList.add('hidden-image');
+					 		slide1.style.zIndex = '0'; //previous
+						break};
+					};
+				}
+				else if(length == 11){
+					
+					slide1 = siblings[5];
+					slide2 = siblings[7];
+					slide3 = siblings[9];
+					
+					switch(count){
+						case 1: {
+							count = 3;
+							slide3.classList.remove('slide'); //next
+					 		slide1.classList.remove('slide2'); //current
+							slide2.classList.remove('slide-reverse2'); //previous
+							slide1.classList.remove('slide-reverse'); //current
+							slide1.classList.add('slide-reverse2'); //current
+				 			slide3.classList.add('slide-reverse'); //next
+				 			slide3.classList.remove('hidden-image'); //next
+				 			setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
+				 			slide1.style.zIndex = '1'; //current
+						break};
+						case 2: {
+							count = 1;
+							slide1.classList.remove('slide'); //next
+					 		slide2.classList.remove('slide2'); //current
+							slide3.classList.remove('slide-reverse2'); //previous
+							slide2.classList.remove('slide-reverse'); //current
+				 			slide2.classList.add('slide-reverse2'); //current
+					 		slide1.classList.add('slide-reverse'); //next
+					 		slide1.classList.remove('hidden-image'); //next
+					 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800); //current
+						break};
+						case 3: {
+							count = 2;
+							slide2.classList.remove('slide'); //next
+					 		slide3.classList.remove('slide2'); //current
+							slide1.classList.remove('slide-reverse2'); //previous
+					 		slide3.classList.remove('slide-reverse'); //current
+							slide3.classList.add('slide-reverse2'); //current
+					 		slide2.classList.add('slide-reverse'); //next
+					 		slide2.classList.remove('hidden-image'); //next
+					 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800); //current
+					 		slide1.style.zIndex = '0'; //previous
+						break};
+					};
+				}
+				else if(length == 13){
+		
+					
+					slide1 = siblings[5];
+					slide2 = siblings[7];
+					slide3 = siblings[9];
+					slide4 = siblings[11];
+					
+					console.log(siblings);
+					
+					switch(count){
+						case 1: {
+							count = 4;
+							slide4.classList.remove('slide'); //next
+					 		slide1.classList.remove('slide2'); //current
+							slide2.classList.remove('slide-reverse2'); //previous
+							slide1.classList.remove('slide-reverse'); //current
+				 			slide1.classList.add('slide-reverse2'); //current
+					 		slide4.classList.add('slide-reverse'); //next
+					 		slide4.classList.remove('hidden-image'); //next
+					 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
+					 		slide1.style.zIndex = '1'; //current
+						break};
+						case 2: {
+							count = 1;
+							slide1.classList.remove('slide');
+					 		slide2.classList.remove('slide2');
+							slide3.classList.remove('slide-reverse2');
+					 		slide2.classList.remove('slide-reverse');
+							slide2.classList.add('slide-reverse2');
+					 		slide1.classList.add('slide-reverse');
+					 		slide1.classList.remove('hidden-image');
+					 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
+						break};
+						case 3: {
+							count = 2;
+							slide2.classList.remove('slide');
+					 		slide3.classList.remove('slide2');
+							slide4.classList.remove('slide-reverse2');
+					 		slide3.classList.remove('slide-reverse');
+							slide3.classList.add('slide-reverse2');
+					 		slide2.classList.add('slide-reverse');
+					 		slide2.classList.remove('hidden-image');
+					 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
+					 		//slide3.classList.add('hidden-image');
+						break};
+						case 4: {
+							count = 3;
+							slide3.classList.remove('slide'); //next
+					 		slide4.classList.remove('slide2'); //current
+							slide1.classList.remove('slide-reverse2'); //previous
+					 		slide4.classList.remove('slide-reverse'); //current
+							slide4.classList.add('slide-reverse2'); //current
+					 		slide3.classList.add('slide-reverse'); //next
+					 		slide3.classList.remove('hidden-image'); //next
+					 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800); //current
+					 		//slide4.classList.add('hidden-image');
+					 		slide1.style.zIndex = '0'; //previous
+						break};
+				    	};
+					}; 
+			break};
+	
+			case false: {
 
-			
-			slide1 = siblings[5];
-			slide2 = siblings[7];
-			slide3 = siblings[9];
-			slide4 = siblings[11];
-			
-			console.log(siblings);
-			
-			switch(count){
-				case 1: {
-					count = 4;
-					slide4.classList.remove('slide'); //next
-			 		slide1.classList.remove('slide2'); //current
-					slide2.classList.remove('slide-reverse2'); //previous
-					slide1.classList.remove('slide-reverse'); //current
-		 			slide1.classList.add('slide-reverse2'); //current
-			 		slide4.classList.add('slide-reverse'); //next
-			 		slide4.classList.remove('hidden-image'); //next
-			 		setTimeout(function(){slide1.classList.add('hidden-image')}, 800); //current
-			 		slide1.style.zIndex = '1'; //current
-				break};
-				case 2: {
-					count = 1;
-					slide1.classList.remove('slide');
-			 		slide2.classList.remove('slide2');
-					slide3.classList.remove('slide-reverse2');
-			 		slide2.classList.remove('slide-reverse');
-					slide2.classList.add('slide-reverse2');
-			 		slide1.classList.add('slide-reverse');
-			 		slide1.classList.remove('hidden-image');
-			 		setTimeout(function(){slide2.classList.add('hidden-image')}, 800);
-				break};
-				case 3: {
-					count = 2;
-					slide2.classList.remove('slide');
-			 		slide3.classList.remove('slide2');
-					slide4.classList.remove('slide-reverse2');
-			 		slide3.classList.remove('slide-reverse');
-					slide3.classList.add('slide-reverse2');
-			 		slide2.classList.add('slide-reverse');
-			 		slide2.classList.remove('hidden-image');
-			 		setTimeout(function(){slide3.classList.add('hidden-image')}, 800);
-			 		//slide3.classList.add('hidden-image');
-				break};
-				case 4: {
-					count = 3;
-					slide3.classList.remove('slide'); //next
-			 		slide4.classList.remove('slide2'); //current
-					slide1.classList.remove('slide-reverse2'); //previous
-			 		slide4.classList.remove('slide-reverse'); //current
-					slide4.classList.add('slide-reverse2'); //current
-			 		slide3.classList.add('slide-reverse'); //next
-			 		slide3.classList.remove('hidden-image'); //next
-			 		setTimeout(function(){slide4.classList.add('hidden-image')}, 800); //current
-			 		//slide4.classList.add('hidden-image');
-			 		slide1.style.zIndex = '0'; //previous
-				break};
-		    	};
-			}; 
+			break};					
+		};			
 	});
 };
 
