@@ -262,6 +262,7 @@ a {
 	margin: 0 auto;
 	color: var(--darker-color);
 	height: 46px;
+	left: 2vw;
 }
 
 .flexbox p.navlabel {
@@ -272,6 +273,7 @@ a {
 	position: relative;
     top: -4px;
     font-weight: 500;
+    left: 2vw;
 }
 
 
